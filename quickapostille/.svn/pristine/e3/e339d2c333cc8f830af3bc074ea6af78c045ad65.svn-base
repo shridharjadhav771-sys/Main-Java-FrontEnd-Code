@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.dakshabhi.order.dto.CustomerOrderProductDto"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<%@ page isELIgnored="false"%>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start' : new Date().getTime(),
+			event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+				+ l
+				: '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-WSFP6M7W');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<link rel="canonical" href="https://www.quickapostille.online/apostille" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title"
+	content="Apostille Service - Get an Apostille in 1 day - For any document" />
+<meta property="og:description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<meta property="og:url" content="https://www.quickapostille.online/" />
+<meta property="og:site_name"
+	content="Apostille for Any Document from Any Country" />
+<title>Apostille | Quick Apostille</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="images/favicon-07.png" />
+<!-- Bootstrap icons-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" type="text/css" />
+<!-- Google fonts-->
+<link href='https://fonts.googleapis.com/css?family=Titillium Web'
+	rel='stylesheet'>
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/styles.css?v=1204" rel="stylesheet" />
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script src="https://js.stripe.com/v3/"></script>
+
+</head>
+<%
+
+%>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSFP6M7W"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="container top-bar d-flex p-2">
+		<div class="col-4 col-sm-0 text-start d-none d-sm-block">
+			<strong><img class="alignnone" src="images/mail-1.png"
+				alt="mail" width="24" height="24">&nbsp;&nbsp;<span
+				style="color: #203852">contact@quickapostille.online</span></strong>
+		</div>
+
+		<div class="col-md-3 col-sm-12 text-center">
+			<!-- <strong><img class="alignnone" src="images/phone 2-01.png"
+				alt="phone" width="24" height="24">&nbsp;&nbsp; <span href="#"
+				style="color: #203852; text-decoration: none">+1(252) 579
+					0347</span></strong> -->
+		</div>
+
+		<div class="col-5 col-sm-0  text-end  d-none d-sm-block">
+			<span style="color: #203852"><strong> <img
+					class="alignnone"
+					src="images/WXibs0O8_400x400-removebg-preview-300x300.png" alt=""
+					width="29" height="29">Official HCCH Hague Convention
+					Documentation
+			</strong></span>
+		</div>
+	</div>
+
+	<!-- Navigation-->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand"
+				href="https://www.quickapostille.online/apostille"><img
+				src="images/logo-new-white-06.svg" alt="Quick Apostille"></a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="" role="button"><i class="fa fa-bars"
+					aria-hidden="true" style="color: #e6e6ff"></i></span>
+			</button>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav navbar-nav">
+					<li class="nav-item"><a class="mega-menu-link"
+						href="https://www.quickapostille.online/" tabindex="0" target="_">Home</a></li>
+					<li class="nav-item"><a class="mega-menu-link"
+						href="https://www.quickapostille.online/about-us/" tabindex="0"
+						target="_">About Us</a></li>
+					<li class="nav-item"><a class="mega-menu-link"
+						href="https://www.quickapostille.online/services/" tabindex="0"
+						target="_">Services</a></li>
+					<li class="nav-item"><a class="mega-menu-link"
+						href="https://www.quickapostille.online/products/" tabindex="0"
+						target="_">Products</a></li>
+					<li class="nav-item"><a class="mega-menu-link"
+						href="https://www.quickapostille.online/contact/" tabindex="0"
+						target="_">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="mt-5">
+
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-1 com-sm-0"></div>
+				<div class="col-md-10 com-sm-12">
+					<div class="justify-content-between"> 
+						<div class="row">
+							<p class="justify-content-between">We are ready to finalize
+								your order. Please bear in mind that your order is pending until
+								we receive your ID check and ascertain your uploaded documents.
+								Today we will be charging you card a total of
+								${orderDTO.currencySymbol}95.00 for apostille service, plus any
+								fees for notarization, certified copies, express services, or
+								translation. Once your order is placed, we will verify your ID
+								with a third party service and when complete, we will begin
+								processing your order. Please bear in mind we will strive to
+								complete the process in 1 day or less based on the document
+								characteristics. Feel free to contact us at any time to check
+								your order status and or amend any items.</p>
+						</div>
+						<div class="row">
+						<div class="col-md-12 text-center">
+							<h1 class="mb-5"><img style="width: 150px" src="images/common_law_assosiation.jpg" alt="common law assosiation"/></h1>
+						</div>
+				 		<div class="col-md-12 text-center">
+							<h4 class="mb-2 mt-5 text-decoration-underline steps-text">Step 3: Finalize Order</h4>
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1 com-sm-0"></div>
+
+			</div>
+			<div class="horizontalLine"></div>
+			<form id="checkoutForm" name="checkoutForm" action="#">
+				<input type="hidden" id="first_name" name="first_name"
+					value="${orderDTO.firstName}" /> <input type="hidden"
+					id="last_name" name="last_name" value="${orderDTO.lastName}" /> <input
+					type="hidden" id="email" name="email" value="${orderDTO.email}" />
+				<input type="hidden" id="phone" name="phone"
+					value="${orderDTO.phoneNo}" /> <input type="hidden" id="orderCost"
+					name="orderCost" value="${orderDTO.orderTotalAmount}" /> <input
+					type="hidden" id="orderCostRound" name="orderCostRound"
+					value="${orderDTO.orderTotalAmountRound}" /> <input type="hidden"
+					id="currencyCode" name="currencyCode"
+					value="${orderDTO.currencyCode}" /> <input type="hidden"
+					id="currencySymbol" name="currencySymbol"
+					value="${orderDTO.currencySymbol}" /> <input type="hidden"
+					id="orderStatus" name="orderStatus" value="0" /> <input
+					type="hidden" id="orderId" name="orderId" value="${orderDTO.id}" />
+				<input type="hidden" id="stripekey" name="stripekey" value="" /> <input
+					type="hidden" id="clientSecret" name="clientSecret" value="" /> <input
+					type="hidden" id="paymentId" name="paymentId" /> <input
+					type="hidden" id="mainOrderId" name="mainOrderId" value="0" /> <input
+					type="hidden" id="isfile" name="isfile" value="0" /> <input
+					type="hidden" id="notes" name="notes" value="${orderDTO.notes}" />
+				<div class="row  mt-3 ">
+					<div class="col-md-2 col-xs-0 order-2 ps-3"></div>
+					<div class="col-md-8 col-xs-12  order-2 ps-3">
+						<div class="mb-0 text-end ">
+							<img class="w-25 mb-1" src="images/secure_checkout.png"
+								alt="secure checkout">
+						</div>
+						<div class="border border-2 rounded p-4 mb-4">
+							<div id="paymentErrorDiv" class="alert alert-danger" role="alert"
+								style="display: none">
+								<span id="errormsg"></span>
+							</div>
+							<!-- Payment Section -->
+							<div class="mb-4">
+								<div class="p-2 bg-light" id="card-fields">
+									<fieldset>
+										<legend class="fieldset-legend">
+											<strong>Credit / Debit Card:</strong> <img
+												id="credit_cardimg" alt="credit cards"
+												src="images/cardlogo.png">
+										</legend>
+										<div class="row p-2" style="padding: 0px;">
+											<div class="col-sm-12 col-xs-12">
+												<strong class="d-block mb-1">Name on card <span
+													class="requiredfield">*</span></strong> <input type="text"
+													class="required form-control" id="fullname" name="fullname"
+													value="${orderDTO.firstName} ${orderDTO.lastName}"
+													placeholder="Name on card"> <span class="msgError"
+													id="error_fullname"></span>
+
+											</div>
+										</div>
+										<div class="row p-2" style="padding: 0px;">
+											<div class="col-sm-12 col-xs-12">
+												<strong class="d-block mb-1">Card number <span
+													class="requiredfield">*</span></strong>
+												<div id="stripe-card-number" class="form-control"
+													style="padding: 10px;"></div>
+
+											</div>
+										</div>
+										<div class="row p-2" style="padding: 0px;">
+											<div class="col-sm-12 col-md-6 mt-2">
+												<strong class="d-block mb-1">Expiration date <span
+													class="requiredfield">*</span></strong>
+												<div id="stripe-card-expiry" class="form-control"
+													style="padding: 10px;"></div>
+											</div>
+
+											<div class="col-sm-12 col-md-6 mt-2">
+												<strong class="d-block mb-1">Security code <span
+													class="requiredfield">*</span></strong>
+												<div id="stripe-card-cvc" class="form-control"
+													style="padding: 10px;"></div>
+
+											</div>
+										</div>
+										<div class="row p-2" style="padding: 0px;">
+											<div class="col-sm-12 col-xs-12 mt-2">
+												<strong class="d-block mb-1">Billing Address <span
+													class="requiredfield">*</span></strong> <input type="text"
+													class="required form-control" id="street" name="street"
+													placeholder="Billing Address"> <span
+													class="msgError" id="error_street"></span>
+
+											</div>
+										</div>
+										<div class="row p-2" style="padding: 0px;">
+											<div class="col-sm-12 col-md-6 mt-2">
+												<strong class="d-block mb-1">Billing City <span
+													class="requiredfield">*</span></strong> <input type="text"
+													class="required form-control" id="city" name="city"
+													placeholder="Billing City"> <span class="msgError"
+													id="error_city"></span>
+											</div>
+
+											<div class="col-sm-12 col-md-6 mt-2">
+												<strong class="d-block mb-1">Billing State <span
+													class="requiredfield">*</span></strong> <input type="text"
+													class="required form-control" id="state" name="state"
+													placeholder="Billing State"> <span class="msgError"
+													id="error_state"></span>
+											</div>
+										</div>
+										<div class="row p-2" style="padding: 0px;">
+											<div class="col-sm-12 col-md-6 mt-2">
+												<strong class="d-block mb-1">Billing Postal Code <span
+													class="requiredfield">*</span></strong> <input type="text"
+													class="required form-control" id="zip" name="zip"
+													placeholder="Billing Postal Code"> <span
+													class="msgError" id="error_zip"></span>
+
+											</div>
+
+											<div class="col-sm-12 col-md-6 mt-2">
+												<strong class="d-block mb-1">Billing Country <span
+													class="requiredfield">*</span></strong> <select
+													class="required form-control" id="country" name="country">
+													<option value="">Select Country</option>
+													<option value="AF">Afghanistan</option>
+													<option value="AX">Islands</option>
+													<option value="AL">Albania</option>
+													<option value="DZ">Algeria</option>
+													<option value="AS">American Samoa</option>
+													<option value="AD">Andorra</option>
+													<option value="AO">Angola</option>
+													<option value="AI">Anguilla</option>
+													<option value="AQ">Antarctica</option>
+													<option value="AG">Antigua and Barbuda</option>
+													<option value="AR">Argentina</option>
+													<option value="AM">Armenia</option>
+													<option value="AW">Aruba</option>
+													<option value="AU">Australia</option>
+													<option value="AT">Austria</option>
+													<option value="AZ">Azerbaijan</option>
+													<option value="BS">Bahamas</option>
+													<option value="BH">Bahrain</option>
+													<option value="BD">Bangladesh</option>
+													<option value="BB">Barbados</option>
+													<option value="BY">Belarus</option>
+													<option value="PW">Belau</option>
+													<option value="BE">Belgium</option>
+													<option value="BZ">Belize</option>
+													<option value="BJ">Benin</option>
+													<option value="BM">Bermuda</option>
+													<option value="BT">Bhutan</option>
+													<option value="BO">Bolivia</option>
+													<option value="BQ">Bonaire, Saint Eustatius and
+														Saba</option>
+													<option value="BA">Bosnia and Herzegovina</option>
+													<option value="BW">Botswana</option>
+													<option value="BV">Bouvet Island</option>
+													<option value="BR">Brazil</option>
+													<option value="IO">British Indian Ocean Territory</option>
+													<option value="BN">Brunei</option>
+													<option value="BG">Bulgaria</option>
+													<option value="BF">Burkina Faso</option>
+													<option value="BI">Burundi</option>
+													<option value="KH">Cambodia</option>
+													<option value="CM">Cameroon</option>
+													<option value="CA">Canada</option>
+													<option value="CV">Cape Verde</option>
+													<option value="KY">Cayman Islands</option>
+													<option value="CF">Central African Republic</option>
+													<option value="TD">Chad</option>
+													<option value="CL">Chile</option>
+													<option value="CN">China</option>
+													<option value="CX">Christmas Island</option>
+													<option value="CC">Cocos (Keeling) Islands</option>
+													<option value="CO">Colombia</option>
+													<option value="KM">Comoros</option>
+													<option value="CG">Congo (Brazzaville)</option>
+													<option value="CD">Congo (Kinshasa)</option>
+													<option value="CK">Cook Islands</option>
+													<option value="CR">Costa Rica</option>
+													<option value="HR">Croatia</option>
+													<option value="CU">Cuba</option>
+													<option value="CW">Curaçao</option>
+													<option value="CY">Cyprus</option>
+													<option value="CZ">Czech Republic</option>
+													<option value="DK">Denmark</option>
+													<option value="DJ">Djibouti</option>
+													<option value="DM">Dominica</option>
+													<option value="DO">Dominican Republic</option>
+													<option value="EC">Ecuador</option>
+													<option value="EG">Egypt</option>
+													<option value="SV">El Salvador</option>
+													<option value="GQ">Equatorial Guinea</option>
+													<option value="ER">Eritrea</option>
+													<option value="EE">Estonia</option>
+													<option value="SZ">Eswatini</option>
+													<option value="ET">Ethiopia</option>
+													<option value="FK">Falkland Islands</option>
+													<option value="FO">Faroe Islands</option>
+													<option value="FJ">Fiji</option>
+													<option value="FI">Finland</option>
+													<option value="FR">France</option>
+													<option value="GF">French Guiana</option>
+													<option value="PF">French Polynesia</option>
+													<option value="TF">French Southern Territories</option>
+													<option value="GA">Gabon</option>
+													<option value="GM">Gambia</option>
+													<option value="GE">Georgia</option>
+													<option value="DE">Germany</option>
+													<option value="GH">Ghana</option>
+													<option value="GI">Gibraltar</option>
+													<option value="GR">Greece</option>
+													<option value="GL">Greenland</option>
+													<option value="GD">Grenada</option>
+													<option value="GP">Guadeloupe</option>
+													<option value="GU">Guam</option>
+													<option value="GT">Guatemala</option>
+													<option value="GG">Guernsey</option>
+													<option value="GN">Guinea</option>
+													<option value="GW">Guinea-Bissau</option>
+													<option value="GY">Guyana</option>
+													<option value="HT">Haiti</option>
+													<option value="HM">Heard Island and McDonald
+														Islands</option>
+													<option value="HN">Honduras</option>
+													<option value="HK">Hong Kong</option>
+													<option value="HU">Hungary</option>
+													<option value="IS">Iceland</option>
+													<option value="IN">India</option>
+													<option value="ID">Indonesia</option>
+													<option value="IR">Iran</option>
+													<option value="IQ">Iraq</option>
+													<option value="IE">Ireland</option>
+													<option value="IM">Isle of Man</option>
+													<option value="IL">Israel</option>
+													<option value="IT">Italy</option>
+													<option value="CI">Ivory Coast</option>
+													<option value="JM">Jamaica</option>
+													<option value="JP">Japan</option>
+													<option value="JE">Jersey</option>
+													<option value="JO">Jordan</option>
+													<option value="KZ">Kazakhstan</option>
+													<option value="KE">Kenya</option>
+													<option value="KI">Kiribati</option>
+													<option value="KW">Kuwait</option>
+													<option value="KG">Kyrgyzstan</option>
+													<option value="LA">Laos</option>
+													<option value="LV">Latvia</option>
+													<option value="LB">Lebanon</option>
+													<option value="LS">Lesotho</option>
+													<option value="LR">Liberia</option>
+													<option value="LY">Libya</option>
+													<option value="LI">Liechtenstein</option>
+													<option value="LT">Lithuania</option>
+													<option value="LU">Luxembourg</option>
+													<option value="MO">Macao</option>
+													<option value="MG">Madagascar</option>
+													<option value="MW">Malawi</option>
+													<option value="MY">Malaysia</option>
+													<option value="MV">Maldives</option>
+													<option value="ML">Mali</option>
+													<option value="MT">Malta</option>
+													<option value="MH">Marshall Islands</option>
+													<option value="MQ">Martinique</option>
+													<option value="MR">Mauritania</option>
+													<option value="MU">Mauritius</option>
+													<option value="YT">Mayotte</option>
+													<option value="MX">Mexico</option>
+													<option value="FM">Micronesia</option>
+													<option value="MD">Moldova</option>
+													<option value="MC">Monaco</option>
+													<option value="MN">Mongolia</option>
+													<option value="ME">Montenegro</option>
+													<option value="MS">Montserrat</option>
+													<option value="MA">Morocco</option>
+													<option value="MZ">Mozambique</option>
+													<option value="MM">Myanmar</option>
+													<option value="NA">Namibia</option>
+													<option value="NR">Nauru</option>
+													<option value="NP">Nepal</option>
+													<option value="NL">Netherlands</option>
+													<option value="NC">New Caledonia</option>
+													<option value="NZ">New Zealand</option>
+													<option value="NI">Nicaragua</option>
+													<option value="NE">Niger</option>
+													<option value="NG">Nigeria</option>
+													<option value="NU">Niue</option>
+													<option value="NF">Norfolk Island</option>
+													<option value="KP">North Korea</option>
+													<option value="MK">North Macedonia</option>
+													<option value="MP">Northern Mariana Islands</option>
+													<option value="NO">Norway</option>
+													<option value="OM">Oman</option>
+													<option value="PK">Pakistan</option>
+													<option value="PS">Palestinian Territory</option>
+													<option value="PA">Panama</option>
+													<option value="PG">Papua New Guinea</option>
+													<option value="PY">Paraguay</option>
+													<option value="PE">Peru</option>
+													<option value="PH">Philippines</option>
+													<option value="PN">Pitcairn</option>
+													<option value="PL">Poland</option>
+													<option value="PT">Portugal</option>
+													<option value="PR">Puerto Rico</option>
+													<option value="QA">Qatar</option>
+													<option value="RE">Reunion</option>
+													<option value="RO">Romania</option>
+													<option value="RU">Russia</option>
+													<option value="RW">Rwanda</option>
+													<option value="BL">Saint Barthélemy</option>
+													<option value="SH">Saint Helena</option>
+													<option value="KN">Saint Kitts and Nevis</option>
+													<option value="LC">Saint Lucia</option>
+													<option value="SX">Saint Martin (Dutch part)</option>
+													<option value="MF">Saint Martin (French part)</option>
+													<option value="PM">Saint Pierre and Miquelon</option>
+													<option value="VC">Saint Vincent and the
+														Grenadines</option>
+													<option value="WS">Samoa</option>
+													<option value="SM">San Marino</option>
+													<option value="ST">São Tomé and Príncipe</option>
+													<option value="SA">Saudi Arabia</option>
+													<option value="SN">Senegal</option>
+													<option value="RS">Serbia</option>
+													<option value="SC">Seychelles</option>
+													<option value="SL">Sierra Leone</option>
+													<option value="SG">Singapore</option>
+													<option value="SK">Slovakia</option>
+													<option value="SI">Slovenia</option>
+													<option value="SB">Solomon Islands</option>
+													<option value="SO">Somalia</option>
+													<option value="ZA">South Africa</option>
+													<option value="GS">South Georgia/Sandwich Islands</option>
+													<option value="KR">South Korea</option>
+													<option value="SS">South Sudan</option>
+													<option value="ES">Spain</option>
+													<option value="LK">Sri Lanka</option>
+													<option value="SD">Sudan</option>
+													<option value="SR">Suriname</option>
+													<option value="SJ">Svalbard and Jan Mayen</option>
+													<option value="SE">Sweden</option>
+													<option value="CH">Switzerland</option>
+													<option value="SY">Syria</option>
+													<option value="TW">Taiwan</option>
+													<option value="TJ">Tajikistan</option>
+													<option value="TZ">Tanzania</option>
+													<option value="TH">Thailand</option>
+													<option value="TL">Timor-Leste</option>
+													<option value="TG">Togo</option>
+													<option value="TK">Tokelau</option>
+													<option value="TO">Tonga</option>
+													<option value="TT">Trinidad and Tobago</option>
+													<option value="TN">Tunisia</option>
+													<option value="TR">Turkey</option>
+													<option value="TM">Turkmenistan</option>
+													<option value="TC">Turks and Caicos Islands</option>
+													<option value="TV">Tuvalu</option>
+													<option value="UG">Uganda</option>
+													<option value="UA">Ukraine</option>
+													<option value="AE">United Arab Emirates</option>
+													<option value="GB">United Kingdom (UK)</option>
+													<option value="US">United States (US)</option>
+													<option value="UM">United States (US) Minor
+														Outlying Islands</option>
+													<option value="UY">Uruguay</option>
+													<option value="UZ">Uzbekistan</option>
+													<option value="VU">Vanuatu</option>
+													<option value="VA">Vatican</option>
+													<option value="VE">Venezuela</option>
+													<option value="VN">Vietnam</option>
+													<option value="VG">Virgin Islands (British)</option>
+													<option value="VI">Virgin Islands (US)</option>
+													<option value="WF">Wallis and Futuna</option>
+													<option value="EH">Western Sahara</option>
+													<option value="YE">Yemen</option>
+													<option value="ZM">Zambia</option>
+													<option value="ZW">Zimbabwe</option>
+												</select> <span class="msgError" id="error_country"></span>
+											</div>
+
+
+											<div class="col-sm-12 col-md-6"></div>
+										</div>
+									</fieldset>
+								</div>
+								<!-- Terms and Place Order -->
+
+								<div class="form-check mb-3 mt-3">
+									<label class="form-label" for="agreeTerms">By clicking
+										the Complete Order button below I agree to the <a
+										href="https://www.quickapostille.online/terms-and-conditions/"
+										target="_blank"> Terms & Conditions</a> of this service to
+										process my apostille or notary order starting immediately.
+									</label>
+								</div>
+								<div class="row">
+									<div class="col-xs-2 col-md-6">
+										<a href="order.jsp" class="btn btn-light w-75 mt-3"> <i
+											class="fa fa-arrow-left p-2" aria-hidden="true"></i> Back
+										</a>
+									</div>
+									<div class="col-xs-10 col-md-6">
+										<button class="btn btn-lg w-100 mt-3" type="submit"
+											id="submitbtn">
+											<i class="fa fa-credit-card p-2" aria-hidden="true"></i>
+											COMPLETE ORDER
+										</button>
+									</div>
+								</div>
+
+								<div class="row mt-5">
+									<div class="col-sm-12 col-xs-12">
+										<div style="text-align: center;">
+
+											<a target="_vbvLearnMore" href="vbv_learn_more.html"
+												border="0"><img border="0"
+												src="images/vbv_learn_more.gif" align="top" /></a>
+
+											&nbsp;&nbsp;&nbsp;&nbsp;<a target="_mcscLearnMore"
+												href="mcs_learn_more.html" border="0"><img border="0"
+												src="images/mcsc_learn_more.gif" align="top" /></a>
+
+											<p
+												style="text-align: justify; font-size: 11px; color: #999999">Your
+												card may be eligible or enrolled in Verified by Visa,
+												MasterCard SecureCode authentication programs. After
+												clicking the 'Complete Order' button, your Card Issuer may
+												prompt you for your payer authentication password to
+												complete your purchase.</p>
+										</div>
+									</div>
+
+								</div>
+
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-md-2 col-xs-0  order-2 ps-3"></div>
+				</div>
+			</form>
+		</div>
+
+	</section>
+
+
+	<!-- Footer-->
+
+
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm- 12 mt-3">
+					<section id="block-15"
+						class="widget widget_block widget_media_image">
+						<figure class="wp-block-image size-full is-resized">
+							<img decoding="async" src="images/logo-new-white-06.svg" alt=""
+								class="wp-image-3606" style="width: 238px; height: auto">
+						</figure>
+					</section>
+					<section id="block-14" class="widget widget_block widget_text">
+						<p>Quick Apostille provides quick, secure, and reliable
+							document authentication services. Our streamlined process ensures
+							accuracy, compliance, and hassle-free verification, making
+							document legalization simple and efficient.</p>
+					</section>
+				</div>
+				<div class="col-md-3 col-sm-12 mt-3">
+					<section id="nav_menu-4" class="widget widget_nav_menu">
+						<h2 class="widget-title">Quick Link</h2>
+						<nav class="menu-footer-menu-container" aria-label="Quick Link">
+							<ul class="menu-footer-menu">
+								<li id="menu-item" class="menu-item"><a
+									href="https://www.quickapostille.online/about-us/"
+									class="menu-link" target="_">About Us</a></li>
+								<li id="menu-item" class="menu-item"><a
+									rel="privacy-policy"
+									href="https://www.quickapostille.online/privacy-policy/"
+									class="menu-link" target="_">Privacy Policy</a></li>
+								<li id="menu-item" class="menu-item"><a
+									href="https://www.quickapostille.online/terms-and-conditions/"
+									class="menu-link" target="_">Terms and Conditions</a></li>
+								<li id="menu-item" class="menu-item"><a
+									href="https://www.quickapostille.online/faq/" class="menu-link"
+									target="_">FAQ</a></li>
+							</ul>
+						</nav>
+					</section>
+				</div>
+				<div class="col-md-3 col-sm-12 mt-3">
+
+					<section id="nav_menu-3" class="widget widget_nav_menu">
+						<h2 class="widget-title">Quick Services</h2>
+						<nav class="menu-services-container" aria-label="Quick Services">
+							<ul class="menu-footer-menu">
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2361"><a
+									href="https://www.quickapostille.online/products/apostille/"
+									class="menu-link" target="_">Apostille Certification</a></li>
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2362"><a
+									href="https://www.quickapostille.online/products/power-of-attorney-apostille/"
+									class="menu-link" target="_">Attorney Apostille</a></li>
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2363"><a
+									href="https://www.quickapostille.online/products/apostille/"
+									class="menu-link" target="_">Notarization Support</a></li>
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2364"><a
+									href="https://www.quickapostille.online/products/certified-copy-of-passport-id/"
+									class="menu-link" target="_">Certified copy of Passport/ID</a></li>
+							</ul>
+						</nav>
+					</section>
+				</div>
+				<div class="col-md-2 col-sm-12 mt-3">
+
+					<section id="block-44" class="widget widget_block">
+						<div
+							class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">
+							<div
+								class="wp-block-group is-layout-constrained wp-container-core-group-is-layout-1 wp-block-group-is-layout-constrained">
+								<div
+									class="wp-block-uagb-info-box uagb-block-b84b6894 uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top">
+									<div class="uagb-ifb-content">
+										<div class="uagb-ifb-title-wrap">
+											<h2 class="widget-title">Contact us</h2>
+										</div>
+										<p class="uagb-ifb-desc">+1(252) 579 0347</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ast-footer-copyright">
+					<p>
+						Copyright &#169;
+						<%=Calendar.getInstance().get(Calendar.YEAR)%>
+						Quick Apostille
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+		type="text/javascript"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js"></script>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+	<script src="js/checkout.js" data-rel-js></script>
+	<script src="js/stripe.js" data-rel-js></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script>
+		var selectedcurrency = "$";
+		$(function() {
+			loadPaymentKeys();
+			$.get("https://ipinfo.io", function(response) {
+				var userCountry = response.country;
+				$("#country").val(response.country);
+				$("#userIp").val(response.ip);
+			}, "jsonp");
+		});
+	</script>
+	<script type="text/javascript">
+		function loadPaymentKeys() {
+			$.ajax({
+				url : 'paykeys',
+				type : 'GET',
+				success : function(data) {
+
+				},
+				failure : function(data) {
+					console.log(data);
+				}
+			});
+		}
+	</script>
+	<script async data-id="101481203" src="//static.getclicky.com/js"></script>
+	<noscript>
+		<p>
+			<img alt="Clicky" width="1" height="1"
+				src="//in.getclicky.com/101481203ns.gif" />
+		</p>
+	</noscript>
+	<script type="text/javascript">
+	(function(c, l, a, r, i, t, y) {
+		c[a] = c[a] || function() {
+			(c[a].q = c[a].q || []).push(arguments)
+		};
+		t = l.createElement(r);
+		t.async = 1;
+		t.src = "https://www.clarity.ms/tag/" + i;
+		y = l.getElementsByTagName(r)[0];
+		y.parentNode.insertBefore(t, y);
+	})(window, document, "clarity", "script", "qtrh5lgmnl");
+</script>
+
+<!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 19110171;
+    window.__lc.integration_name = "manual_channels";
+    window.__lc.product_name = "livechat";
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/19110171/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+	
+</body>
+</html>

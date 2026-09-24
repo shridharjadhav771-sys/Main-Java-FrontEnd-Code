@@ -1,0 +1,98 @@
+package com.dakshabhi.orders.dao;
+
+import java.sql.ResultSet;
+import java.util.ArrayList;import com.ctc.wstx.util.StringUtil;
+import com.dakshabhi.common.db.QueryHelper;
+import com.dakshabhi.common.utility.StringUtility;
+import com.dakshabhi.orders.dto.OrderDTO;
+
+public class OrderDAO {
+
+	public static ArrayList<OrderDTO> getOrderList(String searchKeyword, String fromDate, String toDate,
+			String orderStatus) {
+
+		ArrayList<OrderDTO> orderList = new ArrayList<OrderDTO>(); 
+		QueryHelper qh = new QueryHelper();
+		
+		try {
+			String subSuery = "";
+			if(!"".equals(orderStatus)) {
+				subSuery = " and order_status = " + orderStatus;
+			}
+			String sql = "select * from qa_order where 1=1  " + subSuery + " and  date_created >= ? and date_created <= ? order by id desc";
+			qh.addParam(fromDate);
+			qh.addParam(toDate);
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			while(rs.next()) {
+				OrderDTO orderDTO = new OrderDTO();
+				orderDTO.setOrderId(rs.getString("id"));
+				orderDTO.setDateCreated(rs.getString("date_created"));
+				orderDTO.setTimeCreated(rs.getString("time_created"));
+				orderDTO.setFirstName(rs.getString("first_name"));
+				orderDTO.setLastName(rs.getString("last_name"));
+				orderDTO.setEmail(rs.getString("email"));
+				orderDTO.setPhone(rs.getString("phone_no"));
+				orderDTO.setPaymentId("");
+				if(rs.getInt("order_status") ==1) {
+					orderDTO.setPaymentId(getPaymentID(rs.getInt("id")));
+				}
+				orderDTO.setShippingMethod(StringUtility.removeNull(rs.getString("shipping_method")));
+				orderDTO.setShippingCost(String.format("%.2f", rs.getDouble("shipping_cost")));
+				orderDTO.setDocumentName(StringUtility.removeNull(rs.getString("document_name")));
+				orderDTO.setAdditionalServices(getAdditionalService(rs.getString("id")));
+				orderDTO.setOrderStatus(rs.getString("order_status"));
+				orderDTO.setCurrencyCode(StringUtility.removeNull(rs.getString("currency_code")));
+				orderDTO.setCountry(StringUtility.removeNull(rs.getString("country")));
+				orderDTO.setTotalCost(String.format("%.2f", rs.getDouble("order_total_amount")));
+				orderDTO.setUserIP(StringUtility.removeNull(rs.getString("user_ip")));
+				orderList.add(orderDTO);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		
+		
+		return orderList;
+	}
+
+	private static String getPaymentID(int orderID) {
+		QueryHelper qh = new QueryHelper(); 
+		try {
+			String sql = "select * from qa_order_payment where order_id = ?";
+			qh.addParam(orderID);
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			
+			if(rs.next()) {
+				return  rs.getString("payment_id");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return "";
+	}
+
+	private static String getAdditionalService(String orderID) {
+		QueryHelper qh = new QueryHelper();
+		String services = "";
+		try {
+			String sql = "select * from qa_order_products where order_id = ?";
+			qh.addParam(orderID);
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			
+			while(rs.next()) {
+				services += rs.getString("prodcut_name") + "<br/>";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		
+		return services;
+	}
+
+}

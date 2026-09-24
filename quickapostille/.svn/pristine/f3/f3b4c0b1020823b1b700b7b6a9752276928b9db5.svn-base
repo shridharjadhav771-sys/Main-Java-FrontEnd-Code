@@ -1,0 +1,69 @@
+package com.dakshabhi.product.dao;
+
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import com.dakshabhi.common.db.QueryHelper;
+import com.dakshabhi.product.dto.AddonsDTO;
+import com.dakshabhi.product.dto.ProductServiceDTO;
+
+public class ProductServiceDAO {
+	public ProductServiceDTO getProductDetails(int id, String name) {
+		QueryHelper qh = new QueryHelper();
+		try {
+			String sql = "SELECT * FROM qa_items WHERE item_id = ? and item_name = ? and is_deleted = 0";
+			qh.addParam(id);
+			qh.addParam(name);
+			ResultSet rs = qh .runQueryStreamResults(sql);
+			if(rs.next()) {
+				ProductServiceDTO dto = new ProductServiceDTO();
+				dto.setId(rs.getInt("id"));
+				dto.setItem_category(rs.getString("item_categrory"));
+				dto.setItem_id(rs.getInt("item_id"));
+				String item_name = rs.getString("item_name");
+				if(item_name.equalsIgnoreCase("Certified Copy of Passport Id")) {
+					item_name = "Certified Copy of Passport/ID";
+				}
+				dto.setItem_name(item_name);
+				dto.setItem_price(rs.getDouble("item_price"));
+				dto.setItem_uae_price(rs.getDouble("item_uae_price"));
+				dto.setItem_us_price(rs.getDouble("item_us_price"));
+				dto.setItem_gbp_price(rs.getDouble("item_gbp_price"));
+				dto.setItem_euro_price(rs.getDouble("item_euro_price"));
+				return dto;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return null;
+		
+	}
+
+	public ArrayList<AddonsDTO> getAddonsPrice() {
+		QueryHelper qh = new QueryHelper();
+		ArrayList<AddonsDTO> list = new ArrayList<>();
+		try {
+			String sql = "SELECT * FROM qa_addons WHERE is_deleted = 0";
+			ResultSet rs = qh .runQueryStreamResults(sql);
+			while(rs.next()) {
+				AddonsDTO dto = new AddonsDTO();
+				dto.setId(rs.getInt("id"));
+				dto.setAddon_name(rs.getString("name"));
+				dto.setDefault_price(rs.getDouble("default_price"));
+				dto.setUs_price(rs.getDouble("us_price"));
+				dto.setGbp_price(rs.getDouble("gbp_price"));
+				dto.setUae_price(rs.getDouble("uae_price"));
+				dto.setEuro_price(rs.getDouble("euro_price"));
+				list.add(dto);
+			}			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return list;
+	}
+	
+}

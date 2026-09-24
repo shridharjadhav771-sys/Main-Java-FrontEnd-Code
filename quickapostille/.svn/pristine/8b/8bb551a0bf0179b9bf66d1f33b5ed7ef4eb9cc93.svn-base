@@ -1,0 +1,79 @@
+package com.dakshabhi.payment.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+import com.stripe.Stripe;
+import com.stripe.model.Customer;
+import com.stripe.model.PaymentIntent;
+
+public class StripeOperations {
+
+	public String createPaymentIntent(String roundAmount, CustomerDetails userDetail, String stripeapiKey, String orderNo, boolean isShippingAdded) {
+		// TODO Auto-generated method stub
+		
+		try { 			
+			Stripe.apiKey = stripeapiKey;			
+			String customerID = ""; 
+			Map<String, Object> customerParams = new HashMap<String, Object>();
+			customerParams.put("description", "Customer " + userDetail.getFirstName() + " " + userDetail.getLastName());
+			customerParams.put("email", userDetail.getEmail());
+			//customerParams.put("source", token); 
+			orderNo = "F"+ orderNo;
+			Map<String, Object> mataParams = new HashMap<String, Object>();		 
+			mataParams.put("email",  userDetail.getEmail());
+			mataParams.put("fullname", userDetail.getFirstName() + " " + userDetail.getLastName());
+			mataParams.put("orderid", orderNo);
+			 
+			//mataParams.put("userip", "");
+			
+			// ^ obtained with Stripe.js
+			Customer customer = Customer.create(customerParams);
+			if(!customer.getId().equals("")){
+				System.out.println("Customer ID is " + customer.getId());
+				customerID = customer.getId();			
+			}
+			
+			Map<String, Object> paymentintentParams = new HashMap<String, Object>();
+			paymentintentParams.put("amount", roundAmount);
+			paymentintentParams.put("currency",userDetail.getCurrency()); //GBP //EUR
+			paymentintentParams.put("capture_method", "automatic");
+			paymentintentParams.put("customer", customerID);
+			paymentintentParams.put("metadata", mataParams); 
+			
+			//paymentintentParams.put("statement_descriptor", "Postal Address Change");			
+			paymentintentParams.put("description", "Quick Apostille Order For: " +  orderNo);
+			
+			
+			ArrayList paymentMethodTypes = new ArrayList();
+			paymentMethodTypes.add("card");
+			paymentintentParams.put("payment_method_types", paymentMethodTypes); 
+			if(isShippingAdded){
+				//Setup Shipping
+				Map<String, Object> shipping = new HashMap<String, Object>();
+				Map<String, Object> shippingAddress = new HashMap<String, Object>();
+				shippingAddress.put("line1", userDetail.getShippingStreet());
+				shippingAddress.put("city", userDetail.getShippingCity());
+				shippingAddress.put("state", userDetail.getShippingState());
+				shippingAddress.put("postal_code", userDetail.getShippingZip());
+				shippingAddress.put("country", userDetail.getShippingCountry());
+				
+				shipping.put("address", shippingAddress);
+				shipping.put("name", userDetail.getFirstName() + " " + userDetail.getLastName());
+				paymentintentParams.put("shipping", shipping);
+			}
+			
+			PaymentIntent paymentIntent = PaymentIntent.create(paymentintentParams);
+			String clientSecret = paymentIntent.getClientSecret();
+			
+			
+			return clientSecret;
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		
+		return "";
+	}
+}

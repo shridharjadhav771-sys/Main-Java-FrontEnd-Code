@@ -1,0 +1,997 @@
+
+<!DOCTYPE html>
+
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start' : new Date().getTime(),
+			event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+				+ l
+				: '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-WSFP6M7W');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<link rel="canonical" href="https://www.quickapostille.online/apostille" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title"
+	content="Apostille Service - Get an Apostille in 1 day - For any document" />
+<meta property="og:description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<meta property="og:url" content="https://www.quickapostille.online/" />
+<meta property="og:site_name"
+	content="Apostille for Any Document from Any Country" />
+<title>Apostille | Quick Apostille</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="images/favicon-07.png" />
+<!-- Bootstrap icons-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" type="text/css" />
+<!-- Google fonts-->
+<link href='https://fonts.googleapis.com/css?family=Titillium Web'
+	rel='stylesheet'>
+
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- forfaq -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- forfaq -->
+<script async data-id="101481203" src="//static.getclicky.com/js"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<noscript>
+	<p>
+		<img alt="Clicky" width="1" height="1"
+			src="//in.getclicky.com/101481203ns.gif" />
+	</p>
+</noscript>
+
+<style>
+#headerImageSection {
+	box-shadow: 0px 0px #00000070;
+	padding-top: 150px;
+	padding-bottom: 200px;
+	padding-left: 0px;
+	padding-right: 0px;
+	overflow: visible;
+	border-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 30% 30%;
+	background-size: cover;
+	position: relative;
+	background-image: url(images/about-us.webp);
+	background-clip: padding-box;
+}
+
+#headerImageSection:before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	top: -0px;
+	left: -0px;
+	width: calc(100% + 0px + 0px);
+	height: calc(100% + 0px + 0px);
+	border-color: inherit;
+	background: #070614;
+	opacity: 0.6;
+}
+
+section#headerImageSection>div {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+section#headerImageSection>div>div>h1 {
+	font-size: 55px;
+	font-weight: 700;
+}
+
+.seprator_faq {
+	width: 40%;
+	border-top-width: 5px;
+	border-top-style: solid;
+	margin-bottom: 0px;
+	align-items: center;
+	position: absolute;
+	border-top-width: 5px;
+	border-top-color: #333;
+	border-top-style: solid;
+	margin-bottom: 20pxpx;
+	align-items: center;
+	position: absolute;
+}
+
+.seprator {
+	width: 6%;
+	border-top-width: 5px;
+	border-top-style: solid;
+	margin-bottom: 0px;
+	align-items: center;
+	position: absolute;
+	border-top-width: 5px;
+	border-top-color: #333;
+	border-top-style: solid;
+	margin-bottom: 20pxpx;
+	align-items: center;
+	position: absolute;
+}
+
+.seprator_head {
+	width: 6%;
+	border-top-width: 5px;
+	border-top-style: solid;
+	margin-bottom: 0px;
+	align-items: center;
+	position: absolute;
+	border-top-width: 6px;
+	border-top-color: #ffffff;
+	border-top-style: solid;
+	margin-bottom: 20px;
+	align-items: center;
+	position: absolute;
+}
+
+}
+#services-sections {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+.product-sections-inside-h3 {
+	color: #0f172a;
+	margin-top: 15px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.3em;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.product-sections-inside-p {
+	color: #0f172a;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3em;
+	margin-top: 10px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.get-apostille-span {
+	color: #2c4a6e;
+	background: #f2d299;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 35px;
+	padding-left: 35px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	font-weight: 800;
+	font-size: 14px;
+}
+
+.getStarted {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
+.getStarted-p {
+	font-family: 'Titillium Web', sans-serif;
+	font-size:;
+	font-weight:;
+	color: #FFFFFF;
+	font-weight:;
+	text-align: center
+}
+
+#getStarted-section {
+	min-height: 440px;
+	box-shadow: 0px 0px #00000070;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	margin-left: 0px;
+	margin-right: 0px;
+	overflow: visible;
+	order: initial;
+	border-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-clip: padding-box;
+	row-gap: 20px;
+	column-gap: 20px;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	background-image: url(images/call-to-action-1.webp);
+}
+
+#getStarted-section:before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	top: -0px;
+	left: -0px;
+	width: calc(100% + 0px + 0px);
+	height: calc(100% + 0px + 0px);
+	border-color: inherit;
+	background: #070614;
+	opacity: 0.6;
+}
+
+section#getStarted-section>div {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+#get-started-button {
+	background-color: #0067ff;
+	letter-spacing: 1px;
+	color: #ffffff;
+	padding-left: 20px;
+	font-weight: 500;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: inline-block;
+	transition: color 0.3s ease, border-color 0.3s ease;
+	border-radius: 0;
+}
+
+#get-started-button:hover {
+	background-color: #0067ff;
+}
+
+#get-started-button::before {
+	content: "";
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, #F1CC8A 0%, #f1cc8a 100%);
+	z-index: -1;
+	transition: top 0.4s ease;
+}
+
+#get-started-button:hover::before {
+	top: 0;
+}
+
+.testimonial {
+	align-items: center;
+	text-align: center;
+	justify-items: center;
+}
+
+#containers-padding {
+	padding-top: 40px
+}
+
+.our-services-box>div>h3 {
+	color: #0F172A;
+	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 2.5em;
+}
+
+#section-everything {
+	background-color: #f5f5f5;
+}
+
+#section-everything img {
+	width: 600px;
+	height: 450px;
+	width: 600px;
+}
+
+#section-everything-inside {
+	padding-right: 30px;
+}
+
+.everithing-svg {
+	box-sizing: content-box;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	color: #364151;
+	width: 16px;
+	height: 16px;
+	color: #0F172A;
+	fill: #0F172A;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.how-services-work-box {
+	border: solid;
+	border: solid;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 1px;
+	padding-right: 1px;
+	border-color: #364151;
+	background-color: #f5f5f5;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 5px;
+	box-shadow: 1px 8px 8px -4px #00000070;
+}
+
+.how-services-work-box-svg {
+	box-sizing: content-box;
+	text-align: center;
+	line-height: 30px;
+	font-size: 30px;
+	color: #333;
+	fill: #333;
+	width: 45px;
+	height: 30px;
+}
+
+#section-how-services-work {
+	
+}
+
+/* faq-style */
+.question {
+	background-color: #D1DAE5;
+	border-radius: 5px;
+	margin-bottom: 8px;
+	border: solid;
+	border-color: #D1DAE5;
+	border-width: 1px 1px 1px 1px !important;
+}
+
+.question-inside-box {
+	border-left: 4px solid;
+	border-left-color: #2b394e;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.question-inside {
+	padding-top: 15px;
+}
+
+.answer {
+	background-color: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: none;
+	padding-left: 5px;
+}
+
+.span-space {
+	padding-left: 10px;
+}
+
+.container_for_faq {
+	padding-top: 20px;
+	padding-right: 30px;
+	padding-left: 30px;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+/* faq-style-ends */
+.legalization-image {
+	object-fit: cover;
+	width: 600px;
+	height: 450px;
+	/* background-image: url(images/Apostille-Legalization-Updates.webp); */
+	border-radius: 5px;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+</style>
+
+
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSFP6M7W"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="container top-bar d-flex p-2">
+		<div class="col-4 col-sm-0 text-start d-none d-sm-block">
+			<strong><img class="alignnone" src="images/mail-1.png"
+				alt="mail" width="24" height="24">&nbsp;&nbsp;<span
+				style="color: #203852">contact@quickapostille.online</span></strong>
+		</div>
+
+		<div class="col-md-3 col-sm-12 text-center">
+			<strong><img class="alignnone" src="images/phone 2-01.png"
+				alt="phone" width="24" height="24">&nbsp;&nbsp; <span href="#"
+				style="color: #203852; text-decoration: none">+1(252) 579
+					0347</span></strong>
+		</div>
+
+		<div class="col-5 col-sm-0  text-end  d-none d-sm-block">
+			<span style="color: #203852"><strong> <img
+					class="alignnone"
+					src="images/WXibs0O8_400x400-removebg-preview-300x300.png" alt=""
+					width="29" height="29">Official HCCH Hague Convention
+					Documentation
+			</strong></span>
+		</div>
+	</div>
+
+	<!-- Navigation-->
+	<%@ include file="nav.jsp"%>
+	<!-- Navigation end-->
+	<section id="headerImageSection">
+		<div class="container flex text-center">
+			<div class="d-flex justify-content-center">
+				<div class="seprator_head"></div>
+			</div>
+			<div class="d-flex justify-content-center">
+
+				<h1 class="lh-lg">
+					Stay Informed: Key Changes in Apostille<br> and Document
+					Legalization
+				</h1>
+
+			</div>
+			<p class="lh-lg">
+				Staying informed about the latest changes in Apostille and document
+				legalization processes is essential for individuals and businesses
+				dealing <br> with international documentation.
+			</p>
+		</div>
+	</section>
+	<section>
+		<div class="container mb-5">
+
+			<div class="row mt-5">
+
+				<div class="col-12 col-md-6 p-4">
+					<img alt="about_us_image" src="images/About-us-cover-image.png"
+						class="img-fluid">
+
+				</div>
+				<div class="col-12 col-md-6 p-4">
+					<div class="seprator"></div>
+					<h2 class="lh-lg">Apostille & Legalization Made Easy: New
+						Changes and What They Mean for You</h2>
+
+					<p class="lh-base mt-5">
+						In today's global world, official documents often need to be
+						recognized abroad-whether you're applying for higher education,
+						immigration, business expansion, or personal reasons like marriage
+						or birth registration. This is where <strong>Apostille
+							and Legalization</strong> services play a vital role. Staying up to date
+						with the latest changes ensures a smoother and faster process for
+						all your international documentation needs.
+					</p>
+				</div>
+
+
+			</div>
+
+		</div>
+
+
+	</section>
+	<section id="section-everything">
+		<div class="container-md pt-5">
+			<div class="row mt-5">
+				<div class="col-md-6 col-sm-3">
+					<h2>
+						Everything You Should Know About<br> the Latest Apostille &
+						Legalization<br> Updates
+					</h2>
+				</div>
+				<div class="col-md-6 col-sm-3 ">
+					<p>
+						Apostille and legalization are international processes used to
+						verify the authenticity of documents. While <strong>Apostille</strong>
+						is used between countries that are members of the Hague
+						Convention, <strong>Legalization</strong> applies to non-member
+						countries and usually requires additional embassy-level
+						verification.
+					</p>
+				</div>
+			</div>
+			<div class="row mt-5 pb-5">
+				<div class="col-md-6 col-sm-3 " id="section-everything-inside">
+					<div
+						class="row mt-5 border border-secondary border-top-0 border-end-0 border-start-0">
+
+						<div class="col-md-6 col-sm-3">
+							<div>
+								<span> <svg xmlns="https://www.w3.org/2000/svg"
+										viewBox="0 0 448 512" class="everithing-svg">
+										<path
+											d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"></path></svg>
+
+								</span>
+
+							</div>
+							<div>
+								<h3>Hague Apostille Convention</h3>
+							</div>
+							<p>simplifying the process for their citizens.</p>
+						</div>
+						<div class="col-md-6 col-sm-3">
+							<div>
+								<span> <svg xmlns="https://www.w3.org/2000/svg"
+										viewBox="0 0 448 512" class="everithing-svg">
+										<path
+											d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"></path></svg>
+
+								</span>
+
+							</div>
+
+
+							<div>
+								<h3>Online apostille systems</h3>
+							</div>
+							<p>being implemented in countries like USA for faster
+								service.</p>
+						</div>
+
+					</div>
+					<div class="row mt-5 mb-5">
+						<div class="col-md-6 col-sm-3">
+							<div>
+								<span> <svg xmlns="https://www.w3.org/2000/svg"
+										viewBox="0 0 448 512" class="everithing-svg">
+										<path
+											d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"></path></svg>
+
+								</span>
+
+							</div>
+
+							<div>
+								<h3>Stricter document checks</h3>
+							</div>
+							<p>especially for educational & legal documents, to prevent
+								fraud.</p>
+						</div>
+						<div class="col-md-6 col-sm-3">
+							<div>
+								<span> <svg xmlns="https://www.w3.org/2000/svg"
+										viewBox="0 0 448 512" class="everithing-svg">
+										<path
+											d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"></path></svg>
+
+								</span>
+
+							</div>
+
+							<div>
+								<h3>Extended processing time</h3>
+							</div>
+							<p>in some regions due to increased application volumes.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-3">
+					<div>
+						<img alt="about_us_image"
+							src="images/Apostille-Legalization-Updates.webp"
+							class="img-fluid rounded">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+	<section id="section-how-services-work">
+		<div class="container flex p-5">
+
+			<div class="row">
+				<div>
+					<h3 class="d-flex justify-content-center">How Our Apostille &
+						Legalization Services Work</h3>
+				</div>
+				<p class="d-flex justify-content-center">With so many updates
+					and evolving regulations, choosing a reliable service provider
+					makes all the difference. Here's why clients trust us:</p>
+			</div>
+		</div>
+		<div class="container mb-5">
+			<div class="row ">
+
+				<div class="col-sm m-1 ">
+					<div class="text-center how-services-work-box">
+						<div class=" justify-content-center">
+							<svg class="how-services-work-box-svg"
+								xmlns="https://www.w3.org/2000/svg" viewBox="0 0 384 512">
+								<path
+									d="M256 0v128h128L256 0zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM272 416h-160C103.2 416 96 408.8 96 400C96 391.2 103.2 384 112 384h160c8.836 0 16 7.162 16 16C288 408.8 280.8 416 272 416zM272 352h-160C103.2 352 96 344.8 96 336C96 327.2 103.2 320 112 320h160c8.836 0 16 7.162 16 16C288 344.8 280.8 352 272 352zM288 272C288 280.8 280.8 288 272 288h-160C103.2 288 96 280.8 96 272C96 263.2 103.2 256 112 256h160C280.8 256 288 263.2 288 272z"></path></svg>
+						</div>
+						<div>
+							<h4 class="justify-content-center">Global Support</h4>
+						</div>
+						<p class=" justify-content-center">Whether you're from New
+							York, Los Angeles, Taxes or any remote area, we provide
+							nationwide pickup and delivery.</p>
+					</div>
+
+
+				</div>
+				<div class="col-sm m-1 ">
+					<div class="text-center how-services-work-box">
+						<div class="justify-content-center">
+							<svg class="how-services-work-box-svg"
+								xmlns="https://www.w3.org/2000/svg" viewBox="0 0 384 512">
+								<path
+									d="M256 0v128h128L256 0zM224 128L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V160h-127.1C238.3 160 224 145.7 224 128zM272 416h-160C103.2 416 96 408.8 96 400C96 391.2 103.2 384 112 384h160c8.836 0 16 7.162 16 16C288 408.8 280.8 416 272 416zM272 352h-160C103.2 352 96 344.8 96 336C96 327.2 103.2 320 112 320h160c8.836 0 16 7.162 16 16C288 344.8 280.8 352 272 352zM288 272C288 280.8 280.8 288 272 288h-160C103.2 288 96 280.8 96 272C96 263.2 103.2 256 112 256h160C280.8 256 288 263.2 288 272z"></path></svg>
+						</div>
+						<div>
+							<h4 class=" justify-content-center">Document Handling</h4>
+						</div>
+						<p class=" justify-content-center">Our team understands the
+							document process for multiple countries and guides you with
+							precision.</p>
+					</div>
+
+
+				</div>
+				<div class="col-sm m-1 ">
+					<div class="text-center how-services-work-box">
+						<div class="d-flex justify-content-center">
+							<svg class="how-services-work-box-svg"
+								xmlns="https://www.w3.org/2000/svg" viewBox="0 0 384 512">
+								<path
+									d="M272 0C289.7 0 304 14.33 304 32C304 49.67 289.7 64 272 64H256V98.45C293.5 104.2 327.7 120 355.7 143L377.4 121.4C389.9 108.9 410.1 108.9 422.6 121.4C435.1 133.9 435.1 154.1 422.6 166.6L398.5 190.8C419.7 223.3 432 262.2 432 304C432 418.9 338.9 512 224 512C109.1 512 16 418.9 16 304C16 200 92.32 113.8 192 98.45V64H176C158.3 64 144 49.67 144 32C144 14.33 158.3 0 176 0L272 0zM248 192C248 178.7 237.3 168 224 168C210.7 168 200 178.7 200 192V320C200 333.3 210.7 344 224 344C237.3 344 248 333.3 248 320V192z"></path></svg>
+						</div>
+
+						<div>
+							<h4 class="justify-content-center">Faster Processing</h4>
+						</div>
+						<p class=" justify-content-center">We stay updated with the
+							latest rules, which helps avoid rejections and unnecessary
+							delays.</p>
+					</div>
+
+
+				</div>
+				<div class="col-sm m-1 ">
+					<div class="text-center how-services-work-box">
+						<div class="d-flex justify-content-center">
+							<svg class="how-services-work-box-svg"
+								xmlns="https://www.w3.org/2000/svg" viewBox="0 0 384 512">
+								<path
+									d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM177.8 63.19L187.8 80.62C190.5 85.46 192 90.93 192 96.5V137.9C192 141.8 193.6 145.6 196.3 148.3C202.6 154.6 212.8 153.1 218.3 147.1L231.9 130.1C236.6 124.2 244.8 122.4 251.6 125.8L266.8 133.4C270.2 135.1 273.1 136 277.8 136C284.3 136 290.6 133.4 295.2 128.8L299.1 124.9C302 121.1 306.5 121.2 310.1 123.1L339.4 137.7C347.1 141.6 352 149.5 352 158.1C352 168.6 344.9 177.8 334.7 180.3L299.3 189.2C291.9 191 284.2 190.7 276.1 188.3L244.1 177.7C241.7 176.6 238.2 176 234.8 176C227.8 176 220.1 178.3 215.4 182.5L176 212C165.9 219.6 160 231.4 160 244V272C160 298.5 181.5 320 208 320H240C248.8 320 256 327.2 256 336V384C256 401.7 270.3 416 288 416C298.1 416 307.6 411.3 313.6 403.2L339.2 369.1C347.5 357.1 352 344.5 352 330.7V318.6C352 314.7 354.6 311.3 358.4 310.4L363.7 309.1C375.6 306.1 384 295.4 384 283.1C384 275.1 381.2 269.2 376.2 264.2L342.7 230.7C338.1 226.1 338.1 221 342.7 217.3C348.4 211.6 356.8 209.6 364.5 212.2L378.6 216.9C390.9 220.1 404.3 215.4 410.1 203.8C413.6 196.8 421.3 193.1 428.1 194.6L456.4 200.1C431.1 112.4 351.5 48 256 48C228.3 48 201.1 53.4 177.8 63.19L177.8 63.19z"></path></svg>
+						</div>
+						<div>
+							<h4 class="d-flex justify-content-center">Global Support</h4>
+						</div>
+						<p class="d-flex justify-content-center">Whether you're from
+							Delhi, Mumbai, Chennai, or any remote area, we provide nationwide
+							pickup and delivery.</p>
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+
+	</section>
+
+
+
+	<section class="testimonials-section">
+		<div class="d-flex justify-content-center">
+			<div class="seprator"></div>
+
+		</div>
+		<div class="container" id="containers-padding">
+
+			<div class="section-header">
+
+				<h2>What Our Clients Say</h2>
+				<p>Hear from our satisfied clients who have experienced our
+					quick, reliable, and hassle-free document authentication services.</p>
+			</div>
+
+			<div class="testimonial-carousel">
+				<div class="testimonial">
+					<p class="testimonial-desc">Quick Apostille handled my marriage
+						certificate apostille seamlessly. The team was responsive and
+						guided me at every step.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-1.png" alt="Emily Carter"> <span
+							class="author">Emily Carter</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">They helped me get my birth
+						certificate apostilled within days. The communication was
+						excellent and everything was done digitally.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-2.png" alt="Michael Trujillo"> <span
+							class="author">Michael Trujillo</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">We were traveling abroad and needed
+						a minor travel consent notarized urgently. Their team came through
+						at the right time.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-3.png" alt="Olivia Brown"> <span
+							class="author">Olivia Brown</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">A hassle-free and smooth process!
+						The team was supportive, and my documents were verified quickly.
+						Great service.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-6.png" alt="Andrea Sanders"> <span
+							class="author">Andrea Sanders</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">The entire process for my Power of
+						Attorney notarization was quick and smooth. I didn't have to worry
+						about anything highly recommend!</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-5.png" alt="Scott R. Pierce"> <span
+							class="author">Scott R. Pierce</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">Professional, efficient, and
+						reliable. They handled my request with care and delivered on time.
+						Fantastic experience.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-4.png" alt="Gerald L."> <span
+							class="author">Gerald L.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="getStarted-section" class="d-flex justify-content-center">
+
+		<div>
+			<div>
+
+				<div>
+					<h2 class="getStarted d-flex justify-content-center text-center">
+						Need Help with Apostille or<br> Legalization?
+					</h2>
+				</div>
+
+				<p class="getStarted-p">
+					We specialize in <strong>seamless, quick, and reliable
+						apostille and legalization<br>services
+					</strong> for personal, educational, and commercial documents. Let us handle<br>
+					the complexities while you focus on your goals.
+				</p>
+
+
+			</div>
+			<div class="d-flex justify-content-center">
+				<a class="btn" href="contact.jsp" role="button"><span
+					id="get-started-button">Contact Us</span></a>
+			</div>
+		</div>
+	</section>
+	<!-- faq -->
+	<section>
+		<div>
+			<h3 class="d-flex justify-content-center pb-3 pt-5">Frequently
+				Asked Questions</h3>
+			<div class="d-flex justify-content-center pb-3">
+				<div class="seprator_faq"></div>
+
+			</div>
+		</div>
+
+		<div class="container  pb-5 pt-3">
+
+			<div class="question ">
+				<div class="d-flex flex-row question-inside-box">
+					<div class="question-inside">
+						<p>
+							<span class="span-space "><i class="fa fa-plus"></i></span><span
+								class="span-space " data-bs-target="#ans1">What is the
+								difference between Apostille and Legalization?</span>
+						<p>
+					</div>
+				</div>
+
+
+				<div class="answer">
+					<span class="span-space" id="ans1">Apostille is used for
+						countries that are part of the Hague Convention. Legalization
+						involves embassy-level attestation for non-member countries.</span>
+				</div>
+
+
+
+			</div>
+			<div class="question">
+				<div class="d-flex flex-row question-inside-box">
+					<div class="question-inside">
+						<p>
+							<span class="span-space "><i class="fa fa-plus"></i></span><span
+								class="span-space " data-bs-target="#ans1">How long does
+								the apostille process take?</span>
+						<p>
+					</div>
+				</div>
+				<div class="answer">
+					<span class="span-space" id="ans2">Typically, it takes 2 to
+						7 business days, depending on the document type and location.</span>
+				</div>
+
+			</div>
+			<div class="question">
+				<div class="d-flex flex-row question-inside-box">
+					<div class="question-inside">
+						<p>
+							<span class="span-space "><i class="fa fa-plus"></i></span><span
+								class="span-space " data-bs-target="#ans1">Can I
+								apostille my documents online?</span>
+						<p>
+					</div>
+				</div>
+				<div class="answer">
+					<span class="span-space" id="ans3">Yes, in some countries
+						like India, certain educational and personal documents can be
+						apostilled via the e-Sanad portal.</span>
+				</div>
+
+			</div>
+			<div class="question">
+				<div class="d-flex flex-row question-inside-box">
+					<div class="question-inside">
+						<p>
+							<span class="span-space "><i class="fa fa-plus"></i></span><span
+								class="span-space " data-bs-target="#ans1">Which
+								documents can be apostilled or legalized?</span>
+						<p>
+					</div>
+				</div>
+				<div class="answer">
+					<span class="span-space" id="ans4">Birth certificates,
+						marriage certificates, degree certificates, affidavits, and
+						commercial documents can all be processed.</span>
+				</div>
+
+			</div>
+			<div class="question">
+				<div class="d-flex flex-row question-inside-box">
+					<div class="question-inside">
+						<p>
+							<span class="span-space "><i class="fa fa-plus"></i></span><span
+								class="span-space " data-bs-target="#ans1">What if my
+								document is not in English?</span>
+						<p>
+					</div>
+				</div>
+				<div class="answer">
+					<span class="span-space" id="ans5">In most cases, a
+						certified translation will be required before processing.</span>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+
+	</section>
+	<!-- faq-ends -->
+	<!-- Footer-->
+
+
+	<%@ include file="footer.jsp"%>
+	<!-- footer end -->
+
+	<script type="text/javascript">
+	$(document).ready(
+			function() {
+
+				// Close all open answers and reset icons on load
+				$(".answer").css("display", "none");
+				$("#ans1").slideDown("slow");
+				$(".question").click(
+						function() {
+
+							const answer = $(this).find(".answer");
+
+							if (answer.is(":hidden")) {
+								// Close all open answers and reset icons
+								$(".answer").slideUp("slow");
+								$("i").removeClass("fa-minus").addClass(
+										"fa-plus");
+								$(".question-inside-box").css("border-left-color", "#2B394E");
+								$(".question-inside-box").css( "border-bottom-left-radius", "5px");
+								
+
+								// Open the selected answer and update icon
+								answer.slideDown("slow");
+								$(this).find(".question-inside-box").css("border-left-color", "#f1cc8a");
+								$(this).find("i").removeClass("fa-plus").addClass("fa-minus");
+								$(this).find(".question-inside-box").css( "border-bottom-left-radius", "0px");
+							} else {
+								// Close the selected answer and reset icon
+								answer.slideUp("slow");
+								$(this).find(".question-inside-box").css("border-left-color", "#2B394E");
+								$(this).find("i").removeClass("fa-minus").addClass("fa-plus");
+								$(this).find(".question-inside-box").css( "border-bottom-left-radius", "5px");
+							}
+
+						});
+
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+package com.dakshabhi.payment.service;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dakshabhi.payment.dto.PaymentKeysDTO;
+import com.google.gson.Gson;
+import com.stripe.Stripe;
+import com.stripe.model.PaymentIntent;
+
+@WebServlet("/stripecheckout")
+public class StripeCheckout extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			PaymentKeysDTO paymentKeysDTO = request.getSession().getAttribute("paymentKeysDTO")== null ? null: (PaymentKeysDTO)request.getSession().getAttribute("paymentKeysDTO");
+			String stripeapiKey = paymentKeysDTO.getAuthKey();
+			Stripe.apiKey = stripeapiKey; 
+			String payid = request.getParameter("stripeToken") == null ? "" : request.getParameter("stripeToken");
+			System.out.println("stripeapiKey " + stripeapiKey);
+			System.out.println("payid " + payid);
+			response.setContentType("application/json");
+			Gson gson = new Gson();
+			if(!"".equals(payid) && !"".equals(stripeapiKey)){ 
+				PaymentIntent paymentIntent = PaymentIntent.retrieve(payid);
+				System.out.println("Payment Status for " + payid + " " + paymentIntent.getStatus());
+				
+				if (paymentIntent.getStatus().equalsIgnoreCase("requires_capture") || paymentIntent.getStatus().equalsIgnoreCase("succeeded")) { 
+					request.getSession().removeAttribute("stripeClientSecret");
+					request.getSession().removeAttribute("orderDTO");
+					request.getSession().removeAttribute("addonList");
+					Map map = new HashMap();
+					map.put("paymentId", paymentIntent.getId());
+					map.put("authorizationCode", payid);
+					map.put("payment", "sucess");   
+					response.getWriter().write(gson.toJson(map));
+				}else {
+					Map map = new HashMap(); 
+					map.put("message", "Card not authorized  please try a different card.");
+					map.put("payment", "failure");  
+					response.getWriter().write(gson.toJson(map));
+				}  
+			}else {
+				Map map = new HashMap(); 
+				map.put("message", "Card not authorized  please try a different card.");
+				map.put("payment", "failure");  
+				response.getWriter().write(gson.toJson(map));
+			} 
+
+		} catch (Exception e) {
+			Gson gson = new Gson();
+			Map map = new HashMap(); 
+			map.put("message", e.getMessage());
+			map.put("payment", "failure");  
+			response.getWriter().write(gson.toJson(map));
+		}
+	}
+
+}

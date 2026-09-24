@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start' : new Date().getTime(),
+			event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+				+ l
+				: '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-WSFP6M7W');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<link rel="canonical" href="https://www.quickapostille.online/apostille" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title"
+	content="Apostille Service - Get an Apostille in 1 day - For any document" />
+<meta property="og:description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<meta property="og:url" content="https://www.quickapostille.online/" />
+<meta property="og:site_name"
+	content="Apostille for Any Document from Any Country" />
+<title>Apostille | Quick Apostille</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="images/favicon-07.png" />
+<!-- Bootstrap icons-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" type="text/css" />
+<!-- Google fonts-->
+<link href='https://fonts.googleapis.com/css?family=Titillium Web'
+	rel='stylesheet'>
+
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://js.stripe.com/v3/"></script>
+
+
+<script async data-id="101481203" src="//static.getclicky.com/js"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<noscript>
+	<p>
+		<img alt="Clicky" width="1" height="1"
+			src="//in.getclicky.com/101481203ns.gif" />
+	</p>
+</noscript>
+<style type="text/css">
+
+/* Timline-CSS-Starts */
+.uagb-timeline__outer-wrap {
+	position: relative
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: inherit;
+	color: inherit;
+	font-size: inherit
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field:not(:last-child) {
+	margin-bottom: 20px
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field a {
+	margin-bottom: inherit;
+	text-decoration: none
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field a.uagb-timeline__image
+	{
+	position: relative;
+	display: block;
+	max-width: 100%
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field a.uagb-timeline__image img
+	{
+	display: inline-block;
+	box-sizing: content-box;
+	height: auto;
+	max-width: 100%
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field .uagb-timeline__author-link
+	{
+	text-transform: capitalize
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field a.uagb-timeline__link {
+	display: inline-block
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field.uagb-timeline__left.hide-events .uagb-timeline__events-inner-new,
+	.uagb-timeline__outer-wrap .uagb-timeline__field.uagb-timeline__left.hide-events .uagb-timeline__date-new
+	{
+	visibility: hidden
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field.uagb-timeline__right.hide-events .uagb-timeline__events-inner-new,
+	.uagb-timeline__outer-wrap .uagb-timeline__field.uagb-timeline__right.hide-events .uagb-timeline__date-new
+	{
+	visibility: hidden
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field .uagb-timeline__image a
+	{
+	position: relative;
+	display: block;
+	max-width: 100%
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field .uagb-timeline__image img
+	{
+	display: inline-block;
+	box-sizing: content-box
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__line {
+	position: absolute;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	width: 3px;
+	background-color: #eee
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__line .uagb-timeline__line__inner
+	{
+	width: 100%;
+	background-color: #0693e3
+}
+
+.uagb-timeline__outer-wrap svg {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 16px
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__field:hover .uagb-timeline__marker
+	{
+	transition: all 0.2s ease-in-out
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__marker {
+	position: relative;
+	display: flex;
+	z-index: 1;
+	justify-content: center;
+	align-items: center;
+	min-width: 3em;
+	min-height: 3em;
+	background-color: #eee;
+	border-radius: 999px;
+	line-height: 48px;
+	transition: all 0.2s ease-in-out
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__year {
+	position: relative;
+	display: flex
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__year span {
+	display: inline-block;
+	padding-bottom: 6px
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__arrow-center .uagb-timeline__field
+	{
+	align-items: center
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__arrow-center .uagb-timeline__left .uagb-timeline__arrow,
+	.uagb-timeline__outer-wrap.uagb-timeline__arrow-center .uagb-timeline__right .uagb-timeline__arrow
+	{
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%)
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__arrow-bottom .uagb-timeline__field
+	{
+	align-items: flex-end
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__arrow-bottom .uagb-timeline__left .uagb-timeline__arrow,
+	.uagb-timeline__outer-wrap.uagb-timeline__arrow-bottom .uagb-timeline__right .uagb-timeline__arrow
+	{
+	top: 100%;
+	transform: translateY(-100%)
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__arrow-bottom .uagb-timeline__date-new .uagb-timeline__date-new
+	{
+	padding-top: 8px;
+	padding-bottom: 8px
+}
+
+.uagb-timeline__outer-wrap .uagb-timeline__date .uagb-timeline__inner-date-new
+	{
+	margin: 0;
+	white-space: nowrap
+}
+
+.uagb-timeline__outer-wrap .in-view i.uagb-timeline__in-view-icon {
+	-webkit-transition: background 0.25s ease-out 0.25s, width 0.25s
+		ease-in-out, height 0.25s ease-in-out, color 0.25s ease-in-out,
+		font-size 0.25s ease-in-out;
+	-webkit-transition: background 0.25s ease-out 0.25s, width 0.25s
+		ease-in-out, height 0.25s ease-in-out, color 0.25s ease-in-out,
+		font-size 0.25s ease-out;
+	transition: background 0.25s ease-out 0.25s, width 0.25s ease-in-out,
+		height 0.25s ease-in-out, color 0.25s ease-in-out, font-size 0.25s
+		ease-out
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__left-block .uagb-timeline__date-new
+	{
+	display: none
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__date-new
+	{
+	display: none
+}
+
+.uagb-timeline__outer-wrap p:empty {
+	display: none
+}
+
+.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__line
+	{
+	position: absolute;
+	transform: translateX(50%);
+	-webkit-transform: translateX(50%);
+	-ms-transform: translateX(50%)
+}
+
+.uagb-timeline__outer-wrap span.dashicons-admin-users.dashicons {
+	display: inline;
+	vertical-align: baseline;
+	margin-right: 4px
+}
+
+.uagb-content {
+	word-break: break-word
+}
+
+.uagb-timeline__headingh1, .uagb-timeline__headingh2,
+	.uagb-timeline__headingh3, .uagb-timeline__headingh4,
+	.uagb-timeline__headingh5, .uagb-timeline__headingh6 {
+	margin-bottom: 0
+}
+
+.uagb-timeline__inner-date-new p, .uagb-timeline__date-inner .uagb-timeline__inner-date-new p
+	{
+	margin-bottom: 0
+}
+
+.uagb-timeline__center-block {
+	text-align: center
+}
+
+.uagb-timeline__center-block .uagb-timeline__day-right .uagb-timeline__arrow::after
+	{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	display: inline;
+	width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 13px solid #eee;
+	transform: translateY(-50%);
+	content: "";
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%)
+}
+
+.uagb-timeline__center-block .uagb-timeline__marker {
+	flex-grow: 0;
+	flex-shrink: 0;
+	order: 1
+}
+
+.uagb-timeline__center-block .uagb-timeline__date-hide {
+	display: none
+}
+
+.uagb-timeline__center-block .uagb-timeline__field.uagb-timeline__right
+	{
+	flex-direction: row-reverse
+}
+
+.uagb-timeline__center-block .uagb-timeline__day-new,
+	.uagb-timeline__center-block .uagb-timeline__date-new {
+	display: block;
+	position: relative;
+	flex-grow: 1;
+	flex-basis: 50%;
+	max-width: 100%
+}
+
+.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__day-new
+	{
+	order: 2
+}
+
+.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__date-new
+	{
+	display: flex;
+	justify-content: flex-start
+}
+
+.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__arrow
+	{
+	position: absolute;
+	top: 0;
+	right: -10px;
+	width: 10px;
+	height: 40px
+}
+
+.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__arrow::after
+	{
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%)
+}
+
+.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__day-new
+	{
+	order: 2
+}
+
+.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__date-new
+	{
+	display: flex;
+	justify-content: flex-end
+}
+
+.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__arrow
+	{
+	position: absolute;
+	top: 0;
+	left: -10px;
+	width: 10px;
+	height: 40px
+}
+
+.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__arrow::after
+	{
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%)
+}
+
+.uagb-timeline__center-block .uagb-timeline__line {
+	right: auto;
+	left: 50%
+}
+
+.uagb-timeline__right-block .uagb-timeline__field {
+	flex-direction: row-reverse
+}
+
+.uagb-timeline__right-block .uagb-timeline__date-new {
+	display: flex;
+	align-items: center;
+	margin-left: 10px
+}
+
+.uagb-timeline__right-block .uagb-timeline__day-left .uagb-timeline__events-inner-new,
+	.uagb-timeline__right-block .uagb-timeline__day-right .uagb-timeline__events-inner-new
+	{
+	text-align: inherit
+}
+
+.uagb-timeline__right-block .uagb-timeline__right .uagb-timeline__events-inner-new,
+	.uagb-timeline__right-block .uagb-timeline__left .uagb-timeline__events-inner-new
+	{
+	text-align: right
+}
+
+.uagb-timeline__right-block .uagb-timeline__right .uagb-timeline__arrow::after,
+	.uagb-timeline__right-block .uagb-timeline__left .uagb-timeline__arrow::after
+	{
+	top: 50%;
+	transform: translateY(-50%)
+}
+
+.uagb-timeline__right-block .uagb-timeline__right .uagb-timeline__arrow,
+	.uagb-timeline__right-block .uagb-timeline__left .uagb-timeline__arrow
+	{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 40px
+}
+
+.uagb-timeline__right-block .uagb-timeline__right .uagb-timeline__arrow
+	{
+	right: -12px
+}
+
+.uagb-timeline__right-block .uagb-timeline__left .uagb-timeline__arrow {
+	right: -10px
+}
+
+.uagb-timeline__right-block .uagb-timeline__marker,
+	.uagb-timeline__right-block .uagb-timeline__day-new {
+	position: relative;
+	max-width: 100%
+}
+
+.uagb-timeline__right-block .uagb-timeline__day-new {
+	flex-grow: 1;
+	margin-right: 14px
+}
+
+.uagb-timeline__right-block .uagb-timeline__marker {
+	flex-grow: 0;
+	flex-shrink: 0
+}
+
+.uagb-timeline__left-block {
+	text-align: left
+}
+
+.uagb-timeline__left-block .uagb-timeline__marker,
+	.uagb-timeline__left-block .uagb-timeline__day-new {
+	position: relative;
+	max-width: 100%
+}
+
+.uagb-timeline__left-block .uagb-timeline__line {
+	right: auto;
+	left: 20px
+}
+
+.uagb-timeline__left-block .uagb-timeline__day-new {
+	flex-grow: 1;
+	order: 1;
+	margin-left: 14px
+}
+
+.uagb-timeline__left-block .uagb-timeline__date-new {
+	margin-right: 10px
+}
+
+.uagb-timeline__left-block .uagb-timeline__marker {
+	flex-grow: 0;
+	flex-shrink: 0;
+	order: 0
+}
+
+.uagb-timeline__left-block .uagb-timeline__right .uagb-timeline__events-inner-new,
+	.uagb-timeline__left-block .uagb-timeline__left .uagb-timeline__events-inner-new
+	{
+	text-align: left
+}
+
+.uagb-timeline__left-block .uagb-timeline__right .uagb-timeline__arrow::after,
+	.uagb-timeline__left-block .uagb-timeline__left .uagb-timeline__arrow::after
+	{
+	top: 50%;
+	transform: translateY(-50%)
+}
+
+.uagb-timeline__left-block .uagb-timeline__right .uagb-timeline__arrow,
+	.uagb-timeline__left-block .uagb-timeline__left .uagb-timeline__arrow {
+	position: absolute;
+	top: 0;
+	width: 10px;
+	height: 40px
+}
+
+.uagb-timeline__left-block .uagb-timeline__right .uagb-timeline__arrow {
+	left: -10px
+}
+
+.uagb-timeline__left-block .uagb-timeline__left .uagb-timeline__arrow {
+	left: -12px
+}
+
+.uagb-timeline__left-block .uagb-timeline__day-right .uagb-timeline__arrow::after
+	{
+	position: absolute;
+	display: inline;
+	width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-right: 13px solid #eee;
+	border-bottom: 12px solid transparent;
+	content: ""
+}
+
+.uagb-timeline__day-right .uagb-timeline__events-inner {
+	text-align: right
+}
+
+.uagb-timeline__day-left .uagb-timeline__events-inner {
+	text-align: left
+}
+
+.uagb-timeline__arrow-top .uagb-timeline__date-new .uagb-timeline__date-new
+	{
+	padding-top: 8px;
+	padding-bottom: 8px
+}
+
+.uagb-timeline__events-inner-new, .uagb-timeline__arrow {
+	transition: background 0.2s ease-in-out
+}
+
+.uagb-timeline__arrow::after {
+	transition: border-color 0.2s ease-in-out
+}
+
+.uagb-timeline__date-new {
+	transition: color 0.2s ease-in-out
+}
+
+.uagb-timeline__day-left .uagb-timeline__arrow::after {
+	position: absolute;
+	left: 0;
+	display: inline;
+	width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	content: ""
+}
+
+.uagb-timeline__right .uagb-timeline__day-left .uagb-timeline__arrow::after
+	{
+	right: 0
+}
+
+.uagb-timeline__day-right .uagb-timeline__arrow::after {
+	position: absolute;
+	right: 0;
+	display: inline;
+	width: 0;
+	height: 0;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	content: ""
+}
+
+.uagb-timeline__icon {
+	position: relative;
+	z-index: 1;
+	vertical-align: middle;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 100px;
+	-webkit-border-radius: 50%
+}
+
+.uagb-timeline__left {
+	text-align: left
+}
+
+.uagb-timeline__right {
+	text-align: right
+}
+
+.uagb-timeline__right-block .uagb-timeline__day-right .uagb-timeline__arrow::after
+	{
+	border-left: 13px solid #eee
+}
+
+.uagb-timeline__right-block .uagb-timeline__day-left .uagb-timeline__arrow::after
+	{
+	border-left: 13px solid #eee
+}
+
+.uagb-timeline__center-block .uagb-timeline__day-left .uagb-timeline__arrow::after
+	{
+	border-right: 13px solid #eee
+}
+
+.uagb-timeline__left-block .uagb-timeline__day-left .uagb-timeline__arrow::after
+	{
+	border-right: 13px solid #eee
+}
+
+.uagb-timeline__day-right .uagb-timeline__events-inner-new {
+	border-radius: 4px 4px 4px 4px
+}
+
+.uagb-timeline__day-left .uagb-timeline__events-inner-new {
+	border-radius: 4px 4px 4px 4px
+}
+
+.uagb-timeline__arrow {
+	height: 3em
+}
+
+.uagb-timeline__right-block .uagb-timeline__line {
+	right: 1.5em
+}
+
+.rtl .uagb-timeline__center-block .uagb-timeline__day-right .uagb-timeline__arrow::after
+	{
+	border-right: 13px solid #eee;
+	border-left: none
+}
+
+.rtl .uagb-timeline__center-block .uagb-timeline__day-left .uagb-timeline__arrow::after
+	{
+	border-right: none;
+	border-left: 13px solid #eee
+}
+
+.rtl .uagb-timeline__left-block .uagb-timeline__line {
+	right: auto;
+	left: 16px
+}
+
+.rtl .uagb-timeline__left-block .uagb-timeline__field {
+	flex-direction: row-reverse
+}
+
+.rtl .uagb-timeline__left-block .uagb-timeline__day-left .uagb-timeline__arrow::after
+	{
+	border-right: 13px solid #eee;
+	right: -3px
+}
+
+.rtl .uagb-timeline__left-block .uagb-timeline__day-right .uagb-timeline__arrow::after
+	{
+	border-right: 13px solid #eee;
+	right: -3px
+}
+
+.rtl .uagb-timeline__right-block .uagb-timeline__line {
+	right: auto;
+	left: 1.5em
+}
+
+.rtl .uagb-timeline__right-block .uagb-timeline__field {
+	flex-direction: row
+}
+
+.rtl .uagb-timeline__right-block .uagb-timeline__day-right .uagb-timeline__arrow::after
+	{
+	border-left: 13px solid #eee
+}
+
+.rtl .uagb-timeline__right-block .uagb-timeline__day-left .uagb-timeline__arrow::after
+	{
+	border-left: 13px solid #eee;
+	right: -17px
+}
+
+.wp-block-uagb-content-timeline .wp-block-uagb-content-timeline-child .uagb-timeline__events-inner--content .uagb-timeline__heading
+	{
+	margin-top: unset
+}
+
+.wp-block-uagb-content-timeline .wp-block-uagb-content-timeline-child .uagb-timeline__events-inner--content p.uagb-timeline-desc-content
+	{
+	margin-bottom: unset
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap .uagb-timeline__field
+	{
+	display: unset
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap .uagb-timeline__field .uagb-timeline__widget
+	{
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	font-size: inherit;
+	color: inherit;
+	margin-bottom: inherit
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__left-block .uagb-timeline__date-new
+	{
+	display: none
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__right-block .uagb-timeline__date-new
+	{
+	display: none
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__center-block .uagb-timeline__widget.uagb-timeline__right
+	{
+	flex-direction: row-reverse
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__center-block .uagb-timeline__marker
+	{
+	order: 1;
+	flex-shrink: 0;
+	flex-grow: 0
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__day-new
+	{
+	order: 2;
+	padding-left: 0;
+	padding-right: 12px
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__day-new
+	{
+	order: 2;
+	padding-right: 0;
+	padding-left: 12px
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__arrow
+	{
+	right: 0;
+	top: 0;
+	width: 10px;
+	height: 40px;
+	position: absolute
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__arrow
+	{
+	left: 0;
+	top: 0;
+	width: 10px;
+	height: 40px;
+	position: absolute
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__right-block .uagb-timeline__widget
+	{
+	flex-direction: row-reverse
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__arrow-center .uagb-timeline__widget
+	{
+	align-items: center
+}
+
+.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__arrow-center .uagb-timeline__left .uagb-timeline__arrow,
+	.wp-block-uagb-content-timeline .uagb-timeline__content-wrap.uagb-timeline__arrow-center .uagb-timeline__right .uagb-timeline__arrow
+	{
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%)
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__heading {
+	margin-bottom: 5px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__marker.uagb-timeline__in-view-icon svg
+	{
+	fill: #fff;
+	color: #fff;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__heading-text
+	{
+	margin-bottom: 5px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__day-right .uagb-timeline__arrow:after
+	{
+	border-left-color: #eee;
+	border-right-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__center-block .uagb-timeline__day-right .uagb-timeline__arrow:after
+	{
+	border-left-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__right-block .uagb-timeline__day-right .uagb-timeline__arrow:after
+	{
+	border-left-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__right-block .uagb-timeline__day-left .uagb-timeline__arrow:after
+	{
+	border-left-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__center-block .uagb-timeline__day-left .uagb-timeline__arrow:after
+	{
+	border-right-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__left-block .uagb-timeline__day-left .uagb-timeline__arrow:after
+	{
+	border-right-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__center-block .uagb-timeline__day-right .uagb-timeline__arrow:after
+	{
+	border-left-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__day-right .uagb-timeline__arrow:after
+	{
+	border-left-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__day-left .uagb-timeline__arrow:after
+	{
+	border-left-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__center-block .uagb-timeline__day-left .uagb-timeline__arrow:after
+	{
+	border-right-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__left-block .uagb-timeline__day-left .uagb-timeline__arrow:after
+	{
+	border-right-color: #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__line__inner
+	{
+	background-color: #142c46;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__line {
+	background-color: #eee;
+	width: 3px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__line
+	{
+	right: calc(35px/ 2);
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__left-block .uagb-timeline__line
+	{
+	left: calc(35px/ 2);
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__center-block .uagb-timeline__line
+	{
+	right: calc(35px/ 2);
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__marker {
+	background-color: #eee;
+	min-height: 35px;
+	min-width: 35px;
+	line-height: 35px;
+	border: 0px solid #eee;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__left-block .uagb-timeline__left .uagb-timeline__arrow
+	{
+	height: 35px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__right .uagb-timeline__arrow
+	{
+	height: 35px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__arrow
+	{
+	height: 35px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__arrow
+	{
+	height: 35px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__center-block .uagb-timeline__left .uagb-timeline__marker
+	{
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__center-block .uagb-timeline__right .uagb-timeline__marker
+	{
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__field:not(:last-child)
+	{
+	margin-bottom: 15px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__date-hide.uagb-timeline__date-inner
+	{
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__date-hide.uagb-timeline__inner-date-new
+	{
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__day-new.uagb-timeline__day-left
+	{
+	margin-right: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__left-block .uagb-timeline__day-new.uagb-timeline__day-left
+	{
+	margin-left: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__left-block .uagb-timeline__day-new.uagb-timeline__day-right
+	{
+	margin-left: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__day-new.uagb-timeline__day-right
+	{
+	margin-right: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__date-new
+	{
+	font-size: 12px;
+	color: #333;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__right-block .uagb-timeline__date-hide.uagb-timeline__date-inner
+	{
+	font-size: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap.uagb-timeline__left-block .uagb-timeline__date-hide.uagb-timeline__date-inner
+	{
+	font-size: 12px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-events-new .uagb-timeline__events-inner-new
+	{
+	padding: 20px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__events-inner-new
+	{
+	background-color: #eee;
+	border-radius: 15px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__events-inner--content
+	{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__marker svg
+	{
+	color: #333;
+	width: 12px;
+	fill: #333;
+}
+
+.uagb-block-859be97d.uagb-timeline__outer-wrap .uagb-timeline__marker.uagb-timeline__in-view-icon
+	{
+	background: #142c46;
+	border-color: #0693e3;
+}
+
+/* Timeline-CSS-END */
+.seprator {
+	background-color: #0067ff;
+	width: 80px;
+	border-top-width: 6px;
+	border-top-color: #0067ff;
+	border-top-style: solid;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: inline-block;
+	line-height: 0;
+	align-items: center;
+}
+
+#sepratorsectionid {
+	text-align: center;
+}
+
+#contact_btn_span {
+	padding: 4px 12px;
+	background-color: #142c46;
+	font-size: 16px;
+	font-weight: 700;
+	color: #ffffff;
+	font-family: inherit;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line_height: 2em;
+}
+
+#contact_btn_span-2 {
+	padding: 8px;
+	background-color: #f2d299;
+	font-size: 16px;
+	font-weight: 700;
+	color: #0f172a;
+	font-family: inherit;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line_height: 2em;
+}
+.box-mission {
+    box-shadow: 0px -19px 70px -28px rgba(34, 36, 37, 0.25);
+    background-color: #e7f6ff;
+    padding: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    order: initial;
+    max-width: 100%;
+    width: 100%;
+    column-gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    row-gap: 20px;
+    color: #0f172a;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+.box-mission_p {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 16px;
+	color: #364151;
+}
+
+.getStarted {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
+.getStarted-p {
+	font-family: 'Titillium Web', sans-serif;
+	font-size:;
+	font-weight:;
+	color: #FFFFFF;
+	font-weight:;
+	text-align: center
+}
+
+#getStarted-section {
+	min-height: 440px;
+	box-shadow: 0px 0px #00000070;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	margin-left: 0px;
+	margin-right: 0px;
+	overflow: visible;
+	order: initial;
+	border-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url('images/call-to-action-1.webp');
+	background-clip: padding-box;
+	row-gap: 20px;
+	column-gap: 20px;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+#getStarted-section:before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	top: -0px;
+	left: -0px;
+	width: calc(100% + 0px + 0px);
+	height: calc(100% + 0px + 0px);
+	border-color: inherit;
+	background: #070614;
+	opacity: 0.6;
+}
+
+section#getStarted-section>div {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+#headerImageSection {
+	box-shadow: 0px 0px #00000070;
+	padding-top: 150px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: !important;
+	margin-bottom: !important;
+	overflow: visible;
+	order: initial;
+	border-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 55% 29%;
+	background-size: cover;
+	background-attachment: scroll;
+	background-image: url('images/about-us.webp');
+	background-clip: padding-box;
+	row-gap: 20px;
+	column-gap: 20px;
+	position: relative;
+}
+
+#headerImageSection:before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	top: -0px;
+	left: -0px;
+	width: calc(100% + 0px + 0px);
+	height: calc(100% + 0px + 0px);
+	border-color: inherit;
+	background: #070614;
+	opacity: 0.8;
+}
+
+section#headerImageSection>div {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+.box-mission_outer {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	margin-left: 0px;
+	margin-right: 0px;
+	order: initial;
+	background: linear-gradient(180deg, rgb(245, 247, 248) 51%,
+		rgba(255, 255, 255, 0.5) 51%);
+	background-clip: padding-box;
+	column-gap: 20px;
+	width: calc(100% + 0px + 0px);
+}
+
+@media only screen and (min-width: 768px) {
+  .box-mission_outer {grid-area: 1 / span 6;}
+  .
+}
+
+#svg-box-about-us {
+	min-height: 35px;
+	min-width: 35px;
+	line-height: 35px;
+	background: #142c46;
+	border-color: #0693e3;
+	flex-grow: 0;
+	flex-shrink: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+p.about_us_top_heading {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-top: 30px;
+}
+.about_us_icon_list > div {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+.c-shadow_box{
+        box-shadow: -8px -8px 0px 0px #142c46;
+
+}
+
+</style>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSFP6M7W"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="container top-bar d-flex p-2">
+		<div class="col-4 col-sm-0 text-start d-none d-sm-block">
+			<strong><img class="alignnone" src="images/mail-1.png"
+				alt="mail" width="24" height="24">&nbsp;&nbsp;<span
+				style="color: #203852">contact@quickapostille.online</span></strong>
+		</div>
+
+		<div class="col-md-3 col-sm-12 text-center">
+			<strong><img class="alignnone" src="images/phone 2-01.png"
+				alt="phone" width="24" height="24">&nbsp;&nbsp; <span href="#"
+				style="color: #203852; text-decoration: none">+1(252) 579
+					0347</span></strong>
+		</div>
+
+		<div class="col-5 col-sm-0  text-end  d-none d-sm-block">
+			<span style="color: #203852"><strong> <img
+					class="alignnone"
+					src="images/WXibs0O8_400x400-removebg-preview-300x300.png" alt=""
+					width="29" height="29">Official HCCH Hague Convention
+					Documentation
+			</strong></span>
+		</div>
+	</div>
+
+	<!-- Navigation-->
+	<%@ include file="nav.jsp"%>
+	<main>
+		<section id="headerImageSection">
+			<div class="container">
+				<div class="seprator"></div>
+				<h1>
+					Trusted & Efficient <br> Document <br> Authentication
+					Services
+				</h1>
+				<p>Trusted & Efficient Document Authentication Services We
+					specialize in Quick and secure document authentication, ensuring
+					compliance with official regulations. Our expert team streamlines
+					the process, saving you time and effort.</p>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="">
+					<div class="row mt-5">
+
+						<div class="col-12 col-md-6">
+							<div class="seprator"></div>
+							<h2>About Us</h2>
+
+							<p>
+								At <strong>Quick Apostille</strong>, we simplify document
+								authentication with a seamless, secure, and efficient process.
+								Our expert team ensures that your documents are verified and
+								processed in compliance with official regulations, eliminating
+								delays and complexities.<br> With a commitment to accuracy
+								and reliability, we offer hassle-free services designed to save
+								your time and effort. Whether for legal, personal, or business
+								purposes, we make document authentication smooth and
+								stress-free.
+							</p>
+							<a class="btn" href="contact.jsp" role="button"><span
+								id="contact_btn_span" class="rounded">Contact Us</span></a>
+						</div>
+						<div class="col-12 col-md-6 " >
+
+							<img alt="about_us_image" src="images/About-us-cover-image.png"
+								class="img-fluid c-shadow_box">
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="container mt-5 mb-5">
+
+					<div class="d-flex justify-content-center">
+						<h2 class = "my-5">Meet the People Behind the Brand</h2>
+					</div>
+
+					<div class="row ">
+						<div class="col-12 text-center col-md-4">
+							<img alt="about_us_image" src="images/team-skip-01.jpg"
+								class="img-fluid rounded">
+							<div>
+								<p class = "about_us_top_heading">Santiago Cruz</p>
+								<p>Santiago powers the tech side of Quick Apostille. From
+									building a smooth checkout system to automating document flows,
+									he ensures our website is fast, simple, and user-friendly - so
+									customers can get their apostille services done in just a few
+									clicks.</p>
+							</div>
+
+							 
+
+						</div>
+						<div class="col-12 text-center col-md-4">
+							<img alt="about_us_image" src="images/team-skip-24.jpg"
+								class="img-fluid rounded">
+							<div>
+								<p class = "about_us_top_heading">Elena Navarro</p>
+								<p>
+									Elena oversees the day-to-day operations, making sure every
+									document is processed quickly and delivered smoothly. With his
+									experience from <br> Quickappostile, he keeps our service
+									running efficiently and reliably.
+								</p>
+							</div>
+							 
+
+
+						</div>
+						<div class="col-12 text-center col-md-4">
+							<img alt="about_us_image" src="images/team-skip-03.jpg"
+								class="img-fluid rounded">
+							<div>
+								<p class = "about_us_top_heading">Isabel Serrano</p>
+								<p>Isabel is the visionary behind Quick Apostille. Focused
+									on simplifying document legalization, he built the platform to
+									make apostille services faster, easier, and fully online. His
+									leadership fuels the trust and innovation we stand for.</p>
+							</div>
+							 
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+		<div class="box-mission_outer">
+					<div class="container mt-5 ">
+
+						<div class="row mt-20px">
+							<div class="col-12 col-md-4 text-left mb-md-0 mb-3">
+								<div class="box-mission h-100 rounded ">
+									<h4>Our Vision</h4>
+									<p class="box-mission_p">To be the most trusted and
+										efficient document authentication service, ensuring a seamless
+										experience for individuals and businesses worldwide.</p>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 text-left  mb-md-0 mb-3">
+								<div class="box-mission h-100 rounded">
+									<h4>Our Mission</h4>
+									<p class="box-mission_p">To provide Quick, secure, and
+										reliable document authentication while maintaining accuracy,
+										compliance, and customer satisfaction.</p>
+								</div>
+							</div>
+							<div class="col-12 col-md-4 text-left">
+								<div class="box-mission h-100 rounded">
+
+									<h4>Our Commitment</h4>
+									<p class="box-mission_p">We ensure a secure, accurate, and
+										hassle-free document authentication process. Our focus is on
+										reliability, compliance, and customer support.</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+		</section>
+		<section class = "mt-5 mb-5">
+		<div class = "container">
+			<h2 class="d-flex justify-content-center mb-5">Our Story - Timeline</h2>
+
+
+			<div
+				class="wp-block-uagb-content-timeline uagb-timeline__outer-wrap uagb-block-859be97d uagb-timeline__content-wrap uagb-timeline__arrow-center uagb-timeline uagb-timeline__center-block">
+				<article
+					class="wp-block-uagb-content-timeline-child uagb-timeline__field uagb-timeline-child-e92af5f5 uagb-timeline__right out-view">
+					<div
+						class="uagb-timeline__marker out-view-uagb-timeline__icon uagb-timeline__right uagb-timeline__out-view-icon">
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"></path></svg>
+					</div>
+					<div
+						class="uagb-timeline__day-new uagb-timeline__events-inner-new uagb-timeline__day-right">
+						<div class="uagb-timeline__events-inner--content">
+							<div
+								class="uagb-timeline__date-hide uagb-timeline__inner-date-new">October
+								20, 2020</div>
+							<h4 class="uagb-timeline__heading">Foundation</h4>
+							<p class="uagb-timeline-desc-content">Quick Apostille was
+								launched to simplify document legalization.</p>
+							<div class="uagb-timeline__arrow"></div>
+						</div>
+					</div>
+					<div class="uagb-timeline__date-new">October 20, 2020</div>
+				</article>
+
+				<article
+					class="wp-block-uagb-content-timeline-child uagb-timeline__field uagb-timeline-child-d049ce03 uagb-timeline__left out-view">
+					<div
+						class="uagb-timeline__marker out-view-uagb-timeline__icon uagb-timeline__left uagb-timeline__out-view-icon">
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"></path></svg>
+					</div>
+					<div
+						class="uagb-timeline__day-new uagb-timeline__events-inner-new uagb-timeline__day-left">
+						<div class="uagb-timeline__events-inner--content">
+							<div
+								class="uagb-timeline__date-hide uagb-timeline__inner-date-new">October
+								20, 2021</div>
+							<h4 class="uagb-timeline__heading">Online Platform</h4>
+							<p class="uagb-timeline-desc-content">We introduced our
+								digital platform for easy access to services.</p>
+							<div class="uagb-timeline__arrow"></div>
+						</div>
+					</div>
+					<div class="uagb-timeline__date-new">October 20, 2021</div>
+				</article>
+
+				<article
+					class="wp-block-uagb-content-timeline-child uagb-timeline__field uagb-timeline-child-ef4e07b5 uagb-timeline__right out-view">
+					<div
+						class="uagb-timeline__marker out-view-uagb-timeline__icon uagb-timeline__right uagb-timeline__out-view-icon">
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"></path></svg>
+					</div>
+					<div
+						class="uagb-timeline__day-new uagb-timeline__events-inner-new uagb-timeline__day-right">
+						<div class="uagb-timeline__events-inner--content">
+							<div
+								class="uagb-timeline__date-hide uagb-timeline__inner-date-new">October
+								20, 2022</div>
+							<h4 class="uagb-timeline__heading">Growth</h4>
+							<p class="uagb-timeline-desc-content">Crossed 10,000+
+								successful submissions and expanded nationwide.</p>
+							<div class="uagb-timeline__arrow"></div>
+						</div>
+					</div>
+					<div class="uagb-timeline__date-new">October 20, 2022</div>
+				</article>
+
+				<article
+					class="wp-block-uagb-content-timeline-child uagb-timeline__field uagb-timeline-child-f9eb684e out-view uagb-timeline__left">
+					<div
+						class="uagb-timeline__marker out-view-uagb-timeline__icon uagb-timeline__out-view-icon uagb-timeline__left">
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"></path></svg>
+					</div>
+					<div
+						class="uagb-timeline__day-new uagb-timeline__events-inner-new uagb-timeline__day-left">
+						<div class="uagb-timeline__events-inner--content">
+							<div
+								class="uagb-timeline__date-hide uagb-timeline__inner-date-new">October
+								20, 2023</div>
+							<h4 class="uagb-timeline__heading">Smarter Features</h4>
+							<p class="uagb-timeline-desc-content">Launched automation,
+								add-ons, and real-time tracking.</p>
+							<div class="uagb-timeline__arrow"></div>
+						</div>
+					</div>
+					<div class="uagb-timeline__date-new">October 20, 2023</div>
+				</article>
+
+				<article
+					class="wp-block-uagb-content-timeline-child uagb-timeline__field uagb-timeline-child-c578d1a9 out-view uagb-timeline__right pb-5">
+					<div
+						class="uagb-timeline__marker out-view-uagb-timeline__icon uagb-timeline__out-view-icon uagb-timeline__right">
+						<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"></path></svg>
+					</div>
+					<div
+						class="uagb-timeline__day-new uagb-timeline__events-inner-new uagb-timeline__day-right">
+						<div class="uagb-timeline__events-inner--content">
+							<div
+								class="uagb-timeline__date-hide uagb-timeline__inner-date-new">October
+								20, 2024</div>
+							<h4 class="uagb-timeline__heading">Trust &amp; Support</h4>
+							<p class="uagb-timeline-desc-content">Focused on stronger
+								support and a faster user experience.</p>
+							<div class="uagb-timeline__arrow"></div>
+						</div>
+					</div>
+					<div class="uagb-timeline__date-new">October 20, 2024</div>
+				</article>
+				<div class="uagb-timeline__line" style="bottom: 31px; top: 31px;">
+					<div class="uagb-timeline__line__inner" style="height: 1.96354px;"></div>
+				</div>
+			</div>
+		</div>
+		</section>
+
+
+	</main>
+
+	<section class="testimonials-section">
+		<div class="container">
+		
+			<div class="section-header">
+			<div class="seprator mb-3 mt-3"></div>
+				<h2>What Our Clients Say</h2>
+				<p>Hear from our satisfied clients who have experienced our
+					quick, reliable, and hassle-free document authentication services.</p>
+			</div>
+
+			<div class="testimonial-carousel">
+				<div class="testimonial">
+					<p class="testimonial-desc">Quick Apostille handled my marriage
+						certificate apostille seamlessly. The team was responsive and
+						guided me at every step.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-1.png" alt="Emily Carter"> <span
+							class="author">Emily Carter</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">They helped me get my birth
+						certificate apostilled within days. The communication was
+						excellent and everything was done digitally.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-2.png" alt="Michael Trujillo"> <span
+							class="author">Michael Trujillo</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">We were traveling abroad and needed
+						a minor travel consent notarized urgently. Their team came through
+						at the right time.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-3.png" alt="Olivia Brown"> <span
+							class="author">Olivia Brown</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">A hassle-free and smooth process!
+						The team was supportive, and my documents were verified quickly.
+						Great service.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-6.png" alt="Andrea Sanders"> <span
+							class="author">Andrea Sanders</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">The entire process for my Power of
+						Attorney notarization was quick and smooth. I didn't have to worry
+						about anything highly recommend!</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-5.png" alt="Scott R. Pierce"> <span
+							class="author">Scott R. Pierce</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">Professional, efficient, and
+						reliable. They handled my request with care and delivered on time.
+						Fantastic experience.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-4.png" alt="Gerald L."> <span
+							class="author">Gerald L.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="getStarted-section" class="d-flex justify-content-center">
+
+		<div>
+			<div>
+
+				<div>
+					<h2 class="getStarted d-flex justify-content-center">Get
+						Started Today !</h2>
+				</div>
+				<p class="getStarted-p">
+					Simplify your document authentication with our Quick and secure
+					service.<br> Quick Processing | Secure & Verified | Legally
+					Compliant
+				</p>
+			</div>
+			<div class="d-flex justify-content-center">
+				<a class="btn" href="contact.jsp" role="button"><span
+					id="contact_btn_span-2" class="rounded ">Contact Us</span></a>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<!-- Footer--> 
+	<%@ include file="footer.jsp"%>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+		type="text/javascript"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js"></script>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<!-- Timeline JS starts -->
+	<script>
+window.addEventListener( 'DOMContentLoaded', uagbTimelineInit );
+window.addEventListener( 'resize', uagbTimelineInit );
+window.addEventListener( 'scroll', uagbTimelineInit );
+document.addEventListener( 'UAGTimelineEditor', uagbTimelineInit );
+$(window).on('resize', function() {
+	initializeMobileSlider();
+});
+$(document).ready(function(){	
+	$('.testimonial-carousel').slick({
+		slidesToShow : 1,
+		slidesToScroll : 1,
+		infinite : true,
+		arrows : false,
+		dots : true,
+		autoplay : true,
+		autoplaySpeed : 2000,
+		centerMode : false,
+		responsive : [ {
+			breakpoint : 768,
+			settings : {
+				slidesToShow : 2
+			}
+		}, {
+			breakpoint : 480,
+			settings : {
+				slidesToShow : 1
+			}
+		} ]
+	});
+	initializeMobileSlider();
+});
+
+function initializeMobileSlider() {
+	if ($(window).width() < 768) {
+		if (!$('.testimonial-carousel').hasClass('slick-initialized')) {
+			$('.testimonial-carousel').slick({
+				slidesToShow : 1,
+				slidesToScroll : 1,
+				infinite : true,
+				arrows : false,
+				dots : true,
+				autoplay : true,
+				autoplaySpeed : 2000,
+				centerMode : false
+			});
+		}
+	} else {
+		if ($('.testimonial-carousel').hasClass('slick-initialized')) {
+			$('.testimonial-carousel').slick('unslick');
+		}
+	}
+}
+function uagbTimelineInit() {
+	const iframeEl = document.querySelector( `iframe[name='editor-canvas']` );
+	let mainDiv;
+	if ( iframeEl ) {
+		mainDiv = iframeEl.contentDocument.querySelectorAll( '.uagb-timeline' );
+	} else {
+		mainDiv = document.querySelectorAll( '.uagb-timeline' );
+	}
+
+	const timeline = mainDiv;
+	if ( timeline.length === 0 ) {
+		return;
+	}
+
+	for ( const content of timeline ) {
+		const lineInner = content.querySelector( '.uagb-timeline__line__inner' );
+		const lineOuter = content.querySelector( '.uagb-timeline__line' );
+		const iconClass = content.querySelectorAll( '.uagb-timeline__marker' );
+		const timelineField = content.querySelector( '.uagb-timeline__field:nth-last-child(2)' );
+		const cardLast = timelineField
+			? timelineField
+			: content.querySelector( '.block-editor-block-list__block:last-child' );
+		const timelineStartIcon = iconClass[ 0 ];
+		const timelineEndIcon = iconClass[ iconClass.length - 1 ];
+
+		setTimeout( () => {
+			lineOuter.style.top = timelineStartIcon?.offsetTop + 'px';
+		}, 300 );
+		const timelineCardHeight = cardLast?.offsetHeight;
+
+		if ( content.classList.contains( 'uagb-timeline__arrow-center' ) ) {
+			lineOuter.style.bottom = timelineEndIcon?.offsetTop + 'px';
+		} else if ( content.classList.contains( 'uagb-timeline__arrow-top' ) ) {
+			const topHeight = timelineCardHeight - timelineEndIcon?.offsetTop;
+			lineOuter.style.bottom = topHeight + 'px';
+		} else if ( content.classList.contains( 'uagb-timeline__arrow-bottom' ) ) {
+			const bottomHeight = timelineCardHeight - timelineEndIcon?.offsetTop;
+			lineOuter.style.bottom = bottomHeight + 'px';
+		}
+
+		const connectorHeight = 3 * iconClass[ 0 ]?.offsetHeight;
+
+		const viewportHeight = document?.documentElement?.clientHeight;
+
+		const viewportHeightHalf = viewportHeight / 2 + connectorHeight;
+
+		const body = document.body;
+		const html = document.documentElement;
+
+		const height = Math.max(
+			body.scrollHeight,
+			body.offsetHeight,
+			html.clientHeight,
+			html.scrollHeight,
+			html.offsetHeight
+		);
+
+		const timelineEndIconOffsetBottom = height - timelineEndIcon?.getBoundingClientRect()?.top;
+
+		const totalTimelineLineHeight =
+			height - timelineStartIcon?.getBoundingClientRect()?.top - timelineEndIconOffsetBottom;
+
+		const startFlag =
+			timelineStartIcon?.getBoundingClientRect()?.top +
+			window?.scrollY -
+			( window?.innerHeight - window?.innerHeight / 3 );
+
+		if ( startFlag < document?.documentElement?.scrollTop ) {
+			const tscrollPerc =
+				( ( document?.documentElement?.scrollTop - startFlag ) / totalTimelineLineHeight ) * 100;
+			const percHeight = ( totalTimelineLineHeight / 100 ) * tscrollPerc;
+
+			if ( percHeight < totalTimelineLineHeight + 60 ) {
+				lineInner.style.height = percHeight + 'px';
+			}
+		}
+
+		// Icon bg color and icon color
+
+		let timelineIconPos, timelineCardPos;
+		let timelineIconTop, timelineCardTop;
+		const timelineIcon = content.querySelectorAll( '.uagb-timeline__marker' );
+
+		let animateBorder = content.querySelectorAll( '.uagb-timeline__field' );
+
+		if ( animateBorder.length === 0 ) {
+			animateBorder = content.querySelectorAll( '.uagb-timeline__animate-border' );
+		}
+
+		for ( let j = 0; j < timelineIcon.length; j++ ) {
+			timelineIconPos = timelineIcon[ j ].lastElementChild.getBoundingClientRect().top + window.scrollY;
+			timelineCardPos = animateBorder[ j ].lastElementChild.getBoundingClientRect().top + window.scrollY;
+
+			timelineIconTop = timelineIconPos - document.documentElement.scrollTop;
+			timelineCardTop = timelineCardPos - document.documentElement.scrollTop;
+
+			if ( timelineCardTop < viewportHeightHalf ) {
+				animateBorder[ j ].classList.remove( 'out-view' );
+				animateBorder[ j ].classList.add( 'in-view' );
+			} else {
+				// Remove classes if element is below than half of viewport.
+				animateBorder[ j ].classList.add( 'out-view' );
+				animateBorder[ j ].classList.remove( 'in-view' );
+			}
+
+			if ( timelineIconTop < viewportHeightHalf ) {
+				// Add classes if element is above than half of viewport.
+				timelineIcon[ j ].classList.remove( 'uagb-timeline__out-view-icon' );
+				timelineIcon[ j ].classList.add( 'uagb-timeline__in-view-icon' );
+			} else {
+				// Remove classes if element is below than half of viewport.
+				timelineIcon[ j ].classList.add( 'uagb-timeline__out-view-icon' );
+				timelineIcon[ j ].classList.remove( 'uagb-timeline__in-view-icon' );
+			}
+		}
+	}
+}
+
+
+function UAGBTimelineClasses( attributes, id ) {
+	const timeline = document.querySelectorAll( id );
+
+	if ( timeline.length === 0 ) {
+		return;
+	}
+
+	const deviceWidth = Math.max( window.screen.width, window.innerWidth );
+
+	for ( const content of timeline ) {
+		content.classList.remove(
+			'uagb-timeline__left-block',
+			'uagb-timeline__right-block',
+			'uagb-timeline__center-block'
+		);
+
+		let device = '';
+
+		if ( deviceWidth <= uagb_timeline_data.mobile_breakpoint ) {
+			device = 'Mobile';
+		} else if ( deviceWidth <= uagb_timeline_data.tablet_breakpoint ) {
+			device = 'Tablet';
+		}
+
+		if ( 'left' === attributes[ 'timelinAlignment' + device ] ) {
+			content.classList.add( 'uagb-timeline__left-block' );
+		} else if ( 'right' === attributes[ 'timelinAlignment' + device ] ) {
+			content.classList.add( 'uagb-timeline__right-block' );
+		} else {
+			content.classList.add( 'uagb-timeline__center-block' );
+		}
+
+		let timelineChild = content.querySelectorAll( '.wp-block-uagb-content-timeline-child' );
+		let childIndex = 0;
+
+		if ( 0 === timelineChild.length ) {
+			timelineChild = content.querySelectorAll( '.uagb-timeline__field' );
+		}
+
+		for ( const child of timelineChild ) {
+			child.classList.remove( 'uagb-timeline__left', 'uagb-timeline__right' );
+			const timelineMarker = child.querySelectorAll( '.uagb-timeline__marker' )[ 0 ];
+			timelineMarker.classList.remove( 'uagb-timeline__left', 'uagb-timeline__right' );
+
+			const timeLineEventInner = child.querySelectorAll( '.uagb-timeline__events-inner-new' )[ 0 ];
+
+			timeLineEventInner.classList.remove( 'uagb-timeline__day-right', 'uagb-timeline__day-left' );
+
+			if ( 'left' === attributes[ 'timelinAlignment' + device ] ) {
+				child.classList.add( 'uagb-timeline__left' );
+				timelineMarker.classList.add( 'uagb-timeline__left' );
+				timeLineEventInner.classList.add( 'uagb-timeline__day-left' );
+			} else if ( 'right' === attributes[ 'timelinAlignment' + device ] ) {
+				child.classList.add( 'uagb-timeline__right' );
+				timelineMarker.classList.add( 'uagb-timeline__left' );
+				timeLineEventInner.classList.add( 'uagb-timeline__day-right' );
+			} else if ( 'center' === attributes[ 'timelinAlignment' + device ] ) {
+				if ( childIndex % 2 === 0 ) {
+					child.classList.add( 'uagb-timeline__right' );
+					timelineMarker.classList.add( 'uagb-timeline__right' );
+					timeLineEventInner.classList.add( 'uagb-timeline__day-right' );
+				} else {
+					child.classList.add( 'uagb-timeline__left' );
+					timelineMarker.classList.add( 'uagb-timeline__left' );
+					timeLineEventInner.classList.add( 'uagb-timeline__day-left' );
+				}
+			}
+
+			childIndex++;
+		}
+	}
+}
+
+</script>
+	<!-- Timeline JS ends -->
+
+</body>
+</html>

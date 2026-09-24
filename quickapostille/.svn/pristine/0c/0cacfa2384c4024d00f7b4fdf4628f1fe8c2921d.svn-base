@@ -1,0 +1,79 @@
+package com.dakshabhi.product.dto;
+
+public class ProductServiceDTO {
+	private int id;
+	private String item_category;
+	private int item_id;
+	private String item_name;
+	private double item_price;
+	private double item_us_price;
+	private double item_uae_price;
+	private double item_gbp_price;
+	private double item_euro_price;
+	private int is_deleted;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getItem_category() {
+		return item_category;
+	}
+	public void setItem_category(String item_category) {
+		this.item_category = item_category;
+	}
+
+	public int getItem_id() {
+		return item_id;
+	}
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
+	}
+	public String getItem_name() {
+		return item_name;
+	}
+	public void setItem_name(String item_name) {
+		this.item_name = item_name;
+	}
+	public double getItem_price() {
+		return item_price;
+	}
+	public void setItem_price(double item_price) {
+		this.item_price = item_price;
+	}
+	public double getItem_us_price() {
+		return item_us_price;
+	}
+	public void setItem_us_price(double item_us_price) {
+		this.item_us_price = item_us_price;
+	}
+	public double getItem_uae_price() {
+		return item_uae_price;
+	}
+	public void setItem_uae_price(double item_uae_price) {
+		this.item_uae_price = item_uae_price;
+	}
+
+	public double getItem_gbp_price() {
+		return item_gbp_price;
+	}
+	public void setItem_gbp_price(double item_gbp_price) {
+		this.item_gbp_price = item_gbp_price;
+	}
+	public double getItem_euro_price() {
+		return item_euro_price;
+	}
+	public void setItem_euro_price(double item_euro_price) {
+		this.item_euro_price = item_euro_price;
+	}
+	public int getIs_deleted() {
+		return is_deleted;
+	}
+	public void setIs_deleted(int is_deleted) {
+		this.is_deleted = is_deleted;
+	}
+	
+	
+}

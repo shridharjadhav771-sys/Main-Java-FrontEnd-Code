@@ -1,0 +1,179 @@
+package com.dakshabhi.order.dto;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class CustomerOrderDTO {
+	private int id;
+	private LocalDate dateCreated;
+	private LocalTime timeCreated;
+	private String sessionId;
+	private String userIp;
+	private String firstName;
+	private String lastName;
+	private String companyName;
+	private String phoneNo;
+	private String email;
+	private double orderTotalAmount;
+	private int orderTotalAmountRound;
+	private String shippingMethod;
+	private double shippingCost;
+	private String notes;
+	private String currencyCode;
+	private String currencySymbol;
+	private int isDeleted;
+	private String document_name;
+	private String country;
+	private int quantity;
+	private int product_id;
+	private double product_price;
+	private String product_name;
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public LocalDate getDateCreated() {
+		return dateCreated;
+	}
+	public void setDateCreated(LocalDate dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	public LocalTime getTimeCreated() {
+		return timeCreated;
+	}
+	public void setTimeCreated(LocalTime timeCreated) {
+		this.timeCreated = timeCreated;
+	}
+	public String getSessionId() {
+		return sessionId;
+	}
+	public void setSessionId(String sessionId) {
+		this.sessionId = sessionId;
+	}
+	public String getUserIp() {
+		return userIp;
+	}
+	public void setUserIp(String userIp) {
+		this.userIp = userIp;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public double getOrderTotalAmount() {
+		return orderTotalAmount;
+	}
+	public void setOrderTotalAmount(double orderTotalAmount) {
+		this.orderTotalAmount = orderTotalAmount;
+	}
+	public String getShippingMethod() {
+		return shippingMethod;
+	}
+	public void setShippingMethod(String shippingMethod) {
+		this.shippingMethod = shippingMethod;
+	}
+	public double getShippingCost() {
+		return shippingCost;
+	}
+	public void setShippingCost(double shippingCost) {
+		this.shippingCost = shippingCost;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+	public int getIsDeleted() {
+		return isDeleted;
+	}
+	public void setIsDeleted(int isDeleted) {
+		this.isDeleted = isDeleted;
+	}
+	public String getDocument_name() {
+		return document_name;
+	}
+	public void setDocument_name(String document_name) {
+		this.document_name = document_name;
+	}
+	public int getOrderTotalAmountRound() {
+		return orderTotalAmountRound;
+	}
+	public void setOrderTotalAmountRound(int orderTotalAmountRound) {
+		this.orderTotalAmountRound = orderTotalAmountRound;
+	}
+	public String getCurrencyCode() {
+		return currencyCode;
+	}
+	public void setCurrencyCode(String currencyCode) {
+		this.currencyCode = currencyCode;
+	}
+	public String getCurrencySymbol() {
+		return currencySymbol;
+	}
+	public void setCurrencySymbol(String currencySymbol) {
+		this.currencySymbol = currencySymbol;
+	}
+	public int getProduct_id() {
+		return product_id;
+	}
+	public void setProduct_id(int product_id) {
+		this.product_id = product_id;
+	}
+	public double getProduct_price() {
+		return product_price;
+	}
+	public void setProduct_price(double product_price) {
+		this.product_price = product_price;
+	}
+	public String getProduct_name() {
+		return product_name;
+	}
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
+	}
+	
+
+}

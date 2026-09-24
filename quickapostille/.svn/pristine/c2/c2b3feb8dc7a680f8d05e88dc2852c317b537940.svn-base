@@ -1,0 +1,221 @@
+package com.dakshabhi.order.service;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.dakshabhi.common.StringUtility;
+import com.dakshabhi.order.dao.CustomerOrderDAO;
+import com.dakshabhi.order.dto.CustomerOrderDTO;
+import com.dakshabhi.order.dto.CustomerOrderProductDto;
+import com.google.gson.Gson;
+
+@WebServlet("/finalizecustomerorder")
+@MultipartConfig
+public class FinalizeCustomerOrder extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		HttpSession session = req.getSession();
+        CustomerOrderDTO orderDTO = (CustomerOrderDTO) session.getAttribute("orderDTO");
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("orderDTO", orderDTO);
+        hashMap.put("addonList", session.getAttribute("addonList"));
+        Gson gson = new Gson();
+		resp.setContentType("application/json");
+		resp.getWriter().write(gson.toJson(hashMap)); 
+	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		CustomerOrderDAO dao = new CustomerOrderDAO();
+		String userIp = req.getParameter("userIp");
+		String sessionId = req.getSession().getId() + System.currentTimeMillis();
+		String firstName = req.getParameter("first_name");
+		String lastName = req.getParameter("last_name");
+		String company = req.getParameter("company") == null ? "" : req.getParameter("company");
+		String phone = req.getParameter("phone");
+		String email = req.getParameter("email");
+		String currencyCode = req.getParameter("currencyCode");
+		String currencySymbol = req.getParameter("currencySymbol");
+		String orderCostRound = req.getParameter("orderCostRound");
+		String quantity = req.getParameter("quantity");
+		String country = StringUtility.removeNull(req.getParameter("country"));
+		String productId = req.getParameter("productId") == null ? "1001" : req.getParameter("productId");
+		double productPrice = Double.parseDouble(req.getParameter("productPrice") == null ? "0" : req.getParameter("productPrice"));
+		String notes = req.getParameter("notes") == null ? "" : req.getParameter("notes");		
+		double orderCost = Double.parseDouble(req.getParameter("orderCost"));
+		String[] addonValues = req.getParameterValues("addon_values"); 
+		int orderId = Integer.parseInt(req.getParameter("orderId") == null ? "0" : req.getParameter("orderId"));
+		if(orderId == 0) {
+			try {
+				CustomerOrderDTO orderDTO = (CustomerOrderDTO) req.getSession().getAttribute("orderDTO");
+				if(orderDTO != null) {
+					orderId = orderDTO.getId();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		}
+		System.out.println("Order ID " + orderId);
+		String fileName = "";
+		
+		CustomerOrderDTO orderDTO = new CustomerOrderDTO();
+		orderDTO.setUserIp(userIp);
+		orderDTO.setSessionId(sessionId);
+		orderDTO.setFirstName(firstName);
+		orderDTO.setLastName(lastName);
+		orderDTO.setCompanyName(company);
+		orderDTO.setPhoneNo(phone);
+		orderDTO.setEmail(email);
+		orderDTO.setNotes(notes);
+		orderDTO.setOrderTotalAmount(orderCost);
+		orderDTO.setId(orderId); 
+		orderDTO.setDateCreated(LocalDate.now());
+		orderDTO.setTimeCreated(LocalTime.now());		
+		orderDTO.setCurrencyCode(currencyCode);
+		orderDTO.setCurrencySymbol(currencySymbol);
+		orderDTO.setOrderTotalAmountRound(Integer.parseInt(orderCostRound));
+		orderDTO.setCountry(country);
+		orderDTO.setQuantity(Integer.parseInt(quantity));
+		orderDTO.setProduct_id(Integer.parseInt(productId));
+		orderDTO.setProduct_price(productPrice);
+		orderDTO.setProduct_name(dao.getProductName(Integer.parseInt(productId)));
+		boolean status = false;
+		if(orderId <= 0) {
+			orderId = dao.insertOrderDetails(orderDTO);
+			orderDTO.setId(orderId);
+			status = true;
+			sendSlackNotification(firstName+ " "+lastName ,email , orderId);
+		}else {
+			status = dao.updateOrderDetails(orderDTO);
+		}
+		try {
+			String removedFilesParam = req.getParameter("removedFiles");
+
+			if (removedFilesParam != null && !removedFilesParam.isEmpty()) {
+			    try {
+			        JSONArray removedFilesArray = new JSONArray(removedFilesParam);
+			        for (int i = 0; i < removedFilesArray.length(); i++) {
+			            String filename = removedFilesArray.getString(i);
+			            dao.deleteFileAndDBRecord(orderId, filename);
+			        }
+			    } catch (Exception e) {
+			        e.printStackTrace();
+			    }
+			}
+			if (req.getContentType() != null && req.getContentType().toLowerCase().startsWith("multipart/")) {
+			    Collection<Part> parts = req.getParts();
+			    System.out.println(parts.size());
+			    Set<String> uploadedFileNames = new HashSet<>();
+			    for (Part part : parts) {
+			        if (part.getName().equals("upload_images") && part.getSize() > 0) {
+			            String name = extractFileName(part);
+			            if (!uploadedFileNames.contains(name)) {
+			                dao.updateDocument(part, orderId, name); 
+			                uploadedFileNames.add(name);
+			            } else {
+			                System.out.println("Duplicate file skipped: " + name);
+			            }
+			        }
+			    }
+			}			
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if(orderId != 0) {
+			fileName = dao.getUploadedDocuemnt(orderId);
+		}
+		orderDTO.setDocument_name(fileName);
+		List<CustomerOrderProductDto> list = new ArrayList<>();
+		try {
+			if(addonValues != null) {
+				list = dao.updateAddons(orderId, addonValues, quantity);
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		req.getSession().setAttribute("addonList", list);
+		req.getSession().setAttribute("orderDTO", orderDTO);
+		Gson gson = new Gson();
+		resp.setContentType("application/json");
+		resp.getWriter().write(gson.toJson(status)); 
+	}
+	private void sendSlackNotification(String name, String email, int orderId) {
+		
+		try {
+			System.out.println("-----Sending Slack Notificagtion------");
+			URL url = new URL("https://hooks.slack.com/services/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");
+
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			conn.setDoOutput(true);
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json");
+
+			JSONObject json = new JSONObject();
+			json.put("blocks",
+					new org.json.JSONArray()
+							.put(new JSONObject().put("type", "section").put("text",
+									new JSONObject().put("type", "mrkdwn").put("text", "*New Apostille Order*")))
+							.put(new JSONObject()
+									.put("type",
+											"section")
+									.put("fields",
+											new org.json.JSONArray()
+													.put(new JSONObject().put("type", "mrkdwn").put("text",
+															"*Name:*\n" + name))
+													.put(new JSONObject().put("type", "mrkdwn").put("text",
+															"*Email:*\n" + email))
+													.put(new JSONObject().put("type", "mrkdwn").put("text",
+															"*ID:*\n" + orderId)))));
+
+			String jsonString = json.toString();
+			byte[] input = jsonString.getBytes(StandardCharsets.UTF_8);
+
+			try (OutputStream os = conn.getOutputStream()) {
+				os.write(input, 0, input.length);
+			}
+
+			int responseCode = conn.getResponseCode();
+			if (responseCode != HttpURLConnection.HTTP_OK) {
+				System.err.println("Failed to send notification. Response code: " + responseCode);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	  private String extractFileName(Part part) {
+	        String contentDisp = part.getHeader("content-disposition");
+	        for (String token : contentDisp.split(";")) {
+	            if (token.trim().startsWith("filename")) {
+	                return token.substring(token.indexOf("=") + 2, token.length()-1);
+	            }
+	        }
+	        return "unknown_file";
+	    }
+}

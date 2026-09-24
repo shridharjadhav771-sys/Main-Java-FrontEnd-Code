@@ -1,0 +1,59 @@
+
+import java.io.IOException;
+import java.sql.Date;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/RegisterServlet")
+public class InsertStudentServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doPost(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		String reg_fname = req.getParameter("fname");
+		String reg_lname = req.getParameter("lname");
+		long reg_mbno = Long.parseLong(req.getParameter("mobile"));
+		String reg_emailid = req.getParameter("email");
+		String reg_address = req.getParameter("address");
+		String reg_gender = req.getParameter("gender");
+		/* Date reg_dob = Date.valueOf(req.getParameter("DOB")); */
+		String reg_branch = req.getParameter("branch");
+		String reg_specialization = req.getParameter("specialization");
+		String reg_Password = req.getParameter("password");
+
+		try {
+			RegisterDTO regObj = new RegisterDTO();
+
+			regObj.setReg_fname(reg_fname);
+			regObj.setReg_lname(reg_lname);
+			regObj.setReg_mbno(reg_mbno);
+			regObj.setReg_emailid(reg_emailid);
+			regObj.setReg_address(reg_address);
+			regObj.setReg_gender(reg_gender);
+			/* regObj.setReg_dob(reg_dob); */
+			regObj.setReg_branch(reg_branch);
+			regObj.setReg_specialization(reg_specialization);
+			regObj.setReg_Password(reg_Password);
+
+			int status = RegisterDAO.insertRegisterDetails(regObj);
+
+			if (status > 0) {
+				System.out.println("Registred Successfully");
+				resp.sendRedirect("index.jsp");
+			} else {
+				System.out.println("Not Registred");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}

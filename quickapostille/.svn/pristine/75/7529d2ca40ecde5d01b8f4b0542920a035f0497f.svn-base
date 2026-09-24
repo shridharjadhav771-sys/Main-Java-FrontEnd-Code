@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand"
+				href="index.jsp"><img
+				src="images/apostille_logo.png" alt="Quick Apostille"></a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="" role="button"><i class="fa fa-bars"
+					aria-hidden="true" style="color: #e6e6ff"></i></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav navbar-nav">
+					<li class="nav-item"><a class="mega-menu-link"
+						href="index.jsp" tabindex="0" target="_">Home</a></li>
+					<li class="nav-item"><a class="mega-menu-link"
+						href="about_us.jsp" tabindex="0"
+						target="_">About Us</a></li>
+					 
+					<li id = "product-menu-item" class="nav-item"><a class="mega-menu-link" href="product.jsp" tabindex="0"
+						target="_">Products<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+						<ul class="sub_menu" id = "productSubMenu">
+							<li class="menu-section">
+								<div class = "subMenuHeading">Apostille</div>
+								<ul class="submenu">
+									<li class="submenu-item"><a href = "product/1001/Apostille">Apostille</a></li>
+									<li class="submenu-item"><a href = "product/1002/birth-certificate-apostille">Birth Certificate Apostille</a></li>
+									<li class="submenu-item"><a href = "product/1003/death-certificate-apostille">Death Certificate Apostille</a></li>
+									<li class="submenu-item"><a href = "product/1004/marriage-certificate-apostille">Marriage Certificate Apostille</a></li>
+									<li class="submenu-item"><a href = "product/1005/power-of-attorney-apostille">Power of Attorney Apostille</a></li>
+								</ul>
+							</li>
+							<li class="menu-section">
+							<div class = "subMenuHeading">Notarization</div>
+								<ul class="submenu">
+									<li class="submenu-item"><a href = "product/1006/notarized">Notarized</a></li>
+									<li class="submenu-item"><a href = "product/1007/signature-notarization">Signature Notarization</a></li>
+									<li class="submenu-item"><a href = "product/1008/certified-copy-of-passport-id">Certified Copy of Passport/ID</a></li>
+									<li class="submenu-item"><a href = "product/1009/affidavit-notarization">Affidavit Notarization</a></li>
+									<li class="submenu-item"><a href = "product/1010/power-of-attorney">Power of Attorney</a></li>
+									<li class="submenu-item"><a href = "product/1011/birth-certificate-notarization">Birth Certificate Notarization</a></li>
+									<li class="submenu-item"><a href = "product/1012/death-certificate-notarization">Death Certificate Notarization</a></li>
+									<li class="submenu-item"><a href = "product/1013/marriage-certificate">Marriage Certificate</a></li>
+									<li class="submenu-item"><a href = "product/1014/minor-travel-consent">Minor Travel Consent</a></li>
+									<li class="submenu-item"><a href = "product/1015/shareholder-structure">Shareholder Structure</a></li>
+									<li class="submenu-item"><a href = "product/1016/letter-apartment">Letter Apartment</a></li>
+								</ul>
+							</li>
+						</ul>
+						</li>
+					<li class="nav-item"><a class="mega-menu-link"
+						href="contact.jsp" tabindex="0"
+						target="_">Contact</a></li>
+				</ul>
+			</div>
+			<div class="ap-header-button-wrapper text-center">
+				<a id = "headerApostilleBtn" href = "service.jsp"><span class="">GET APOSTILLE NOW</span></a>
+			</div>
+		</div>
+	</nav>

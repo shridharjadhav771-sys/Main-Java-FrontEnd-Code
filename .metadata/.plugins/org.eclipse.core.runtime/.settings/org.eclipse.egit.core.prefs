@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=D\:\\apache-tomcat-9.0.91\\webapps\\MAJ_Shop\\.git;D\:\\apache-tomcat-9.0.91\\webapps\\siepl_amc\\.git;D\:\\apache-tomcat-9.0.91\\webapps\\bank-document-manager\\.git;D\:\\apache-tomcat-9.0.91\\webapps\\MAJ_Shop (3)\\MAJ_Shop\\.git;
+GitRepositoriesView.GitDirectories.relative=MAJ_Shop\\.git;siepl_amc\\.git;bank-document-manager\\.git;MAJ_Shop (3)\\MAJ_Shop\\.git;
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

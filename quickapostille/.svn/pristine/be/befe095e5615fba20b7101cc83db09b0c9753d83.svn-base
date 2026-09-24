@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file> 
+	</welcome-file-list> 
+	 <env-entry>
+		<env-entry-name>DriverClass</env-entry-name>
+		<env-entry-value>com.mysql.cj.jdbc.Driver</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+	<env-entry>
+		<env-entry-name>URL</env-entry-name>
+		<env-entry-value>
+			jdbc:mysql:localhost:quickapostille
+		</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+	<env-entry>
+		<env-entry-name>UID</env-entry-name>
+		<env-entry-value>root</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+	<env-entry>
+		<env-entry-name>password</env-entry-name>
+		<env-entry-value>root</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+	<env-entry>
+		<env-entry-name>Database</env-entry-name>
+		<env-entry-value>quickapostille</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+	<env-entry>
+		<env-entry-name>DatabaseType</env-entry-name>
+		<env-entry-value>MYSQL</env-entry-value>
+		<env-entry-type>java.lang.String</env-entry-type>
+	</env-entry>
+</web-app>

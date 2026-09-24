@@ -1,0 +1,82 @@
+package com.dakshabhi.payment.service;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dakshabhi.common.StringUtility;
+import com.dakshabhi.payment.dto.PaymentKeysDTO;
+
+@WebServlet("/stripesecretkey")
+public class Stripesecretkey extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String orderAmount = StringUtility.removeNull(req.getParameter("orderAmount"));
+		String firstName = StringUtility.removeNull(req.getParameter("firstName"));
+		String lastName = StringUtility.removeNull(req.getParameter("lastName"));
+		String email = StringUtility.removeNull(req.getParameter("email"));
+		
+		String shippingStreet  = StringUtility.removeNull(req.getParameter("shippingStreet"));
+		String shippingCity = StringUtility.removeNull(req.getParameter("shippingCity")); 
+		String shippingState = StringUtility.removeNull(req.getParameter("shippingState")); 
+		String shippingZip = StringUtility.removeNull(req.getParameter("shippingZip")); 
+		String shippingCountry = StringUtility.removeNull(req.getParameter("shippingCountry")); 
+		String currency = StringUtility.removeNull(req.getParameter("currency"));
+		String orderID = StringUtility.removeNull(req.getParameter("orderid"));
+		if("".equals(orderID)) {
+			orderID = "1000";
+		}
+		PaymentKeysDTO paymentKeysDTO = req.getSession().getAttribute("paymentKeysDTO")== null ? null: (PaymentKeysDTO)req.getSession().getAttribute("paymentKeysDTO");
+		String secretKey = paymentKeysDTO.getAuthKey();
+		System.out.println("orderAmount: " + orderAmount);
+		System.out.println("currency: " + currency);
+		System.out.println("secretKey: " + secretKey);
+		boolean isShippingAdded = true;
+		
+		CustomerDetails customerDetails = new CustomerDetails();
+		customerDetails.setFirstName(firstName);
+		customerDetails.setLastName(lastName);
+		customerDetails.setEmail(email);
+		customerDetails.setShippingStreet(shippingStreet);
+		customerDetails.setShippingCity(shippingCity);
+		customerDetails.setShippingState(shippingState);
+		customerDetails.setShippingZip(shippingZip);
+		customerDetails.setShippingCountry(shippingCountry);
+		customerDetails.setCurrency(currency);
+		String stripeClientSecret = getSessionAttribute(req, "stripeClientSecret") == null ? ""
+				: (String) getSessionAttribute(req, "stripeClientSecret");
+		if (stripeClientSecret.equals("")) {
+			System.out.println("Generate new key");
+			StripeOperations stripeOperations = new StripeOperations();
+			stripeClientSecret = stripeOperations.createPaymentIntent(orderAmount, customerDetails, secretKey, orderID, isShippingAdded);
+			if (!stripeClientSecret.equals("")) {
+				setSessionAttribute(req, "stripeClientSecret", stripeClientSecret);
+			}
+		}
+		System.out.println("stripeClientSecret: " + stripeClientSecret);
+		resp.getWriter().write(stripeClientSecret.trim());
+	}
+
+	public Object getSessionAttribute(HttpServletRequest request, String para) {
+		if (null != request && null != request.getSession()) {
+			return request.getSession().getAttribute(para);
+		} else
+			return null;
+	}
+
+	public void setSessionAttribute(HttpServletRequest request, String para, Object value) {
+		if (null != request && null != request.getSession()) {
+			request.getSession().setAttribute(para, value);
+		}
+	}
+}

@@ -1,0 +1,40 @@
+/* @charset "UTF-8";
+@charset "ISO-8859-1";
+h1{
+	text-align:center;
+	color:white;
+}
+input[type=text]{
+	display:flex;
+	padding:10px;
+	margin:10px;
+	width:100%;
+}
+
+div {
+  	background-color: #f2f2f2;
+  	padding:100px;  
+  	
+}
+.col{
+  width:30%;
+  margin-top: 6px;
+  margin:10px 35%  
+}
+input[type=submit]{
+	
+	margin:10px ;
+	width:40%;
+	text-align:center;
+	padding:10px;
+	background-color:blue;
+	font-weight: bold;
+	color:white;
+	display:center;
+}a.nav-link {
+    color: white;
+    font-weight: bold;
+}
+.nav-item{
+	padding-left:20px;
+} */

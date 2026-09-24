@@ -1,0 +1,249 @@
+package com.dakshabhi.order.service;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.dakshabhi.common.StringUtility;
+import com.dakshabhi.common.db.QueryHelper;
+import com.dakshabhi.email.SendOrderConfirmationEmail;
+import com.dakshabhi.order.dto.CustomerOrderProductDto;
+import com.google.gson.Gson;
+@WebServlet("/updateorderdetails")
+public class UpdateOrderDetails extends HttpServlet{
+//	private static final String API_URL = "https://test.quickapostille.online/wp-json/wc/v3/orders";
+//	private static final String API_KEY = "ck_2dd025b9349004f9e999d25626ebf0c1ea1b8847";
+//	private static final String API_SECRET = "cs_6de98f9e1d6ca37c88699a39c0620121b2678c4a";
+	
+	private static final String API_URL = "https://www.quickapostille.online/wp-json/wc/v3/orders";
+	private static final String API_KEY = "ck_2dd025b9349004f9e999d25626ebf0c1ea1b8847";
+	private static final String API_SECRET = "cs_6de98f9e1d6ca37c88699a39c0620121b2678c4a";
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		try {
+			String country = req.getParameter("country");
+			String street = req.getParameter("street"); 
+			String city = req.getParameter("city");
+			String state = req.getParameter("state");
+			String zip = req.getParameter("zip");
+			String firstName = req.getParameter("first_name");
+			String lastName = req.getParameter("last_name");
+			String phone = req.getParameter("phone");
+			String email = req.getParameter("email");
+			String currencySymbol = req.getParameter("currencySymbol");
+			String currencyCode = req.getParameter("currencyCode");
+			int orderStatus = Integer.parseInt(req.getParameter("orderStatus") == null ? "0" : req.getParameter("orderStatus")); 
+			int orderId = Integer.parseInt(req.getParameter("orderId") == null ? "0" : req.getParameter("orderId"));
+			String paymentId = StringUtility.removeNull(req.getParameter("paymentId"));
+			String notes = StringUtility.removeNull(req.getParameter("notes")); 
+			int productquantity = Integer.parseInt(req.getParameter("productquantity") == null ? "1" : req.getParameter("productquantity")); 
+			
+			String newOrderID = "";
+			String shippingMethod = "Online Copy (Email)";
+			double shippingCost = 0.00;
+			double orderCost = Double.parseDouble(req.getParameter("orderCost"));
+			if(orderStatus == 1) {
+				updateOrderStatus(orderId,paymentId,orderCost,country,street,city,state,zip);
+				try {
+					String shipping = req.getParameter("shipping_method");
+					String[] shippingDetails = shipping.split("::");
+					shippingMethod = shippingDetails[0];
+					shippingCost = Double.parseDouble(shippingDetails[1]);
+					updateShippingMethod(orderId,shippingMethod,shippingCost);
+				} catch (Exception e) {
+					e.printStackTrace();
+				} 
+ 
+				//Send order confirmation email
+				
+				
+				SendOrderConfirmationEmail orderConfirmationEmail = new SendOrderConfirmationEmail();
+				orderConfirmationEmail.sendConfirmationEmail(orderId);
+			}
+			int isFileUpload = isDocumentUpdate(orderId);
+			Map map = new HashMap();
+			map.put("orderID", orderId); 
+			map.put("mainOrderId", newOrderID);
+			map.put("isfile", isFileUpload);
+			map.put("status", "success");   
+			Gson gson = new Gson();
+			resp.setContentType("application/json");
+			resp.getWriter().write(gson.toJson(map));
+		} catch (Exception e) {
+			e.printStackTrace();
+			Map map = new HashMap(); 
+			map.put("status", "error");   
+			Gson gson = new Gson();
+			resp.setContentType("application/json");
+			resp.getWriter().write(gson.toJson(map));
+		}
+		
+	}
+	
+	private void updateShippingMethod(int orderId, String shippingMethod, double shippingCost) {
+		QueryHelper qh = new QueryHelper();
+		try {
+			String sql = "update qa_order set shipping_method =?,shipping_cost = ?  where id = ?";
+			qh.addParam(shippingMethod);
+			qh.addParam(shippingCost);
+			qh.addParam(orderId);
+			qh.runQuery(sql);  
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+	}
+
+	private int isDocumentUpdate(int orderId) {
+		QueryHelper qh = new QueryHelper();
+		try {
+			String sql = "SELECT document_name FROM  qa_order_documents where order_id = ? ";
+			qh.addParam(orderId);
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			if(rs.next()) {
+				 
+				if(!StringUtility.removeNull(rs.getString("document_name")).equals("") ) {
+					return 1;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return 0;
+	}
+
+	private void updateOrderWithLiveOrder(String newOrderID, int orderId) {
+		QueryHelper qh = new QueryHelper();
+		try {
+			String sql = "update qa_order set mainorderid =? where id = ?";
+			qh.addParam(newOrderID);
+			qh.addParam(orderId);
+			qh.runQuery(sql);  
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		
+	}
+
+	private void updateOrderStatus(int orderId, String paymentId, double orderCost, String country, String street,
+			String city, String state, String zip) {
+		QueryHelper qh = new QueryHelper();
+		try {
+			String sql = "update qa_order set country= ?,  street_address= ?, city= ?, state= ?, postal_code = ?,  order_status =1 where id = ?";
+			qh.addParam(country);
+			qh.addParam(street);
+			qh.addParam(city);
+			qh.addParam(state);
+			qh.addParam(zip); 
+			qh.addParam(orderId);
+			qh.runQuery(sql);
+			
+			qh.clearParams();
+			
+			sql = "insert into qa_order_payment(order_id, payment_id, amount, payment_status) values(?,?,?,1) ";
+			qh.addParam(orderId);
+			qh.addParam(paymentId);
+			qh.addParam(orderCost);
+			
+			qh.runQuery(sql);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		
+	}
+	
+	public static String sendOrderDetailsToAPI(Map<String, String> billingInfo, Map<String, String> shippingInfo,
+			List<Map<String, Object>> lineItems, List<Map<String, Object>> feeLines, Map<String, String> shippingLine,
+			String notes, String currencyCode, String currencySymbol) {
+		String orderID = "";
+		try (CloseableHttpClient client = HttpClients.createDefault()) {
+			HttpPost post = new HttpPost(API_URL);
+
+			String auth = API_KEY + ":" + API_SECRET;
+			String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes(StandardCharsets.UTF_8));
+			post.setHeader("Authorization", "Basic " + encodedAuth);
+			post.setHeader("Content-Type", "application/json");
+			post.setHeader("Accept", "application/json");
+
+			JSONObject orderJson = new JSONObject();
+			orderJson.put("payment_method", "stripe");
+			orderJson.put("payment_method_title", "Credit / Debit Card");
+			orderJson.put("set_paid", true);
+			orderJson.put("billing", new JSONObject(billingInfo));
+			orderJson.put("shipping", new JSONObject(shippingInfo));
+			orderJson.put("customer_note", notes);
+			orderJson.put("currency", currencyCode);
+			orderJson.put("currency_symbol", currencySymbol);
+
+			JSONArray lineItemsArray = new JSONArray();
+			for (Map<String, Object> item : lineItems) {
+				lineItemsArray.put(new JSONObject(item));
+			}
+			orderJson.put("line_items", lineItemsArray);
+
+			JSONArray feeLinesArray = new JSONArray();
+			for (Map<String, Object> fee : feeLines) {
+				feeLinesArray.put(new JSONObject(fee));
+			}
+			orderJson.put("fee_lines", feeLinesArray);
+
+			JSONArray shippingLinesArray = new JSONArray();
+			shippingLinesArray.put(new JSONObject(shippingLine));
+			orderJson.put("shipping_lines", shippingLinesArray);
+			System.out.println(orderJson);
+			post.setEntity(new StringEntity(orderJson.toString(), "UTF-8"));
+
+			HttpResponse response = client.execute(post);
+			int statusCode = response.getStatusLine().getStatusCode();
+			if (statusCode == 201) {
+				System.out.println("Order created successfully.");
+			} else {
+				System.out.println("Failed to create order. HTTP Code: " + statusCode);
+			}
+			HttpEntity responseEntity = response.getEntity();
+			if (responseEntity != null) {
+				String result = EntityUtils.toString(responseEntity);
+				System.out.println("Response: " + result);
+				JSONObject jsonResult = new JSONObject(result);
+				orderID = jsonResult.get("id").toString();
+				System.out.println("Main orderID: " + orderID);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return orderID;
+	}
+
+}

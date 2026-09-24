@@ -1,0 +1,41 @@
+package com.dakshabhi.order.dto;
+
+
+public class CustomerOrderProductDto {
+	private int order_id;
+	private int product_id;
+	private String product_name;
+	private double product_price;
+	private int product_quantity;
+	public int getOrder_id() {
+		return order_id;
+	}
+	public void setOrder_id(int order_id) {
+		this.order_id = order_id;
+	}
+	public int getProduct_id() {
+		return product_id;
+	}
+	public void setProduct_id(int product_id) {
+		this.product_id = product_id;
+	}
+	public String getProduct_name() {
+		return product_name;
+	}
+	public void setProduct_name(String prodcut_name) {
+		this.product_name = prodcut_name;
+	}
+	public double getProduct_price() {
+		return product_price;
+	}
+	public void setProduct_price(double product_price) {
+		this.product_price = product_price;
+	}
+	public int getProduct_quantity() {
+		return product_quantity;
+	}
+	public void setProduct_quantity(int product_quantity) {
+		this.product_quantity = product_quantity;
+	}
+	
+}

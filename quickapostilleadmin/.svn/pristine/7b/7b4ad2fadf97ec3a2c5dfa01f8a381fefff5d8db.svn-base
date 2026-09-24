@@ -1,0 +1,792 @@
+package com.dakshabhi.orders.dao;
+
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ctc.wstx.util.StringUtil;
+import com.dakshabhi.common.db.QueryHelper;
+import com.dakshabhi.common.utility.StringUtility;
+import com.dakshabhi.orders.dto.AddonsDTO;
+import com.dakshabhi.orders.dto.CustomerOrderProductDto;
+import com.dakshabhi.orders.dto.OrderDTO;
+
+public class OrderDAO {
+
+	public static ArrayList<OrderDTO> getOrderList(String searchKeyword, String fromDate, String toDate,
+			String orderStatus) {
+
+		ArrayList<OrderDTO> orderList = new ArrayList<OrderDTO>(); 
+		QueryHelper qh = new QueryHelper();
+
+		try {
+			String subQuery = "";
+
+			if (orderStatus != null && !orderStatus.trim().isEmpty()) {
+			    subQuery += " and order_status = ?";
+			    qh.addParam(orderStatus.trim());
+			}
+
+			if (searchKeyword != null && !searchKeyword.trim().isEmpty()) {
+				searchKeyword = "%" + searchKeyword.trim() + "%";
+				subQuery += " and (email LIKE ? or first_name LIKE ? or last_name LIKE ?)";
+				qh.addParam(searchKeyword);
+				qh.addParam(searchKeyword);
+				qh.addParam(searchKeyword);
+			}
+
+			String sql = "select * from qa_order where is_deleted = 0 " + subQuery
+					+ " and date_created >= ? and date_created <= ? order by id desc";
+
+			qh.addParam(fromDate);
+			qh.addParam(toDate);
+
+			ResultSet rs = qh.runQueryStreamResults(sql);
+
+			while (rs.next()) {
+				OrderDTO orderDTO = new OrderDTO();
+				orderDTO.setOrderId(rs.getString("id"));
+				orderDTO.setDateCreated(rs.getString("date_created"));
+				orderDTO.setTimeCreated(rs.getString("time_created"));
+				orderDTO.setFirstName(rs.getString("first_name"));
+				orderDTO.setLastName(rs.getString("last_name"));
+				orderDTO.setEmail(rs.getString("email"));
+				orderDTO.setPhone(rs.getString("phone_no"));
+				orderDTO.setPaymentId("");
+				if (rs.getInt("order_status") == 1) {
+					orderDTO.setPaymentId(getPaymentID(rs.getInt("id")));
+				}
+				orderDTO.setShippingMethod(StringUtility.removeNull(rs.getString("shipping_method")));
+				orderDTO.setShippingCost(String.format("%.2f", rs.getDouble("shipping_cost")));
+				orderDTO.setDocumentName(StringUtility.removeNull(rs.getString("document_name")));
+				orderDTO.setDocumentList(getDocmentList(rs.getInt("id")));
+				orderDTO.setAdditionalServices(getAdditionalService(rs.getString("id")));
+				orderDTO.setOrderStatus(rs.getString("order_status"));
+				orderDTO.setCurrencyCode(StringUtility.removeNull(rs.getString("currency_code")));
+				orderDTO.setCountry(getCountryFullName(StringUtility.removeNull(rs.getString("country"))));
+				orderDTO.setTotalCost(String.format("%.2f", rs.getDouble("order_total_amount")));
+				orderDTO.setUserIP(StringUtility.removeNull(rs.getString("user_ip")));
+				orderDTO.setNotes(StringUtility.removeNull(rs.getString("notes")));
+				orderList.add(orderDTO);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			qh.releaseConnection();
+		}
+
+		return orderList;
+	}
+	
+	private static String getCountryFullName(String countryCode) { 
+		switch (countryCode) {
+		case "AF": 
+			 return "Afghanistan";
+			case "AX": 
+			 return "Islands";
+			case "AL": 
+			 return "Albania";
+			case "DZ": 
+			 return "Algeria";
+			case "AS": 
+			 return "American Samoa";
+			case "AD": 
+			 return "Andorra";
+			case "AO": 
+			 return "Angola";
+			case "AI": 
+			 return "Anguilla";
+			case "AQ": 
+			 return "Antarctica";
+			case "AG": 
+			 return "Antigua and Barbuda";
+			case "AR": 
+			 return "Argentina";
+			case "AM": 
+			 return "Armenia";
+			case "AW": 
+			 return "Aruba";
+			case "AU": 
+			 return "Australia";
+			case "AT": 
+			 return "Austria";
+			case "AZ": 
+			 return "Azerbaijan";
+			case "BS": 
+			 return "Bahamas";
+			case "BH": 
+			 return "Bahrain";
+			case "BD": 
+			 return "Bangladesh";
+			case "BB": 
+			 return "Barbados";
+			case "BY": 
+			 return "Belarus";
+			case "PW": 
+			 return "Belau";
+			case "BE": 
+			 return "Belgium";
+			case "BZ": 
+			 return "Belize";
+			case "BJ": 
+			 return "Benin";
+			case "BM": 
+			 return "Bermuda";
+			case "BT": 
+			 return "Bhutan";
+			case "BO": 
+			 return "Bolivia";
+			case "BQ": 
+			 return "Bonaire, Saint Eustatius and Saba";
+			case "BA": 
+			 return "Bosnia and Herzegovina";
+			case "BW": 
+			 return "Botswana";
+			case "BV": 
+			 return "Bouvet Island";
+			case "BR": 
+			 return "Brazil";
+			case "IO": 
+			 return "British Indian Ocean Territory";
+			case "BN": 
+			 return "Brunei";
+			case "BG": 
+			 return "Bulgaria";
+			case "BF": 
+			 return "Burkina Faso";
+			case "BI": 
+			 return "Burundi";
+			case "KH": 
+			 return "Cambodia";
+			case "CM": 
+			 return "Cameroon";
+			case "CA": 
+			 return "Canada";
+			case "CV": 
+			 return "Cape Verde";
+			case "KY": 
+			 return "Cayman Islands";
+			case "CF": 
+			 return "Central African Republic";
+			case "TD": 
+			 return "Chad";
+			case "CL": 
+			 return "Chile";
+			case "CN": 
+			 return "China";
+			case "CX": 
+			 return "Christmas Island";
+			case "CC": 
+			 return "Cocos (Keeling) Islands";
+			case "CO": 
+			 return "Colombia";
+			case "KM": 
+			 return "Comoros";
+			case "CG": 
+			 return "Congo (Brazzaville)";
+			case "CD": 
+			 return "Congo (Kinshasa)";
+			case "CK": 
+			 return "Cook Islands";
+			case "CR": 
+			 return "Costa Rica";
+			case "HR": 
+			 return "Croatia";
+			case "CU": 
+			 return "Cuba";
+			case "CW": 
+			 return "CuraÃ§ao";
+			case "CY": 
+			 return "Cyprus";
+			case "CZ": 
+			 return "Czech Republic";
+			case "DK": 
+			 return "Denmark";
+			case "DJ": 
+			 return "Djibouti";
+			case "DM": 
+			 return "Dominica";
+			case "DO": 
+			 return "Dominican Republic";
+			case "EC": 
+			 return "Ecuador";
+			case "EG": 
+			 return "Egypt";
+			case "SV": 
+			 return "El Salvador";
+			case "GQ": 
+			 return "Equatorial Guinea";
+			case "ER": 
+			 return "Eritrea";
+			case "EE": 
+			 return "Estonia";
+			case "SZ": 
+			 return "Eswatini";
+			case "ET": 
+			 return "Ethiopia";
+			case "FK": 
+			 return "Falkland Islands";
+			case "FO": 
+			 return "Faroe Islands";
+			case "FJ": 
+			 return "Fiji";
+			case "FI": 
+			 return "Finland";
+			case "FR": 
+			 return "France";
+			case "GF": 
+			 return "French Guiana";
+			case "PF": 
+			 return "French Polynesia";
+			case "TF": 
+			 return "French Southern Territories";
+			case "GA": 
+			 return "Gabon";
+			case "GM": 
+			 return "Gambia";
+			case "GE": 
+			 return "Georgia";
+			case "DE": 
+			 return "Germany";
+			case "GH": 
+			 return "Ghana";
+			case "GI": 
+			 return "Gibraltar";
+			case "GR": 
+			 return "Greece";
+			case "GL": 
+			 return "Greenland";
+			case "GD": 
+			 return "Grenada";
+			case "GP": 
+			 return "Guadeloupe";
+			case "GU": 
+			 return "Guam";
+			case "GT": 
+			 return "Guatemala";
+			case "GG": 
+			 return "Guernsey";
+			case "GN": 
+			 return "Guinea";
+			case "GW": 
+			 return "Guinea-Bissau";
+			case "GY": 
+			 return "Guyana";
+			case "HT": 
+			 return "Haiti";
+			case "HM": 
+			 return "Heard Island and McDonald Islands";
+			case "HN": 
+			 return "Honduras";
+			case "HK": 
+			 return "Hong Kong";
+			case "HU": 
+			 return "Hungary";
+			case "IS": 
+			 return "Iceland";
+			case "IN": 
+			 return "India";
+			case "ID": 
+			 return "Indonesia";
+			case "IR": 
+			 return "Iran";
+			case "IQ": 
+			 return "Iraq";
+			case "IE": 
+			 return "Ireland";
+			case "IM": 
+			 return "Isle of Man";
+			case "IL": 
+			 return "Israel";
+			case "IT": 
+			 return "Italy";
+			case "CI": 
+			 return "Ivory Coast";
+			case "JM": 
+			 return "Jamaica";
+			case "JP": 
+			 return "Japan";
+			case "JE": 
+			 return "Jersey";
+			case "JO": 
+			 return "Jordan";
+			case "KZ": 
+			 return "Kazakhstan";
+			case "KE": 
+			 return "Kenya";
+			case "KI": 
+			 return "Kiribati";
+			case "KW": 
+			 return "Kuwait";
+			case "KG": 
+			 return "Kyrgyzstan";
+			case "LA": 
+			 return "Laos";
+			case "LV": 
+			 return "Latvia";
+			case "LB": 
+			 return "Lebanon";
+			case "LS": 
+			 return "Lesotho";
+			case "LR": 
+			 return "Liberia";
+			case "LY": 
+			 return "Libya";
+			case "LI": 
+			 return "Liechtenstein";
+			case "LT": 
+			 return "Lithuania";
+			case "LU": 
+			 return "Luxembourg";
+			case "MO": 
+			 return "Macao";
+			case "MG": 
+			 return "Madagascar";
+			case "MW": 
+			 return "Malawi";
+			case "MY": 
+			 return "Malaysia";
+			case "MV": 
+			 return "Maldives";
+			case "ML": 
+			 return "Mali";
+			case "MT": 
+			 return "Malta";
+			case "MH": 
+			 return "Marshall Islands";
+			case "MQ": 
+			 return "Martinique";
+			case "MR": 
+			 return "Mauritania";
+			case "MU": 
+			 return "Mauritius";
+			case "YT": 
+			 return "Mayotte";
+			case "MX": 
+			 return "Mexico";
+			case "FM": 
+			 return "Micronesia";
+			case "MD": 
+			 return "Moldova";
+			case "MC": 
+			 return "Monaco";
+			case "MN": 
+			 return "Mongolia";
+			case "ME": 
+			 return "Montenegro";
+			case "MS": 
+			 return "Montserrat";
+			case "MA": 
+			 return "Morocco";
+			case "MZ": 
+			 return "Mozambique";
+			case "MM": 
+			 return "Myanmar";
+			case "NA": 
+			 return "Namibia";
+			case "NR": 
+			 return "Nauru";
+			case "NP": 
+			 return "Nepal";
+			case "NL": 
+			 return "Netherlands";
+			case "NC": 
+			 return "New Caledonia";
+			case "NZ": 
+			 return "New Zealand";
+			case "NI": 
+			 return "Nicaragua";
+			case "NE": 
+			 return "Niger";
+			case "NG": 
+			 return "Nigeria";
+			case "NU": 
+			 return "Niue";
+			case "NF": 
+			 return "Norfolk Island";
+			case "KP": 
+			 return "North Korea";
+			case "MK": 
+			 return "North Macedonia";
+			case "MP": 
+			 return "Northern Mariana Islands";
+			case "NO": 
+			 return "Norway";
+			case "OM": 
+			 return "Oman";
+			case "PK": 
+			 return "Pakistan";
+			case "PS": 
+			 return "Palestinian Territory";
+			case "PA": 
+			 return "Panama";
+			case "PG": 
+			 return "Papua New Guinea";
+			case "PY": 
+			 return "Paraguay";
+			case "PE": 
+			 return "Peru";
+			case "PH": 
+			 return "Philippines";
+			case "PN": 
+			 return "Pitcairn";
+			case "PL": 
+			 return "Poland";
+			case "PT": 
+			 return "Portugal";
+			case "PR": 
+			 return "Puerto Rico";
+			case "QA": 
+			 return "Qatar";
+			case "RE": 
+			 return "Reunion";
+			case "RO": 
+			 return "Romania";
+			case "RU": 
+			 return "Russia";
+			case "RW": 
+			 return "Rwanda";
+			case "BL": 
+			 return "Saint BarthÃ©lemy";
+			case "SH": 
+			 return "Saint Helena";
+			case "KN": 
+			 return "Saint Kitts and Nevis";
+			case "LC": 
+			 return "Saint Lucia";
+			case "SX": 
+			 return "Saint Martin (Dutch part)";
+			case "MF": 
+			 return "Saint Martin (French part)";
+			case "PM": 
+			 return "Saint Pierre and Miquelon";
+			case "VC": 
+			 return "Saint Vincent and the Grenadines";
+			case "WS": 
+			 return "Samoa";
+			case "SM": 
+			 return "San Marino";
+			case "ST": 
+			 return "SÃ£o TomÃ© and PrÃ­ncipe";
+			case "SA": 
+			 return "Saudi Arabia";
+			case "SN": 
+			 return "Senegal";
+			case "RS": 
+			 return "Serbia";
+			case "SC": 
+			 return "Seychelles";
+			case "SL": 
+			 return "Sierra Leone";
+			case "SG": 
+			 return "Singapore";
+			case "SK": 
+			 return "Slovakia";
+			case "SI": 
+			 return "Slovenia";
+			case "SB": 
+			 return "Solomon Islands";
+			case "SO": 
+			 return "Somalia";
+			case "ZA": 
+			 return "South Africa";
+			case "GS": 
+			 return "South Georgia/Sandwich Islands";
+			case "KR": 
+			 return "South Korea";
+			case "SS": 
+			 return "South Sudan";
+			case "ES": 
+			 return "Spain";
+			case "LK": 
+			 return "Sri Lanka";
+			case "SD": 
+			 return "Sudan";
+			case "SR": 
+			 return "Suriname";
+			case "SJ": 
+			 return "Svalbard and Jan Mayen";
+			case "SE": 
+			 return "Sweden";
+			case "CH": 
+			 return "Switzerland";
+			case "SY": 
+			 return "Syria";
+			case "TW": 
+			 return "Taiwan";
+			case "TJ": 
+			 return "Tajikistan";
+			case "TZ": 
+			 return "Tanzania";
+			case "TH": 
+			 return "Thailand";
+			case "TL": 
+			 return "Timor-Leste";
+			case "TG": 
+			 return "Togo";
+			case "TK": 
+			 return "Tokelau";
+			case "TO": 
+			 return "Tonga";
+			case "TT": 
+			 return "Trinidad and Tobago";
+			case "TN": 
+			 return "Tunisia";
+			case "TR": 
+			 return "Turkey";
+			case "TM": 
+			 return "Turkmenistan";
+			case "TC": 
+			 return "Turks and Caicos Islands";
+			case "TV": 
+			 return "Tuvalu";
+			case "UG": 
+			 return "Uganda";
+			case "UA": 
+			 return "Ukraine";
+			case "AE": 
+			 return "United Arab Emirates";
+			case "GB": 
+			 return "United Kingdom (UK)";
+			case "US": 
+			 return "United States (US)";
+			case "UM": 
+			 return "United States (US) Minor Outlying Islands";
+			case "UY": 
+			 return "Uruguay";
+			case "UZ": 
+			 return "Uzbekistan";
+			case "VU": 
+			 return "Vanuatu";
+			case "VA": 
+			 return "Vatican";
+			case "VE": 
+			 return "Venezuela";
+			case "VN": 
+			 return "Vietnam";
+			case "VG": 
+			 return "Virgin Islands (British)";
+			case "VI": 
+			 return "Virgin Islands (US)";
+			case "WF": 
+			 return "Wallis and Futuna";
+			case "EH": 
+			 return "Western Sahara";
+			case "YE": 
+			 return "Yemen";
+			case "ZM": 
+			 return "Zambia";
+			case "ZW": 
+			 return "Zimbabwe";  
+		}
+		return "";
+	}
+
+	private static List<String> getDocmentList(int id) {
+		List<String> dList = new ArrayList<String>();
+		QueryHelper qh = new QueryHelper();
+		try {
+			String sql = "select * from qa_order_documents where order_id = ?";
+			qh.addParam(id);
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			while(rs.next()) {
+				dList.add(StringUtility.removeNull(rs.getString("document_name")));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return dList;
+	}
+	private static String getPaymentID(int orderID) {
+		QueryHelper qh = new QueryHelper(); 
+		try {
+			String sql = "select * from qa_order_payment where order_id = ?";
+			qh.addParam(orderID);
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			
+			if(rs.next()) {
+				return  rs.getString("payment_id");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return "";
+	}
+
+	private static String getAdditionalService(String orderID) {
+		QueryHelper qh = new QueryHelper();
+		String services = "";
+		try {
+			String sql = "select * from qa_order_products where order_id = ?";
+			qh.addParam(orderID);
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			
+			while(rs.next()) {
+				services += rs.getString("prodcut_name") + "(" + rs.getString("product_quantity") + ")<br/>";
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		
+		return services;
+	}
+	public OrderDTO getOrderDetails(int id){
+		QueryHelper qh = new QueryHelper();
+		OrderDTO orderDTO = new OrderDTO();
+		try {
+			String sql = "select qo.*,qi.item_name from qa_order qo left join qa_items qi on qo.product_id = qi.item_id  where qo.is_deleted = 0 and qo.id = "+ id;
+			ResultSet rs = qh.runQueryStreamResults(sql);
+			if (rs.next()) {	
+				orderDTO.setOrderId(rs.getString("id"));
+				orderDTO.setDateCreated(rs.getString("date_created"));
+				orderDTO.setTimeCreated(rs.getString("time_created"));
+				orderDTO.setFirstName(rs.getString("first_name"));
+				orderDTO.setLastName(rs.getString("last_name"));
+				orderDTO.setEmail(rs.getString("email"));
+				orderDTO.setPhone(rs.getString("phone_no"));
+				orderDTO.setShippingMethod(StringUtility.removeNull(rs.getString("shipping_method")));
+				orderDTO.setShippingCost(String.format("%.2f", rs.getDouble("shipping_cost")));
+				orderDTO.setDocumentName(StringUtility.removeNull(rs.getString("document_name")));
+				orderDTO.setDocumentList(getDocmentList(rs.getInt("id")));
+				orderDTO.setAdditionalServices(getAdditionalService(rs.getString("id")));
+				orderDTO.setOrderStatus(rs.getString("order_status"));
+				orderDTO.setCurrencyCode(StringUtility.removeNull(rs.getString("currency_code")));
+				orderDTO.setCountry(StringUtility.removeNull(rs.getString("country")));
+				orderDTO.setTotalCost(String.format("%.2f", rs.getDouble("order_total_amount")));
+				orderDTO.setUserIP(StringUtility.removeNull(rs.getString("user_ip")));
+				orderDTO.setNotes(StringUtility.removeNull(rs.getString("notes")));
+				orderDTO.setProduct(rs.getString("item_name"));
+				orderDTO.setQuantity(rs.getInt("quantity"));
+				orderDTO.setSessionId(rs.getString("session_id"));
+				orderDTO.setProduct_price(rs.getDouble("product_price"));
+				return orderDTO;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return orderDTO;
+	}
+
+	public ArrayList<CustomerOrderProductDto> getAddonsList(int id) {
+		QueryHelper qh = new QueryHelper();
+		ArrayList<CustomerOrderProductDto> services = new ArrayList<>();
+		try {
+			String sql = "select * from qa_order_products where order_id = ?";
+			qh.addParam(id);
+			ResultSet rs = qh.runQueryStreamResults(sql);			
+			while(rs.next()) {
+				CustomerOrderProductDto productDto = new CustomerOrderProductDto();
+				productDto.setProduct_name(rs.getString("prodcut_name"));
+				productDto.setProduct_price(rs.getDouble("product_price"));
+				productDto.setProduct_quantity(rs.getInt("product_quantity"));
+				services.add(productDto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return services;
+	}
+	public ArrayList<AddonsDTO> getAddonsPrice() {
+		QueryHelper qh = new QueryHelper();
+		ArrayList<AddonsDTO> list = new ArrayList<>();
+		try {
+			String sql = "SELECT * FROM qa_addons WHERE is_deleted = 0";
+			ResultSet rs = qh .runQueryStreamResults(sql);
+			while(rs.next()) {
+				AddonsDTO dto = new AddonsDTO();
+				dto.setId(rs.getInt("id"));
+				dto.setAddon_name(rs.getString("name"));
+				dto.setDefault_price(rs.getDouble("default_price"));
+				dto.setUs_price(rs.getDouble("us_price"));
+				dto.setGbp_price(rs.getDouble("gbp_price"));
+				dto.setUae_price(rs.getDouble("uae_price"));
+				dto.setEuro_price(rs.getDouble("euro_price"));
+				list.add(dto);
+			}			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			qh.releaseConnection();
+		}
+		return list;
+	}
+
+	public void updateAddons(int orderId, String[] addonValues, int addonquantity1, int addonquantity2, int addonquantity3, int addonquantity4) {
+		QueryHelper qh = new QueryHelper();
+		try {
+			String deleteSql = "DELETE FROM qa_order_products WHERE order_id = ? AND product_id = 0";
+			qh.addParam(orderId);
+			qh.runQuery(deleteSql);
+			qh.releaseConnection();
+		} catch (Exception e) {
+			e.printStackTrace();
+			qh.releaseConnection();
+		}
+		if(addonValues != null) {
+			for (String addon : addonValues) {
+				String[] parts = addon.split("::");
+				if (parts.length == 2) {
+					int quantity = 1;
+					String addonName = parts[0];
+					if(addonName.equalsIgnoreCase("Add Notarization")) {
+						quantity = addonquantity1;
+					}else if(addonName.equalsIgnoreCase("Add Translation")) {
+						quantity = addonquantity2;
+					}else if(addonName.equalsIgnoreCase("Add Certified Copy of Passport/ID")) {
+						quantity = addonquantity3;
+					}else if(addonName.equalsIgnoreCase("Express Service")){
+						quantity = addonquantity4;
+					}
+					double addonPrice = Double.parseDouble(parts[1]);			
+					QueryHelper insertQh = new QueryHelper();
+					try {
+						String insertSql = "INSERT INTO qa_order_products (order_id, product_id, prodcut_name, product_price, product_quantity) VALUES (?, ?, ?, ?, ?)";
+						insertQh.addParam(orderId);
+						insertQh.addParam(0);
+						insertQh.addParam(addonName);
+						insertQh.addParam(addonPrice);
+						insertQh.addParam(quantity);
+						insertQh.runQuery(insertSql);
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						insertQh.releaseConnection();
+					}
+				}
+			}
+		}
+		
+		
+	}
+
+	public boolean updateOrderDetails(OrderDTO orderDTO) {
+		QueryHelper qh = new QueryHelper();
+		try {
+			String sql = "UPDATE qa_order SET order_total_amount=?, shipping_method=?, shipping_cost=?, quantity=? WHERE id=?";
+			qh.addParam(orderDTO.getTotalCost());
+			qh.addParam(orderDTO.getShippingMethod());
+			qh.addParam(orderDTO.getShippingCost());
+			qh.addParam(orderDTO.getQuantity());
+			qh.addParam(orderDTO.getOrderId());
+			qh.runQuery(sql);
+			return true;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			qh.releaseConnection();
+		}
+		return false;
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.dakshabhi.orders.service;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dakshabhi.common.utility.StringUtility;
+import com.dakshabhi.orders.dao.OrderDAO;
+import com.dakshabhi.orders.dto.OrderDTO;
+import com.google.gson.Gson;
+
+@WebServlet("/orders")
+public class Orders extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String searchKeyword = StringUtility.removeNull(req.getParameter("searchKeyword"));
+		String dateType = StringUtility.removeNull(req.getParameter("dateType")); 
+		String fromDate = StringUtility.removeNull(req.getParameter("fromDate"));
+		String toDate = StringUtility.removeNull(req.getParameter("toDate"));
+		String orderStatus = StringUtility.removeNull(req.getParameter("orderStatus"));
+		String acttionType = StringUtility.removeNull(req.getParameter("acttionType"));
+		if (acttionType.equals("list")) {
+			ArrayList<OrderDTO> orderList = OrderDAO.getOrderList(searchKeyword, fromDate, toDate, orderStatus);
+			resp.setContentType("application/json");
+			Gson gson = new Gson();
+			resp.getWriter().write(gson.toJson(orderList));
+		}
+	}
+}

@@ -1,0 +1,108 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	
+		<h1 style="text-align: center; color: green;">Student Information</h1>
+		<form action="Information" method="post">
+		<!-- Bootstrap table class -->
+		<table class="table">
+			<thead>
+				<tr class="table-primary">
+					<th scope="col">Sr.No.</th>
+					<th scope="col">Name</th>
+					<th scope="col">City</th>
+					<th scope="col">Age</th>
+					<th scope="col">Contact</th>
+					<th scope="col">Stream</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="table-secondary">
+					<td scope="row">1</td>
+					<td>Anish</td>
+					<td>Pune</td>
+					<td>21</td>
+					<td>985632554</td>
+					<td>Mechanical</td>
+				</tr>
+				<tr class="table-success">
+					<td scope="row">2</td>
+					<td>Vishal</td>
+					<td>Maharashtra</td>
+					<td>24</td>
+					<td>987777754</td>
+					<td>Computer</td>
+				</tr>
+				<tr class="table-info">
+					<td scope="row">3</td>
+					<td>Nikita</td>
+					<td>Mumbai</td>
+					<td>23</td>
+					<td>888882554</td>
+					<td>Computer Science</td>
+				</tr>
+				<tr class="table-light">
+					<td scope="row">4</td>
+					<td>Yogesh</td>
+					<td>Shimla</td>
+					<td>24</td>
+					<td>966666554</td>
+					<td>MCA</td>
+				</tr>
+				<tr class="table-dark">
+					<td scope="row">5</td>
+					<td>Shridhar</td>
+					<td>Delhi</td>
+					<td>25</td>
+					<td>985555554</td>
+					<td>Civil</td>
+				</tr>
+				<tr class="table-active">
+					<td scope="row">6</td>
+					<td>Pratik</td>
+					<td>Noida</td>
+					<td>26</td>
+					<td>985111114</td>
+					<td>Mechanical</td>
+				</tr>
+				<tr class="table-danger">
+					<td scope="row">7</td>
+					<td>Abdul</td>
+					<td>Bengaluru</td>
+					<td>27</td>
+					<td>985333333</td>
+					<td>MCA</td>
+					<input type="submit" class="btn btn-primary" " value="Register"
+						class="btn">
+						
+						
+				</tr>
+			</tbody>
+		</table>
+		<button onclick="window.location.href='Information'">servlet</button>
+	</div>
+</head>
+<body>
+
+</body>
+
+</html>

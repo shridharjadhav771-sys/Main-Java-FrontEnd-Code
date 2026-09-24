@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+ <%@page import="com.dakshabhi.product.dto.AddonsDTO"%>
+<base href="${pageContext.request.contextPath}/">
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.List"%>
+<%@page import="com.dakshabhi.order.dto.CustomerOrderProductDto"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.dakshabhi.order.dto.CustomerOrderDTO"%>
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start' : new Date().getTime(),
+			event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+				+ l
+				: '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-WSFP6M7W');
+</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16805130076"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16805130076');
+</script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Get an Apostille Online Within Minutes! Quick Apostille Offers Fast Notary and Notarized Services with Guaranteed Processing in Just 1 Day for Secure Authentication." />
+<meta name="keywords" content="apostille online, fastest apostille service, online notary services, notarization certificate, notarization online, remote notary service, notarization certificate, notarized"/>
+<link rel="canonical" href="https://www.quickapostille.online/apostille" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="1-Day Apostille Online - Notary & Notarized Services" />
+<meta property="og:description" content="Get an Apostille Online Within Minutes! Quick Apostille Offers Fast Notary and Notarized Services with Guaranteed Processing in Just 1 Day for Secure Authentication." />
+<meta property="og:url" content="https://www.quickapostille.online/" />
+<meta property="og:site_name"
+	content="Apostille for Any Document from Any Country" />
+<title>Apostille | Quick Apostille</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="images/favicon-07.png" />
+<!-- Bootstrap icons-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" type="text/css" />
+<!-- Google fonts-->
+<link href='https://fonts.googleapis.com/css?family=Titillium Web'
+	rel='stylesheet'> 
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/styles.css?v=180425" rel="stylesheet" />
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" /> 
+<!-- Schema Markup for Apostille Service -->
+<link rel="stylesheet" type="text/css" href="css/dd.css?v=4.0" />
+<script src="js/dd.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/flags.css?v=1.0" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Apostille Service",
+  "image": "https://www.quickapostille.online/apostille/images/Cover-image.webp",
+  "description": "Get an Apostille Online Within Minutes! Quick Apostille Offers Fast Notary and Notarized Services with Guaranteed Processing in Just 1 Day for Secure Authentication.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Quick Apostille"
+  },
+  "sku": "QA-APOSTILLE-001",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.quickapostille.online/apostille/service.jsp",
+    "priceCurrency": "USD",
+    "price": "180.00",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "178"
+  }
+}
+</script>
+<style type="text/css">
+
+@media screen and (max-width: 768px) {
+	span#currentDate {
+	    font-size: 8px;
+	}
+	#apbutton {
+	    transform: translate(0px, 77px);
+	}
+	.ms-dd {
+	    margin-bottom: 30px;
+	    margin-top: -15px;
+	}
+}
+.ms-dd {
+	   display: none;
+	}
+.ap-extbutton-wrapper-t, .ap-header-button-wrapper {
+	  text-transform: uppercase;
+}
+</style>
+</head>
+<%
+String referrer = request.getHeader("referer") == null ? "" : request.getHeader("referer");
+String countryCode = request.getHeader("GEOIP_COUNTRY_CODE") == null ? "" : request.getHeader("GEOIP_COUNTRY_CODE");
+String ip = request.getHeader("X-Forwarded-For");
+if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+	ip = request.getHeader("Proxy-Client-IP");
+}
+if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+	ip = request.getHeader("WL-Proxy-Client-IP");
+}
+if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+	ip = request.getHeader("HTTP_CLIENT_IP");
+}
+if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+	ip = request.getHeader("HTTP_X_FORWARDED_FOR");
+}
+if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
+	ip = request.getRemoteAddr();
+}
+
+boolean isMobile = false;
+String isFromMobile = "1";
+if (request.getHeader("User-Agent").indexOf("Mobile") != -1) {
+	isMobile = true;
+	isFromMobile = "2";
+}
+System.out.println( new Date()  + " "+ referrer + " Country Code: " + countryCode + " Is Mobile: " + isMobile + "  IP : " + ip);
+
+try{ 
+	Enumeration<String> params = request.getParameterNames(); 
+	while(params.hasMoreElements()){
+	 String paramName = params.nextElement();
+	 System.out.println(" **** Parameter Name - "+paramName+", Value - "+request.getParameter(paramName));
+	}
+	
+}catch(Exception e){e.printStackTrace();}
+%>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSFP6M7W"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<!--  ClickCease.com tracking-->
+	<script type='text/javascript'>
+		var script = document.createElement('script');
+		script.async = true;
+		script.type = 'text/javascript';
+		var target = 'https://www.clickcease.com/monitor/stat.js';
+		script.src = target;
+		var elem = document.head;
+		elem.appendChild(script);
+	</script>
+	<noscript>
+		<a href='https://www.clickcease.com' rel='nofollow'><img
+			src='https://monitor.clickcease.com' alt='ClickCease' /></a>
+	</noscript>
+	<!--  ClickCease.com tracking-->
+
+	<div class="container top-bar d-flex p-2">
+		<div class="col-4 col-sm-0 text-start d-none d-sm-block">
+			<strong><img class="alignnone" src="images/mail-1.png"
+				alt="mail" width="24" height="24">&nbsp;&nbsp;<span
+				style="color: #203852">contact@quickapostille.online</span></strong>
+		</div>
+
+		<div class="col-md-3 col-sm-12 text-center">
+			<!-- <strong><img class="alignnone" src="images/phone 2-01.png"
+				alt="phone" width="24" height="24">&nbsp;&nbsp; <span href="#"
+				style="color: #203852; text-decoration: none">+1(252) 579
+					0347</span></strong> -->
+		</div>
+
+		<div class="col-5 col-sm-0  text-end  d-none d-sm-block">
+			<span style="color: #203852"><strong> <img
+					class="alignnone"
+					src="images/WXibs0O8_400x400-removebg-preview-300x300.png" alt=""
+					width="29" height="29">Official HCCH Hague Convention
+					Documentation
+			</strong></span>
+		</div>
+	</div>
+
+	<!-- Navigation-->
+	<%@ include file="nav.jsp"%>
+
+	<section class="mt-3">
+
+		<div class="container">
+			
+			<div class="row mt-5 mb-5" id = "top-logo-container">
+				<div class = "col-md-1 col-12"></div>
+				<div class="col-md-4 col-4 mt-4 text-center lexcel-logo">
+					<h1 class="">
+						<img style="width: 185px" src="images/Lexcel-Logo.gif"
+							alt="" />
+					</h1>
+				</div>
+				<div class="col-md-2 col-4 text-center">
+					<h1 class="selectedCountryImage">
+						 <img style="width: 150px" src="images/common_law_assosiation.jpg" alt="common law assosiation" /> 
+					</h1>
+				</div>
+				<div class="col-md-4 col-4 mt-4 text-center sra-logo">
+					<h1 class="">
+						<img style="width: 170px" src="images/sra.png"
+							alt="" />
+							
+					</h1>
+					<%
+					    SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy");
+					    String formattedDate = formatter.format(new Date());
+					%>
+					<span id="currentDate"><%= formattedDate.toUpperCase() %></span>
+				</div>
+				<div class = "col-md-1 col-sm-12"></div>
+			</div>
+			<!-- <div class="row">
+				<div class="col-md-12 text-center" id = "selectedCountryText">
+					
+				</div>
+			</div> -->
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="mb-2 dark-blue">Certified Apostille and Notary</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h4 class="mb-5 dark-blue">Legalize your documents in 24 hours, no
+						office visit needed.</h4>
+				</div>
+			</div>
+			 
+			<div class="row mb-5">
+				<div class="col-md-3 col-sm-12">
+					<div class="ap-button-wrapper text-start mt-2" id = "apbutton">
+						<a class = "pt-2 pb-2" onclick="getApostilleBtn();"><span
+							class="ap-extbutton-wrapper-t">GET ${product.item_category} NOW</span></a>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					 
+				</div>
+				
+				<div class="col-md-3"></div>
+			</div> 
+			<div class="row">
+				
+				<div class="col-md-7 com-sm-12">
+					<div class="d-flex justify-content-between">
+						<h2>${product.item_name}</h2>
+						<!-- <h3>
+							Price: <span class="currencySymbol"></span>95.00
+						</h3> -->
+					</div>
+					<p class="mt-4">With Quick Apostille, you can securely have your important documents notarized by a licensed notary and apostilled from the comfort of your home or office.</p>
+					<u><h4>How it works</h4></u>
+					<ul class="mt-4">
+						<li>Upload your document(s)</li>
+						<li>Complete your Identity Verification online</li>
+						<li>Get your document(s) with Apostille by email (and via
+							Registered Mail/Courier if required)</li>
+					</ul>
+					 
+					<ul class="fw-bold">
+						<li>Get Your Documents Officially Apostilled.</li>
+						<li>Quick 24 Hour Turnaround.</li>
+						<li>Works For Any Country.</li>
+						<li>Official HCCH Hague Convention Compliance.</li>
+					</ul>
+					 
+				</div>
+				<div class="col-md-5 col-sm-12 order-1">
+					<img id="coverImage" fetchpriority="high" alt="apostille" src="images/Cover-image.webp"
+						class="w-100">
+				</div>
+			</div>
+			<div class="horizontalLine"></div>
+			
+				<%
+							CustomerOrderDTO orderDTO = (CustomerOrderDTO) request.getSession().getAttribute("orderDTO");
+							List<CustomerOrderProductDto> list = (ArrayList<CustomerOrderProductDto>) request.getSession()
+									.getAttribute("addonList");
+							if (orderDTO != null) {
+							%>
+						<script>
+							document.addEventListener("DOMContentLoaded", function () {
+								document.getElementById("userIp").value = "<%=orderDTO.getUserIp()%>";
+								document.getElementById("orderCost").value = "<%=orderDTO.getOrderTotalAmount()%>";
+								document.getElementById("orderCostRound").value = "<%= orderDTO.getOrderTotalAmountRound() %>";
+								
+								document.getElementById("currencyCode").value = "<%= orderDTO.getCurrencyCode() %>";
+								document.getElementById("currencySymbol").value = "<%= orderDTO.getCurrencySymbol() %>";
+								document.getElementById("orderId").value = "<%= orderDTO.getId() %>";
+								document.getElementById("first_name").value = "<%= orderDTO.getFirstName() %>";
+								document.getElementById("last_name").value = "<%= orderDTO.getLastName() %>";
+								document.getElementById("company").value = "<%= orderDTO.getCompanyName() %>";
+								document.getElementById("phone").value = "<%= orderDTO.getPhoneNo() %>";
+								document.getElementById("email").value = "<%= orderDTO.getEmail() %>";
+								document.getElementById("notes").value = "<%= orderDTO.getNotes() %>";
+								document.getElementById("quantity").value = "<%= orderDTO.getQuantity() %>";
+								let filename = "<%= orderDTO.getDocument_name() %>";
+								
+								if(filename != "null" && filename != null && filename != "" && filename != undefined){
+									let files = filename.split(",");
+									for(let i = 0; i < files.length; i++){
+										$('.upload_gallery').append('<div class="p-2 border rounded"><strong>'+files[i]+'</strong><a class = "ms-2 removeFileBtn text-danger" onclick = "removeFile(this);"><i class="fa fa-times" aria-hidden="true"></i><a></div>');
+									}
+									
+								}
+								
+							});
+							 
+						</script>
+					<%
+					}
+					%>
+					<%
+					    List<String> checkboxValues = new ArrayList<>();
+					    if (list != null) {
+					        for (CustomerOrderProductDto dto : list) {
+					            String productName = dto.getProduct_name().replace("\"", "\\\"");
+					            String priceStr = String.format("%.2f", dto.getProduct_price());
+					            String checkboxValue = productName + "::" + priceStr;
+					            checkboxValues.add(checkboxValue);
+					        }
+					    }
+					%>
+					
+					<script type="text/javascript">
+					    <%--  document.addEventListener("DOMContentLoaded", function () {
+					        const checkboxValues = <%= checkboxValues.toString().replace("[", "['").replace("]", "']").replace(", ", "','") %>;
+					        checkboxValues.forEach(function (val) {
+					            $('input[type="checkbox"][value="' + val + '"]').prop('checked', true);
+					        });
+					    }); --%>
+					</script>
+
+			<form id="checkoutForm" name="checkoutForm" action="#" enctype="multipart/form-data">
+				<input type="hidden" id="userIp" name="userIp" /> <input
+					type="hidden" id="orderCost" name="orderCost" /> <input
+					type="hidden" id="orderCostRound" name="orderCostRound" /> <input
+					type="hidden" id="currencyCode" name="currencyCode" /> <input
+					type="hidden" id="currencySymbol" name="currencySymbol" /> <input
+					type="hidden" id="orderStatus" name="orderStatus" value="0" /> <input
+					type="hidden" id="orderId" name="orderId" value="0" /> <input
+					type="hidden" id="stripekey" name="stripekey" value="" /> <input
+					type="hidden" id="clientSecret" name="clientSecret" value="" /> <input
+					type="hidden" id="paymentId" name="paymentId" /> <input
+					type="hidden" id="mainOrderId" name="mainOrderId" value="0" />
+					<input type="hidden" id="country" name="country" value="" />
+					<input type="hidden" id="productId" name="productId" value="${product.item_id}" />
+					<input type="hidden" id="productPrice" name="productPrice" value="" />
+					
+				<div class="row">
+
+					<div class="col-md-7 order-1 pe-md-5">
+
+						<div class="row mt-5">
+							<h4 class="text-decoration-underline steps-text">Step 1:
+								Order Details</h4>
+						</div>
+						<div class="horizontalLine"></div>
+						<div class="row">
+							<div class="col mb-4">
+								<label class="form-label" class="form-label"> First Name
+									<span class="requiredfield">*</span>
+								</label> <input type="text" class="required form-control"
+									id="first_name" name="first_name"> <span
+									class="msgError" id="error_first_name"></span>
+							</div>
+							<div class="col mb-4">
+								<label class="form-label"> Last Name <span
+									class="requiredfield">*</span></label> <input type="text"
+									class="required form-control" id="last_name" name="last_name">
+								<span class="msgError" id="error_last_name"></span>
+							</div>
+						</div>
+
+						<div class="mb-4">
+							<label class="form-label">Company name (optional)</label> <input
+								type="text" class="form-control" id="company" name="company">
+						</div>
+
+						<div class="mb-4">
+							<label class="form-label">Email address <span
+								class="requiredfield">*</span></label> <input type="text"
+								class="required form-control" id="email" name="email"> <span
+								class="msgError" id="error_email"></span>
+						</div>
+						<div class="mb-4">
+							<label class="form-label">Phone <span
+								class="requiredfield">*</span></label> <input type="text"
+								class="required form-control" id="phone" name="phone"> <span
+								class="msgError" id="error_phone"></span>
+						</div>
+
+						<div class="horizontalLine"></div>
+						<div class="mb-3 mt-4">
+							<label class="form-label">Order notes (optional) </label>
+							<textarea class="form-control" id="notes" name="notes"
+								placeholder="Notes about your order, e.g. special notes for delivery."
+								rows="2"> </textarea>
+						</div>
+						<div class="mb-3 mt-3">
+							<fieldset id="drop_zone" class="upload_dropZone text-center mb-3 pb-4">
+								<div class = "mt-3 mb-2">
+									<label class="form-label fw-bold">Quantity : </label> <input
+										type="number" id="quantity" class="input-text qty text-center"
+										name="quantity" value="1" min="1" max="5" step="1"
+										autocomplete="off">
+								</div>
+								<legend class="visually-hidden">Image uploader</legend>
+								
+								<input id="upload_image_background"
+									name="upload_image_background"
+									class="position-absolute invisible" type="file" multiple
+									accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.ppt,.pptx,.odt" /> <label
+									class="btn btn-upload mb-2" for="upload_image_background">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33"
+										fill="none">
+						        <mask id="a" style="mask-type:alpha"
+											maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="33">
+						          <path fill="#D9D9D9" d="M0 .203h32v32H0z" />
+						        </mask>
+						        <g mask="url(#a)">
+						          <path
+											d="M8.41 26.203a2.327 2.327 0 0 1-1.71-.7 2.327 2.327 0 0 1-.7-1.71v-2.616c0-.284.096-.521.287-.712A.967.967 0 0 1 7 20.177c.284 0 .521.096.713.288a.967.967 0 0 1 .287.712v2.616c0 .102.043.196.128.282.086.085.18.128.282.128h15.18a.392.392 0 0 0 .282-.128.392.392 0 0 0 .128-.282v-2.616c0-.284.096-.521.287-.712a.967.967 0 0 1 .713-.288c.284 0 .521.096.713.288a.967.967 0 0 1 .287.712v2.616c0 .673-.233 1.243-.7 1.71-.467.467-1.037.7-1.71.7H8.41ZM15 10.054l-2.564 2.564a.953.953 0 0 1-.706.294 1.002 1.002 0 0 1-.72-.314 1.044 1.044 0 0 1-.3-.703c-.007-.261.093-.495.3-.702l4.146-4.146A1.103 1.103 0 0 1 16 6.706a1.103 1.103 0 0 1 .844.341l4.146 4.146a.94.94 0 0 1 .293.696c-.002.266-.1.502-.293.709a1.02 1.02 0 0 1-.713.32.944.944 0 0 1-.713-.3L17 10.054v10.2a.967.967 0 0 1-.287.713.967.967 0 0 1-.713.287.967.967 0 0 1-.713-.287.967.967 0 0 1-.287-.713v-10.2Z"
+											fill="#212529" />
+							        </g>
+							      </svg>
+								</label>
+								
+								<h4 class="text-center mb-3 text-decoration-underline steps-text">Step 2: Drag/Drop Files</h4>
+
+								<p class="small my-3">
+									Allowed Extensions: <strong>jpg, jpeg, png, pdf, doc,
+										docx, ppt, pptx, odt</strong><br> Maximum Upload Filesize: <strong>50MB</strong>
+								</p>
+
+								<div id="upload_error" class="text-danger mb-2"
+									style="display: none;"></div>
+								<div class="upload_gallery d-flex flex-wrap justify-content-center gap-3 mb-0"></div>
+								
+							</fieldset>
+						</div>
+
+					</div>
+
+					<div class="col-md-5 order-2 ps-3 additionalServicesSec"> 
+						<div class="border border-2 rounded p-4 mb-4">
+							<h5 class="mt-3 mb-5">Additional Services</h5>
+							
+							
+							<div id="addon-container">
+								<div class="addon-box">
+									<label class="addon-label d-flex justify-content-between">
+										<span><input type="checkbox" name="addon_values"
+											value="Add Notarization::0.00"
+											class="form-check-input addon-checkbox addon-option">
+											<span class="addon-title">Add Notarization</span> </span>
+									</label>
+									<p class="addon-description">Get your document notarized by
+										our Notary Public.</p>
+								</div>
+								<div class="horizontalLine"></div>
+								<div class="addon-box">
+									<label class="addon-label d-flex justify-content-between"><span>
+											<input type="checkbox" name="addon_values"
+											value="Add Translation::0.00"
+											class="form-check-input addon-checkbox addon-option">
+											<span class="addon-title">Add Translation</span>
+									</span>
+									</label>
+									<p class="addon-description">Make your document bilingual.</p>
+								</div>
+								<div class="horizontalLine"></div>
+								<div class="addon-box">
+									<label class="addon-label d-flex justify-content-between">
+										<span><input type="checkbox" name="addon_values"
+											value="Add Certified Copy of Passport/ID::0.00"
+											class="form-check-input addon-checkbox addon-option">
+											<span class="addon-title">Add Certified Copy of
+												Passport/ID</span></span>
+									</label>
+									<p class="addon-description">Add a notarized copy of your
+										Passport or ID card to your Apostilled document.</p>
+								</div>
+								<div class="horizontalLine"></div>
+								<div class="addon-box">
+									<label class="addon-label d-flex justify-content-between">
+										<span><input type="checkbox" name="addon_values"
+											value="Express Service::0.00"
+											class="form-check-input addon-checkbox addon-option">
+											<span class="addon-title">Express Service</span></span> 
+									</label>
+									<p class="addon-description">With Express Service, your
+										order will be fulfilled with the highest priority.</p>
+								</div>
+							</div>
+
+							<div class="horizontalLine"></div> 
+								<button class="btn btn-lg w-100 mt-3" type="submit" id="submitbtn">FINALIZE ORDER</button>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+	</section>
+
+	<section id="imageBlockSection" class="mt-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6 banner-text col-sm-12">
+							<div>Trusted by world's leading companies</div>
+						</div>
+						<div class="col-md-6 com-sm-12">
+							<div class="swiper mySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="images/logo1.png" alt="Logo 1">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo2.png" alt="Logo 2">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo3.png" alt="Logo 3">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo4.png" alt="Logo 4">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo5.png" alt="Logo 5">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo6.png" alt="Logo 6">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo7.png" alt="Logo 7">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo8.png" alt="Logo 8">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo9.png" alt="Logo 9">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo10.png" alt="Logo 10">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo11.png" alt="Logo 11">
+									</div>
+									<div class="swiper-slide">
+										<img src="images/logo1.png" alt="Logo 1">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="paymentprocesssection" class="mt-1">
+		<div class="container">
+			<div class="info-section">
+
+				<div class="info-box">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+							d="M80 192V144C80 64.47 144.5 0 224 0C303.5 0 368 64.47 368 144V192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80zM144 192H304V144C304 99.82 268.2 64 224 64C179.8 64 144 99.82 144 144V192z"></path>
+      </svg>
+					<h4>
+						<strong>Secure Order Process</strong>
+					</h4>
+					<p>Fill out our simple order form by selecting the
+						authentication quick secure order process services you need and
+						providing your details.</p>
+				</div>
+
+				<div class="info-box">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+       <path
+							d="M512 64C547.3 64 576 92.65 576 128V384C576 419.3 547.3 448 512 448H64C28.65 448 0 419.3 0 384V128C0 92.65 28.65 64 64 64H512zM272 192C263.2 192 256 199.2 256 208C256 216.8 263.2 224 272 224H496C504.8 224 512 216.8 512 208C512 199.2 504.8 192 496 192H272zM272 320H496C504.8 320 512 312.8 512 304C512 295.2 504.8 288 496 288H272C263.2 288 256 295.2 256 304C256 312.8 263.2 320 272 320zM164.1 160C164.1 148.9 155.1 139.9 143.1 139.9C132.9 139.9 123.9 148.9 123.9 160V166C118.3 167.2 112.1 168.9 108 171.1C93.06 177.9 80.07 190.5 76.91 208.8C75.14 219 76.08 228.9 80.32 237.8C84.47 246.6 91 252.8 97.63 257.3C109.2 265.2 124.5 269.8 136.2 273.3L138.4 273.9C152.4 278.2 161.8 281.3 167.7 285.6C170.2 287.4 171.1 288.8 171.4 289.7C171.8 290.5 172.4 292.3 171.7 296.3C171.1 299.8 169.2 302.8 163.7 305.1C157.6 307.7 147.7 309 134.9 307C128.9 306 118.2 302.4 108.7 299.2C106.5 298.4 104.3 297.7 102.3 297C91.84 293.5 80.51 299.2 77.02 309.7C73.53 320.2 79.2 331.5 89.68 334.1C90.89 335.4 92.39 335.9 94.11 336.5C101.1 339.2 114.4 343.4 123.9 345.6V352C123.9 363.1 132.9 372.1 143.1 372.1C155.1 372.1 164.1 363.1 164.1 352V346.5C169.4 345.5 174.6 343.1 179.4 341.9C195.2 335.2 207.8 322.2 211.1 303.2C212.9 292.8 212.1 282.8 208.1 273.7C204.2 264.7 197.9 258.1 191.2 253.3C179.1 244.4 162.9 239.6 150.8 235.9L149.1 235.7C135.8 231.4 126.2 228.4 120.1 224.2C117.5 222.4 116.7 221.2 116.5 220.7C116.3 220.3 115.7 219.1 116.3 215.7C116.7 213.7 118.2 210.4 124.5 207.6C130.1 204.7 140.9 203.1 153.1 204.1C157.5 205.7 171 208.3 174.9 209.3C185.5 212.2 196.5 205.8 199.3 195.1C202.2 184.5 195.8 173.5 185.1 170.7C180.7 169.5 170.7 167.5 164.1 166.3L164.1 160z"></path>
+      </svg>
+					<h4>
+						<strong>Complete Your Payment</strong>
+					</h4>
+					<p>Easily submit your payment details and upload your documents
+						for a quick review. Our secure process ensures fast processing,
+						reliability, accuracy, and support.</p>
+				</div>
+
+				<div class="info-box">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+        <path
+							d="M292.7 342.3C289.7 345.3 288 349.4 288 353.7V416h62.34c4.264 0 8.35-1.703 11.35-4.727l156.9-158l-67.88-67.88L292.7 342.3zM568.5 167.4L536.6 135.5c-9.875-10-26-10-36 0l-27.25 27.25l67.88 67.88l27.25-27.25C578.5 193.4 578.5 177.3 568.5 167.4zM256 0v128h128L256 0zM256 448c-16.07-.2852-30.62-9.359-37.88-23.88c-2.875-5.875-8-6.5-10.12-6.5s-7.25 .625-10 6.125l-7.749 15.38C187.6 444.6 181.1 448 176 448H174.9c-6.5-.5-12-4.75-14-11L144 386.6L133.4 418.5C127.5 436.1 111 448 92.45 448H80C71.13 448 64 440.9 64 432S71.13 416 80 416h12.4c4.875 0 9.102-3.125 10.6-7.625l18.25-54.63C124.5 343.9 133.6 337.3 144 337.3s19.5 6.625 22.75 16.5l13.88 41.63c19.75-16.25 54.13-9.75 66 14.12C248.5 413.2 252.2 415.6 256 415.9V347c0-8.523 3.402-16.7 9.451-22.71L384 206.5V160H256c-17.67 0-32-14.33-32-32L224 0H48C21.49 0 0 21.49 0 48v416C0 490.5 21.49 512 48 512h288c26.51 0 48-21.49 48-48V448H256z"></path>
+      </svg>
+					<h4>Receive Documents Easily</h4>
+					<p>Sit back and relax while we handle everything. With our
+						Quick Turnaround in 24 hours, you'll receive your authenticated
+						documents without any hassle.</p>
+				</div>
+			</div>
+			<div class="ap-button-wrapper text-center mt-5">
+				<a onclick="getApostilleBtn();"><span class="ap-extbutton-wrapper-t">GET ${product.item_category} NOW</span></a>
+			</div>
+		</div>
+
+	</section>
+	<section id="attorneyserviceblock">
+		<div class="container">
+			<div class="apostille-container">
+				<div class="apostille-box row">
+					<div class="apostille-icon col-md-1 col-sm-12">
+						<img src="images/removebg-preview.png" alt="Quick Apostille Logo"
+							width="40" height="40">
+					</div>
+					<div class="apostille-content col-md-11 col-sm-12">
+						<p class="apostille-title">
+							Recognition and acceptance of The Hague (La Haya) Apostille are
+							guaranteed by <img alt="" src="images/quickapostill.svg"
+								style="width: 178px">
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<h2 class="my-5 text-center">ATTORNEY SERVICES</h2>
+				<span class="dashedlines"></span>
+			</div>
+
+			<div class="row block-columns mt-5">
+				<div class="block-column col-md-6">
+					<h3 class="mb-4">Personal documents</h3>
+
+					<!-- Personal Document Items -->
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+
+								<h5>Apostille</h5>
+						</span>
+							<p>Official government authentication of documents for
+								international use under The Hague Convention guidelines.</p> 
+							<div class = "document-servicepage-link"><a href = "product/1001/Apostille">Read More...</a></div>
+						</div>
+						
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"> <span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Birth Certificate Apostille</h5>
+						</span>
+							<p>Legalizes a birth certificate for international use,
+								verifying authenticity for immigration, marriage, or education.</p>
+						<div class = "document-servicepage-link"><a href = "product/1002/birth-certificate-apostille">Read More...</a></div>
+						</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Death Certificate Apostille</h5>
+						</span>
+							<p>Certifies the death certificate for foreign legal use,
+								often needed for inheritance or repatriation.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1003/death-certificate-apostille">Read More...</a></div>
+								</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox" ><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Marriage Certificate Apostille</h5>
+						</span>
+							<p>Authenticates a marriage certificate for use abroad in
+								immigration, visa, or legal status processes.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1004/marriage-certificate-apostille">Read More...</a></div>
+								</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Power Of Attorney Apostille</h5>
+						</span>
+							<p>Legalizes a power of attorney document for use in foreign
+								property, finance, or legal matters.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1005/power-of-attorney-apostille">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox" ><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Birth Certificate Notarization</h5>
+						</span>
+							<p>Certifies a copy of a birth certificate, often needed for
+								school, immigration, or legal cases.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1011/birth-certificate-notarization">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Death Certificate Notarization</h5>
+						</span>
+							<p>Notarizes copies of death certificates for legal,
+								financial, or estate-related proceedings.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1012/death-certificate-notarization">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Marriage Certificate Notarization</h5>
+						</span>
+							<p>Confirms the authenticity of a notarized marriage certificate, often for legal, visa, or administrative use.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1013/marriage-certificate">Read More...</a></div>
+							</div>
+					</div>
+				</div>
+
+				<!-- Corporate Documents Column -->
+				<div class="wp-block-column col-md-6">
+					<h3 class="mb-4">Corporate documents</h3>
+
+					<!-- Corporate Document Items -->
+					<div class="document-item">
+						<div class="uagb-infobox" ><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Notarization</h5>
+						</span>
+							<p>Official witnessing of signatures to validate identity and intent for legal or official document purposes, ensuring the document is notarized properly.</p> 
+							<div class = "document-servicepage-link"><a href = "product/1006/notarized">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Signature Notarization</h5>
+						</span>
+							<p>Verifies a person's signature on legal documents to
+								prevent fraud and ensure authenticity.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1007/signature-notarization">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Certified Copy Of Passport/ID</h5>
+						</span>
+							<p>A notarized copy of a passport or ID confirming it's a
+								true, accurate representation of the original.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1008/certified-copy-of-passport-id">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Affidavit Notarization</h5>
+						</span>
+							<p>A notary notarizes a sworn statement to confirm it was voluntarily signed under oath or affirmation.</p> 
+							<div class = "document-servicepage-link"><a href = "product/1009/affidavit-notarization">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Power Of Attorney Notarization</h5>
+						</span>
+							<p>Validates the signing of a power of attorney, confirming
+								identity and legal understanding of the signer.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1010/power-of-attorney">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Minor Travel Consent Notarization</h5>
+						</span>
+							<p>Legalizes consent letters for minors traveling alone or
+								with one parent across borders.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1014/minor-travel-consent">Read More...</a></div>
+							</div>
+					</div>
+
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h5>Shareholder Structure Notarization</h5>
+						</span>
+							<p>Verifies documents detailing ownership or structure of a
+								company for legal or financial transactions.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1015/shareholder-structure">Read More...</a></div>
+							</div>
+					</div>
+					<div class="document-item">
+						<div class="uagb-infobox"><span class="d-flex gap-2">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+									width="22" height="22">
+									<path
+										d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z" />
+								</svg>
+								<h4>Letter Apartment Notarization</h4>
+						</span>
+							<p>Notarizes rental or lease letters to confirm terms and
+								signatures for legal protection or submission.</p> 
+								<div class = "document-servicepage-link"><a href = "product/1016/letter-apartment">Read More...</a></div>
+							</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="ap-button-wrapper text-center mt-5">
+				<a onclick="getApostilleBtn();"><span class="ap-extbutton-wrapper-t">GET ${product.item_category} NOW</span></a>
+			</div>
+		</div>
+	</section>
+	<section class="why_choose_us_section">
+		<div class="container">
+			<div class="text-center mb-4">
+				<h3>Why Choose Us?</h3>
+				<p>
+					Get fast, secure, and hassle-free Apostille and notary services with <strong>real-time tracking and 24/7 support</strong>. See how we compare to others below!
+				</p>
+			</div>
+			<div class="table-responsive col-sm-12">
+				<table class="table table-striped align-middle text-center"
+					id="apostille_service">
+					<thead class="">
+						<tr>
+							<th scope="col">Apostille Service</th>
+							<th scope="col">Feature</th>
+							<th scope="col">Other Providers</th>
+							<th scope="col">Feature</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>All major legal documents</td>
+							<td><img class="tableImages" src="images/checkimg.svg" alt="All major legal documents"></td>
+							<td>Limited document types</td>
+							<td><img class="tableImages" src="images/crossimg.svg" alt="Limited document types"></td>
+						</tr>
+						<tr>
+							<td>International document handling</td>
+							<td><img class="tableImages" src="images/checkimg.svg" alt="International document handling"></td>
+							<td>Mostly local services only</td>
+							<td><img class="tableImages" src="images/crossimg.svg" alt = "Mostly local services only"></td>
+						</tr>
+						<tr>
+							<td>24/7 dedicated assistance</td>
+							<td><img class="tableImages" src="images/checkimg.svg" alt = "24/7 dedicated assistance"></td>
+							<td>Limited or no real-time support</td>
+							<td><img class="tableImages" src="images/crossimg.svg" alt ="Limited or no real-time support" ></td>
+						</tr>
+						<tr>
+							<td>Real-time status updates via email &amp; phone</td>
+							<td><img class="tableImages" src="images/checkimg.svg" alt = "Real-time status updates via email &amp; phone"></td>
+							<td>No or delayed tracking</td>
+							<td><img class="tableImages" src="images/crossimg.svg" alt = "No or delayed tracking"></td>
+						</tr>
+						<tr>
+							<td>Upfront pricing, no hidden fees</td>
+							<td><img class="tableImages" src="images/checkimg.svg" alt = "Upfront pricing, no hidden fees"></td>
+							<td>Hidden charges &amp; extra costs</td>
+							<td><img class="tableImages" src="images/crossimg.svg" alt= "Hidden charges &amp; extra costs"></td>
+						</tr>
+						<tr>
+							<td>100% recognized &amp; secure</td>
+							<td><img class="tableImages" src="images/checkimg.svg" alt = "100% recognized &amp; secure"></td>
+							<td>Risk of unreliable providers</td>
+							<td><img class="tableImages" src="images/crossimg.svg" alt = "Risk of unreliable providers"></td>
+						</tr>
+						<tr>
+							<td>Doorstep pickup &amp; delivery available</td>
+							<td><img class="tableImages" src="images/checkimg.svg" alt = "Doorstep pickup &amp; delivery available"></td>
+							<td>Requires in-person visits</td>
+							<td><img class="tableImages" src="images/crossimg.svg" alt = "Requires in-person visits"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="ap-button-wrapper text-center mt-4">
+				<a onclick="getApostilleBtn();"><span class="ap-extbutton-wrapper-t">GET
+						${product.item_category} NOW</span></a>
+			</div>
+		</div>
+	</section>
+	<section id="apostilles_doc_section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12 text-center">
+					<h3>We process over 100+ Apostilles daily.</h3>
+					<span>Here are a few recent cases:</span>
+				</div>
+			</div>
+			<div class="imageContainer row">
+				<img class="col-sm-6" alt="" src="images/image1.jpg"> <img
+					alt="" class="col-sm-6" src="images/image2.jpg"> <img alt=""
+					class="col-sm-6" src="images/image3.jpg"> <img alt=""
+					class="col-sm-6" src="images/image4.jpg"> <img alt=""
+					class="col-sm-6" src="images/image5.jpg"> <img alt=""
+					class="col-sm-6" src="images/image6.jpg"> <img alt=""
+					class="col-sm-6" src="images/image7.jpg"> <img alt=""
+					class="col-sm-6" src="images/image8.jpg"> <img alt=""
+					class="col-sm-6" src="images/image9.jpg"> <img alt=""
+					class="col-sm-6" src="images/image10.jpg"> <img alt=""
+					class="col-sm-6" src="images/image11.jpg"> <img alt=""
+					class="col-sm-6" src="images/image12.jpg">
+			</div>
+			<div class="ap-button-wrapper text-center mt-4">
+				<a onclick="getApostilleBtn();"><span class="ap-extbutton-wrapper-t">GET
+						${product.item_category} NOW</span></a>
+			</div>
+		</div>
+	</section>
+	<section class="trusted_by_thousands_section">
+		<div class="container mt-3">
+			<div id="trusted_by_thousands">
+				<div class="row text-center">
+					<div class="col-md-12">
+						<span class="textContent">Trusted by thousands</span>
+						<h2 class="mt-3 mb-5 fw-bold">Fast, Legal and Secure Online
+							Apostille Services</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<h2>110K+</h2>
+						<span class="textContent">Over 100,000 satisfied customers</span>
+					</div>
+					<div class="col-md-4">
+						<h2>98%</h2>
+						<span class="textContent">98% Customer satisfaction rate</span>
+					</div>
+					<div class="col-md-4">
+						<h2>4.5/5</h2>
+						<span class="textContent">Based on 2254+ reviews from
+							trustpilot</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="news_updates_section">
+		<div class="container">
+			<div id="news_updates">
+				<h3 class="text-center mb-5">News & Updates</h3>
+				<div class="row d-flex justify-content-between">
+					<div class="col-md-4 col-sm-12">
+						<img alt="" src="images/image13.webp">
+					</div>
+					<div class="contentBlock col-md-8 col-sm-12">
+						<div class="apostille-update_card" id="apostille-update-1">
+
+							<div class="icon-box mb-3 text-center">
+								<div class="circlesIcons">1</div>
+							</div>
+							<div class="apostille-update-content">
+								<div class="apostille-update-textContent">Apostille &
+									Legalization Updates</div>
+								<p class="apostille-update-text">Get reliable authentication
+									for your documents with our seamless apostille services.</p>
+								<div class="mt-auto">
+									<a href="https://www.quickapostille.online/apostille-legalization-updates"
+										class="readMoreBtn">Read More</a>
+								</div>
+							</div>
+						</div>
+						<div class="apostille-update_card" id="apostille-update-2">
+
+							<div class="icon-box mb-3 text-center">
+								<div class="circlesIcons">2</div>
+							</div>
+							<div class="apostille-update-content">
+								<div class="apostille-update-textContent">Apostille &
+									Document Authentication</div>
+								<p class="apostille-update-text">Get reliable authentication
+									for your documents with our seamless apostille services.</p>
+								<div class="mt-auto">
+									<a href="https://www.quickapostille.online/apostille-document-authentication"
+										class="readMoreBtn">Read More</a>
+								</div>
+							</div>
+						</div>
+						<div class="apostille-update_card" id="apostille-update-3">
+							<div class="icon-box mb-3 text-center">
+								<div class="circlesIcons">3</div>
+							</div>
+							<div class="apostille-update-content">
+								<div class="apostille-update-textContent">Apostille Trends
+									& Updates</div>
+								<p class="apostille-update-text">Stay informed about the
+									latest changes and trends in apostille and document
+									legalization.</p>
+								<div class="mt-auto">
+									<a href="https://www.quickapostille.online/apostille-trends-updates"
+										class="readMoreBtn">Read More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<section id="featuredBlocksection">
+		<div class="container">
+			<div id="featuredBlock">
+				<h3 class="featured-title mb-4 text-center">FEATURED IN</h3>
+				<div class="row justify-content-center text-center">
+
+					<div class="col-6 col-sm-4 col-md-2">
+						<img src="images/featuredimages1.png" alt=""
+							class="img-fluid featured-logo">
+					</div>
+
+					<div class="col-6 col-sm-4 col-md-2">
+						<img src="images/featuredimages2.png" alt=""
+							class="img-fluid featured-logo" style="height: 112px;">
+					</div>
+					<div class="col-6 col-sm-4 col-md-2">
+						<img src="images/featuredimages3.png" alt=""
+							class="img-fluid featured-logo">
+					</div>
+					<div class="col-6 col-sm-4 col-md-2">
+						<img src="images/featuredimages4.png" alt=""
+							class="img-fluid featured-logo">
+					</div>
+					<div class="col-6 col-sm-4 col-md-2">
+						<img src="images/featuredimages5.png" alt=""
+							class="img-fluid featured-logo">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section id="contactusSection">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-6 col-sm-12">
+					<h3 class="mb-3 fw-semibold">Keep Up with Us</h3>
+					<p class="mb-4 text-muted">Stay informed with the latest updates, trends, and essential information on notary, apostille, authentication, and legalization services with Quick Turnaround in 24 hours for fast and reliable processing.</p>
+
+				</div>
+				<div class="col-md-6 col-sm-12 text-center">
+					<a href="https://www.quickapostille.online/contact/"
+						class="btn btn-primary px-4 py-2" id="contactus"> Contact Us </a><br>
+					<a id="whatsapp"
+						href="https://api.whatsapp.com/send?phone=34611762250&amp;text=Hi%2C%20I%20got%20your%20WhatsApp%20information%20from%20your%20website."
+						class="btn" style="background-color: #25D366; color: white;"
+						target="_blank" rel="noopener noreferrer"><i
+						class="fa fa-whatsapp"></i> <span>WhatsApp</span> </a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="asked_questions_section">
+		<div class="container">
+			<h2 class="mb-4 ps-3">Frequently Asked Questions</h2>
+			<div class="accordion" id="faqAccordion">
+
+				<!-- FAQ Item 1 -->
+				<div class="mb-3">
+					<div class="faq-question p-3 active" data-bs-toggle="collapse"
+						data-bs-target="#faq1">
+						What is an Apostille, and why do I need one? <i
+							class="fa fa-angle-up" aria-hidden="true"></i>
+					</div>
+					<div id="faq1" class="collapse mt-2 show">
+						<div class="p-3 ">An Apostille is an official certification
+							that verifies the authenticity of a document for use in countries
+							that are part of The Hague Convention. A notary is often required
+							before the apostille for legal, educational, business, or
+							personal documents used internationally.</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="faq-question p-3" data-bs-toggle="collapse"
+						data-bs-target="#faq2">
+						How long does it take to get an Apostille? <i
+							class="fa fa-angle-down" aria-hidden="true"></i>
+					</div>
+					<div id="faq2" class="collapse mt-2">
+						<div class="p-3 ">Our expedited Apostille service ensures quick processing. Depending on the document type and state, standard processing takes 1-2 business days, while rush services are available for even faster completion.</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="faq-question p-3" data-bs-toggle="collapse"
+						data-bs-target="#faq3">
+						Which documents can you Apostille? <i class="fa fa-angle-down"
+							aria-hidden="true"></i>
+					</div>
+					<div id="faq3" class="collapse mt-2">
+						<div class="p-3 ">We handle Apostille services for birth
+							certificates, marriage certificates, diplomas, transcripts, power
+							of attorney, affidavits, notarized documents, business contracts,
+							and more. Contact us to verify your document type.</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="faq-question p-3" data-bs-toggle="collapse"
+						data-bs-target="#faq4">
+						Do you offer same-day Apostille services?<i
+							class="fa fa-angle-down" aria-hidden="true"></i>
+					</div>
+					<div id="faq4" class="collapse mt-2">
+						<div class="p-3 ">Yes, we provide expedited Apostille
+							services, including same-day processing in select locations.
+							Contact us to check availability and requirements for urgent
+							requests.</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="faq-question p-3" data-bs-toggle="collapse"
+						data-bs-target="#faq5">
+						How much does your Apostille service cost? <i
+							class="fa fa-angle-down" aria-hidden="true"></i>
+					</div>
+					<div id="faq5" class="collapse mt-2">
+						<div class="p-3 ">Our pricing varies based on the document
+							type, state, and processing speed. Contact us for a detailed
+							quote and to choose the best option that meets your needs.</div>
+					</div>
+				</div>
+				<div class="mb-3">
+					<div class="faq-question p-3" data-bs-toggle="collapse"
+						data-bs-target="#faq6">
+						How do I track the status of my Apostille request?<i
+							class="fa fa-angle-down" aria-hidden="true"></i>
+					</div>
+					<div id="faq6" class="collapse mt-2">
+						<div class="p-3 ">We keep you informed throughout the
+							process. You will receive updates via email or phone, and you can
+							also contact our support team for real-time tracking of your
+							Apostille request.</div>
+					</div>
+				</div>
+
+				<!-- Add more FAQ items similarly -->
+
+			</div>
+			<div class="ap-button-wrapper text-center mt-5">
+				<a onclick="getApostilleBtn();"><span class="ap-extbutton-wrapper-t">GET ${product.item_category} NOW</span></a>
+			</div>
+		</div>
+	</section>
+	<section class="testimonials-section">
+		<div class="container">
+			<div class="section-header">
+				<h3>What Our Clients Say</h3>
+				<p>Hear from our satisfied clients who have experienced our
+					quick, reliable, and hassle-free document authentication services.</p>
+			</div>
+
+			<div class="testimonial-carousel">
+				<div class="testimonial">
+					<p class="testimonial-desc">Quick Apostille handled my marriage
+						certificate apostille seamlessly. The team was responsive and
+						guided me at every step.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-1.png" alt="Emily Carter"> <span
+							class="author">Emily Carter</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">They helped me get my birth
+						certificate apostilled within days. The communication was
+						excellent and everything was done digitally.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-2.png" alt="Michael Trujillo"> <span
+							class="author">Michael Trujillo</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">We were traveling abroad and needed
+						a minor travel consent notarized urgently. Their team came through
+						at the right time.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-3.png" alt="Olivia Brown"> <span
+							class="author">Olivia Brown</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">A hassle-free and smooth notary process! The team was supportive, and my documents were verified quickly. Great service.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-6.png" alt="Andrea Sanders"> <span
+							class="author">Andrea Sanders</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">The entire process for my Power of
+						Attorney notarization was quick and smooth. I didn't have to worry
+						about anything highly recommend!</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-5.png" alt="Scott R. Pierce"> <span
+							class="author">Scott R. Pierce</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">Professional, efficient, and reliable. They handled my notarized document request with care and delivered on time. Fantastic experience.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-4.png" alt="Gerald L."> <span
+							class="author">Gerald L.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer-->
+
+
+	<%@ include file="footer.jsp"%>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+		type="text/javascript"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js"></script>
+
+	<script src="js/bootstrap.bundle.min.js"></script>  
+	<script
+		src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script>
+		var selectedcurrency = "$";
+		$(function() {
+			$("#headerApostilleBtn").removeAttr("href");
+			$("#headerApostilleBtn").attr("onclick","getApostilleBtn()");
+			$("#headerApostilleBtn").text("GET ${product.item_category} NOW");
+		/* 	getCountryList(); */
+			loadPaymentKeys();
+			$.get("https://ipinfo.io", function(response) {
+				var userCountry = response.country;
+				//getCurrencyByCountry(userCountry, defaultCurrency);
+				//console.log(response.city, response.country);
+				$("#country").val(response.country);
+				 
+				$("#userIp").val(response.ip);
+				setCurrency(response.country); 
+				
+				handlePageShowLogic();
+			}, "jsonp");
+			
+
+		});
+		function handlePageShowLogic() {
+		    if (performance.navigation.type === 2) {
+		        $.ajax({
+		            url: 'finalizecustomerorder',
+		            method: 'GET',
+		            dataType: 'json',
+		            success: function (resp) {
+		                if (resp) {
+		                    let data = resp.orderDTO;
+		                    let addonlist = resp.addonList;
+
+		                    $("#userIp").val(data.userIp || "");
+		                    $("#orderCost").val(data.orderTotalAmount || "");
+		                    $("#orderCostRound").val(data.orderTotalAmountRound || "");
+		                    $("#currencyCode").val(data.currencyCode || "");
+		                    $("#currencySymbol").val(data.currencySymbol || "");
+		                    $("#orderId").val(data.id || "");
+		                    $("#first_name").val(data.firstName || "");
+		                    $("#last_name").val(data.lastName || "");
+		                    $("#company").val(data.companyName || "");
+		                    $("#phone").val(data.phoneNo || "");
+		                    $("#email").val(data.email || "");
+		                    $("#notes").val(data.notes || "");
+		                    $("#quantity").val(data.quantity || "");
+		                    updateProductCost();
+		                    let filename = data.document_name;
+		                    $('.upload_gallery').empty();
+		                    if(filename != "null" && filename != null && filename != "" && filename != undefined){
+								let files = filename.split(",");
+								for(let i = 0; i < files.length; i++){
+									$('.upload_gallery').append('<div class="p-2 border rounded"><strong>'+files[i]+'</strong><a class = "ms-2 removeFileBtn text-danger" onclick = "removeFile(this);"><i class="fa fa-times" aria-hidden="true"></i><a></div>');
+								}
+								
+							}
+		    	            /* updateAddonPrices(); */
+		                    $('[name="addon_values"]').prop("checked",false);
+
+		                    if (addonlist) {
+		                        addonlist.forEach(function (val) {
+		                            $('input[type="checkbox"][value="' + val.product_name + "::" + (val.product_price).toFixed(2) + '"]').prop('checked', true);
+		                        });
+		                    }
+		                } else {
+		                    console.warn("No order data found.");
+		                }
+		            },
+		            error: function (xhr, status, error) {
+		                console.error("Error fetching data:", error);
+		            }
+		        });
+		    }else{
+		    	const checkboxValues = <%= checkboxValues.toString().replace("[", "['").replace("]", "']").replace(", ", "','") %>;
+		        checkboxValues.forEach(function (val) {
+		            $('input[type="checkbox"][value="' + val + '"]').prop('checked', true);
+		        });
+		       /*  updateTotal(); */
+		    }
+		}
+	</script>
+	<script type="text/javascript">
+	let baseProductPrice = 0.00; 
+	let product = baseProductPrice;
+	let total = 0;
+
+	document.addEventListener("DOMContentLoaded", function () {
+	    updateProductCost();
+
+	    $('#quantity').on('input', function () {
+	        let value = parseInt(this.value);
+
+	        if (!isNaN(value) && value >= 1 && value <= 5) {
+	            updateProductCost();
+	        } else {
+	            this.value = 1;
+	            updateProductCost();
+	        }
+	    });
+
+	});
+	function updateAddonPrices() {
+	    let quantity = parseInt($('#quantity').val());
+	    if (isNaN(quantity) || quantity < 1) quantity = 1;
+
+	    document.querySelectorAll('.addon-option').forEach(function (checkbox, index) {
+	        let originalValue = checkbox.getAttribute('data-original-value');
+	        if (!originalValue) {
+	            originalValue = checkbox.value;
+	            checkbox.setAttribute('data-original-value', originalValue);
+	        }
+	        let [text, value] = originalValue.split("::");
+	        let newPrice = parseFloat(value) * quantity;
+	        checkbox.value = text + "::" + newPrice.toFixed(2);
+	        $(checkbox).next('label').text(text + " (" + selectedcurrency + newPrice.toFixed(2) + ")");
+	    });
+	}
+	function updateProductCost() {
+	    let quantity = parseInt($('#quantity').val());
+	    if (isNaN(quantity) || quantity < 1) quantity = 1;
+	    product = baseProductPrice * quantity;
+	}
+
+	function updateTotal() {
+	    total = 0;
+	    document.querySelectorAll('.addon-option:checked').forEach(function (checkbox) {
+	        total += parseFloat(checkbox.value.split("::")[1]) * $('#quantity').val();
+	    });
+
+	    let finalCost = total + product;
+	    $("#orderCost").val(finalCost.toFixed(2));
+	    $("#orderCostRound").val((finalCost * 100).toFixed(0));
+	}
+	function getApostilleBtn() {
+	    window.scrollTo(0, findPosition(document.getElementById("checkoutForm")));
+	}
+
+	function findPosition(obj) {
+	    let currenttop = 0;
+	    if (obj.offsetParent) {
+	        do {
+	            currenttop += obj.offsetTop - 40;
+	        } while ((obj = obj.offsetParent));
+	        return [currenttop];
+	    }
+	}
+		function setCurrency(country) {
+			const prices = {
+					AE: {
+			            product: '${product.item_uae_price}',
+			            addonTexts: [
+			            <% 
+			                ArrayList<AddonsDTO> addonsList = (ArrayList<AddonsDTO>) request.getAttribute("addonsprice");
+			                if (addonsList != null) {
+			                    for (int i = 0; i < addonsList.size(); i++) {
+			                        AddonsDTO addon = addonsList.get(i);
+			                        String comma = (i < addonsList.size() - 1) ? "," : "";
+			            %>
+			                '<%= addon.getAddon_name() %>::<%= String.format("%.2f", addon.getUae_price())%>'<%= comma %>
+			            <% 
+			                    }
+			                }
+			            %>
+			            ]
+			        },
+			        GBP: {
+			            product: '${product.item_gbp_price}',
+			            addonTexts: [
+			            <% 
+			                if (addonsList != null) {
+			                    for (int i = 0; i < addonsList.size(); i++) {
+			                        AddonsDTO addon = addonsList.get(i);
+			                        String comma = (i < addonsList.size() - 1) ? "," : "";
+			            %>
+			                '<%= addon.getAddon_name() %>::<%= String.format("%.2f", addon.getGbp_price())%>'<%= comma %>
+			            <% 
+			                    }
+			                }
+			            %>
+			            ]
+			        },
+			        EUR: {
+			            product: '${product.item_euro_price}',
+			            addonTexts: [
+			            <% 
+			                if (addonsList != null) {
+			                    for (int i = 0; i < addonsList.size(); i++) {
+			                        AddonsDTO addon = addonsList.get(i);
+			                        String comma = (i < addonsList.size() - 1) ? "," : "";
+			            %>
+			                '<%= addon.getAddon_name() %>::<%= String.format("%.2f", addon.getEuro_price())%>'<%= comma %>
+			            <% 
+			                    }
+			                }
+			            %>
+			            ]
+			        },
+			        DEFAULT: {
+			            product: '${product.item_us_price}',
+			            addonTexts: [
+			            <% 
+			                if (addonsList != null) {
+			                    for (int i = 0; i < addonsList.size(); i++) {
+			                        AddonsDTO addon = addonsList.get(i);
+			                        String comma = (i < addonsList.size() - 1) ? "," : "";
+			            %>
+			                '<%= addon.getAddon_name() %>::<%= String.format("%.2f", addon.getUs_price())%>'<%= comma %>
+			            <% 
+			                    }
+			                }
+			            %>
+			            ]
+			        }
+			    };
+
+			let priceSet;
+			let currencySymbol = "\u0024";
+			let currencyCode = "USD";
+
+			if (country === 'AE') {
+				priceSet = prices.AE;
+				currencySymbol = "AED ";
+				currencyCode = "AED";
+			} else if (country === 'GB') {
+				priceSet = prices.GBP;
+				currencySymbol = "\u00A3";
+				currencyCode = "GBP";
+			} else if (country !== '' && country !== 'US' && country !== 'IN') {
+				priceSet = prices.EUR;
+				currencySymbol = "\u20AC";
+				currencyCode = "EUR";
+			} else {
+				priceSet = prices.DEFAULT;
+			}
+
+	    baseProductPrice = parseFloat(priceSet.product);
+	    updateProductCost();
+
+	    $('[name="addon_values"]').each(function (index) {
+	        if (priceSet.addonTexts[index]) {
+	            $(this).val(priceSet.addonTexts[index]);
+	            $(this).next('label').text(priceSet.addonTexts[index].split('::')[0]);
+	            this.setAttribute("data-original-value", priceSet.addonTexts[index]);
+	            this.value = priceSet.addonTexts[index];
+	        }
+	    });	  
+	    $("#productPrice").val(baseProductPrice);
+	    selectedcurrency = currencySymbol;
+	    $("#currencyCode").val(currencyCode);
+	    $(".currencySymbol").text(currencySymbol);
+	    $("#currencySymbol").val(currencySymbol.trim());
+	}
+		function loadPaymentKeys() {
+			$.ajax({
+				url : 'paykeys',
+				type : 'GET',
+				success : function(data) {
+
+				},
+				failure : function(data) {
+					console.log(data);
+				}
+			});
+		}
+
+		$(document).ready(
+				function() {
+					$(".faq-question").on(
+							"click",
+							function() {
+								var $this = $(this);
+								var target = $this.data("bs-target");
+								if ($(target).hasClass("show")) {
+									$(target).collapse('hide');
+									$this.removeClass("active");
+									$this.find("i").removeClass("fa-angle-up")
+											.addClass("fa-angle-down");
+								} else {
+									$(".faq-question").removeClass("active")
+											.find("i").removeClass(
+													"fa-angle-up").addClass(
+													"fa-angle-down");
+									$(".collapse.show").collapse('hide');
+									$this.addClass("active");
+									$(target).collapse('show');
+									$this.find("i")
+											.removeClass("fa-angle-down")
+											.addClass("fa-angle-up");
+								}
+							});
+					$('.imageContainer').slick({
+						slidesToShow : 4,
+						slidesToScroll : 1,
+						infinite : true,
+						arrows : false,
+						dots : true,
+						autoplay : true,
+						autoplaySpeed : 2000,
+						centerMode : false,
+						responsive : [ {
+							breakpoint : 768,
+							settings : {
+								slidesToShow : 2
+							}
+						}, {
+							breakpoint : 480,
+							settings : {
+								slidesToShow : 1
+							}
+						} ]
+					});
+					$('.testimonial-carousel').slick({
+						slidesToShow : 1,
+						slidesToScroll : 1,
+						infinite : true,
+						arrows : false,
+						dots : true,
+						autoplay : true,
+						autoplaySpeed : 2000,
+						centerMode : false,
+						responsive : [ {
+							breakpoint : 768,
+							settings : {
+								slidesToShow : 2
+							}
+						}, {
+							breakpoint : 480,
+							settings : {
+								slidesToShow : 1
+							}
+						} ]
+					});
+					initializeMobileSlider();
+				});
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView : 3,
+			slidesPerGroup : 3,
+			spaceBetween : 10,
+			loop : true,
+			loopAdditionalSlides : 3, // important for loop + group combo
+			autoplay : {
+				delay : 2000,
+				disableOnInteraction : false,
+			},
+			speed : 600,
+			breakpoints : {
+				1024 : {
+					slidesPerView : 3,
+					slidesPerGroup : 3,
+				},
+				768 : {
+					slidesPerView : 2,
+					slidesPerGroup : 2,
+				},
+				480 : {
+					slidesPerView : 1,
+					slidesPerGroup : 1,
+				}
+			}
+		});
+
+		$('.collapse').on(
+				'shown.bs.collapse',
+				function() {
+					var question = $(this).prev('.faq-question');
+					question.find("i").removeClass("fa-angle-down").addClass(
+							"fa-angle-up");
+				});
+
+		$('.collapse').on(
+				'hidden.bs.collapse',
+				function() {
+					var question = $(this).prev('.faq-question');
+					question.find("i").removeClass("fa-angle-up").addClass(
+							"fa-angle-down");
+				});
+		$(window).on('resize', function() {
+			initializeMobileSlider();
+		});
+		function initializeMobileSlider() {
+			if ($(window).width() < 768) {
+				if (!$('.testimonial-carousel').hasClass('slick-initialized')) {
+					$('.testimonial-carousel').slick({
+						slidesToShow : 1,
+						slidesToScroll : 1,
+						infinite : true,
+						arrows : false,
+						dots : true,
+						autoplay : true,
+						autoplaySpeed : 2000,
+						centerMode : false
+					});
+				}
+			} else {
+				if ($('.testimonial-carousel').hasClass('slick-initialized')) {
+					$('.testimonial-carousel').slick('unslick');
+				}
+			}
+		}
+		var form = document.checkoutForm; 
+		form.addEventListener('submit', function(e) {
+		    e.preventDefault();
+
+		    let isValid = true;
+		    document.querySelectorAll(".msgError").forEach(el => el.innerText = "");
+		    document.querySelectorAll(".required").forEach(field => {
+		      field.classList.remove("is-invalid");
+		    });
+
+		    document.querySelectorAll(".required").forEach(field => {
+		      const isVisible = field.offsetParent !== null;
+		      const errorSpanId = "error_" + field.id;
+		      const errorSpan = document.getElementById(errorSpanId);
+		      let value = "";
+
+		      if (isVisible) {
+		        const tag = field.tagName.toLowerCase();
+		        if (tag === "input" || tag === "textarea" || tag === "select") {
+		          if (field.id === 'agreeTerms' && !field.checked) {
+		            errorSpan.innerText = "This field is required.";
+		          } else {
+		            value = field.value.trim();
+		          }
+		        }
+
+		        if (!value) {
+		          if (errorSpan) errorSpan.innerText = "This field is required.";
+		          field.classList.add("is-invalid");
+		          isValid = false;
+		        }
+		      }
+		    });
+
+		  /*  if (uploadedFiles.length === 0) {
+		      showError('Please upload at least one file.');
+		      isValid = false;
+		    } */
+
+		    if (isValid) {
+		      updateTotal();
+		      let formData = new FormData(form);
+		      formData.append("removedFiles", JSON.stringify(removedFiles));
+		      uploadedFiles.forEach(file => {
+		        formData.append("upload_images", file);
+		      });
+
+		      $.ajax({
+		        url: 'finalizecustomerorder',
+		        type: 'POST',
+		        data: formData,
+		        contentType: false,
+		        processData: false,
+		        success: function(response) {
+		          var res = eval(response);
+		          console.log(res);
+		          window.location.href = "checkout.jsp";
+		        },
+		        error: function(error) {
+		          console.log(error);
+		        }
+		      });
+		    }
+		  });
+		function changeCountry(country){
+			country = country.toUpperCase();
+			if (country === 'GB') {
+				window.location.href = "service_uk.jsp";
+			}else if(country === 'AE'){
+				window.location.href = "service_uae.jsp";
+			}else if(country === 'ES'){
+				window.location.href = "service_spain.jsp";
+			} else if(country === 'IE'){
+				window.location.href = "service_ireland.jsp";			
+			}else if(country === 'US')  {
+				window.location.href = "service_us.jsp";
+			}
+		}
+		function showError(msg) {
+		    const errorBox = document.querySelector('#upload_error');
+		    if (errorBox) {
+		        errorBox.innerText = msg;
+		        errorBox.style.display = 'block';
+		    }
+		}
+		  const dropZone = document.getElementById('drop_zone');
+		  const fileInput = document.getElementById('upload_image_background');
+		  const uploadError = document.getElementById('upload_error');
+		  const gallery = document.querySelector('.upload_gallery');
+		  const MAX_FILES = 10;
+		  let uploadedFiles = [];
+		  function updateGallery(newfile) {
+			    /* gallery.innerHTML = '';  */
+			    newfile.forEach(file => { 
+			        const preview = document.createElement('div');
+			        preview.classList.add('p-2', 'border', 'rounded');
+			        preview.innerHTML = '<strong>' + file.name + '</strong> (' + (file.size / 1024).toFixed(1) + ' KB)<a class = "ms-2 removeFileBtn text-danger" onclick = "removeFile(this);"><i class="fa fa-times" aria-hidden="true"></i><a>';
+			        gallery.appendChild(preview);
+			      }); 
+			  }
+		  ['dragenter', 'dragover'].forEach(eventName => {
+			    dropZone.addEventListener(eventName, () => {
+			      dropZone.classList.add('highlight');
+			    });
+			  });
+
+			  ['dragleave', 'drop'].forEach(eventName => {
+			    dropZone.addEventListener(eventName, () => {
+			      dropZone.classList.remove('highlight');
+			    });
+			  });
+
+			  dropZone.addEventListener('drop', e => {
+			    const files = e.dataTransfer.files;
+			    handleFiles(files);
+			  });
+
+			  fileInput.addEventListener('change', () => {
+			    handleFiles(fileInput.files);
+			  });
+
+		  function handleFiles(files) {
+			    uploadError.style.display = 'none';
+			    const allowedExts = ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx', 'ppt', 'pptx', 'odt'];
+			    const maxSize = 50 * 1024 * 1024;
+
+			    const newFiles = Array.from(files).filter(file => {
+			      const ext = file.name.split('.').pop().toLowerCase();
+
+			      if (!allowedExts.includes(ext)) {
+			        showError('File ' + file.name + ' has unsupported format.');
+			        return false;
+			      }
+
+			      if (file.size > maxSize) {
+			        showError('File ' + file.name + ' exceeds 50MB limit.');
+			        return false;
+			      }
+
+			      return true;
+			    });
+
+			    if (($('.upload_gallery').find('div').length + newFiles.length) > MAX_FILES) {
+			      showError('You can upload a maximum of 10 files.');
+			      return;
+			    }
+
+			    uploadedFiles.push(...newFiles);
+			    updateGallery(newFiles);
+			  }
+
+			  ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+			    dropZone.addEventListener(eventName, e => {
+			      e.preventDefault();
+			      e.stopPropagation();
+			    });
+			  });
+
+		  function getCountryList(){
+			  $.ajax({
+	                url: 'countrylist', 
+	                method: 'GET',
+	                dataType: 'json',
+	                success: function (data) {
+	                    $.each(data, function (index, country) {
+	                        let flag = country.flags && country.flags.png ? country.flags.png : '';
+	                        let name = country.name && country.name.common ? country.name.common : 'Unknown';
+	                        let value = country.cca2;
+	                        let $option = $('<option></option>').val(value).text(name); 
+
+	                        $('#anotherCountryBox').append($option);
+	                    });
+	                },
+	                error: function (xhr, status, error) {
+	                    console.error('Error fetching countries:', error);
+	                }
+	            });
+		  }
+		  let removedFiles = [];
+
+		  function removeFile(el) {
+		      const filename = $(el).prev().text().trim(); 
+		      removedFiles.push(filename); 
+		      $(el).parent().remove();
+		  }
+		  
+	</script>
+	<script async data-id="101481203" src="//static.getclicky.com/js"></script> 
+<noscript>
+	<p>
+		<img alt="Clicky" width="1" height="1"
+			src="//in.getclicky.com/101481203ns.gif" />
+	</p>
+</noscript>
+ <script type="text/javascript">
+	(function(c, l, a, r, i, t, y) {
+		c[a] = c[a] || function() {
+			(c[a].q = c[a].q || []).push(arguments)
+		};
+		t = l.createElement(r);
+		t.async = 1;
+		t.src = "https://www.clarity.ms/tag/" + i;
+		y = l.getElementsByTagName(r)[0];
+		y.parentNode.insertBefore(t, y);
+	})(window, document, "clarity", "script", "qtrh5lgmnl");
+</script>
+
+<!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 19110171;
+    window.__lc.integration_name = "manual_channels";
+    window.__lc.product_name = "livechat";
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/19110171/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+</body>
+</html>

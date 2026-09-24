@@ -1,0 +1,80 @@
+### ======================================================= ###
+### Deployment properties - for Tomcat                      ###
+### ======================================================= ###
+
+## SET: point to your tomcat install directory
+deploy.server=/opt/TOMCAT/demo-quickapostille-online/
+## SET
+
+deploy.location=${deploy.server}/webapps
+deploy.project.location=${deploy.location}/${project.name}
+deploy.root=${deploy.project.location}/WEB-INF
+deploy.lib=${deploy.root}/lib
+deploy.classes=${deploy.root}/classes
+deploy.jsp=${deploy.root}/jsp
+
+tomcat.home=${deploy.server}
+
+
+### ======================================================= ###
+### Project properties                                      ###
+### ======================================================= ###
+
+
+project.name=apostille
+project.location=..
+project.main=.
+project.dist=${project.main}/dist
+project.dist.file=${project.dist}/${project.name}.war
+project.lib=${project.main}/WEB-INF/lib/
+project.src=${project.main}/WEB-INF/src
+
+## SET: point to your J2EE distribution jar (or jars)
+project.j2ee.lib=${deploy.server}/lib/servlet-api.jar;\
+${deploy.server}/lib/jsp-api.jar
+
+
+### ======================================================= ###
+### Destination directories for the build                   ###
+### ======================================================= ###
+
+
+antbuild=${project.main}/antbuild
+antbuild.jsp=${antbuild}/jsp
+antbuild.classes=${antbuild}/classes
+
+
+
+#============================================================
+# Required Jar files for build 
+#============================================================
+
+
+antbuild.classpath=${project.j2ee.lib};\
+${project.lib}/bcprov-jdk15on-1.60.jar;\
+${project.lib}/catalina.jar;\
+${project.lib}/commons-beanutils-1.9.4.jar;\
+${project.lib}/commons-cli-1.8.0.jar;\
+${project.lib}/commons-codec-1.17.1.jar;\
+${project.lib}/commons-collections4-4.5.0-M2.jar;\
+${project.lib}/commons-dbcp2-2.12.0.jar;\
+${project.lib}/commons-io-2.16.1.jar;\
+${project.lib}/commons-lang-2.4.jar;\
+${project.lib}/commons-lang3-3.15.0.jar;\
+${project.lib}/commons-logging-1.3.3.jar;\
+${project.lib}/commons-pool2-2.12.0.jar;\
+${project.lib}/gson-2.2.3.jar;\
+${project.lib}/httpclient-4.3.1.jar;\
+${project.lib}/httpclient5-5.3.1.jar;\
+${project.lib}/httpcore-4.3.jar;\
+${project.lib}/httpmime-4.0.1.jar;\
+${project.lib}/jackson-annotations-2.17.2.jar;\
+${project.lib}/jackson-core-2.17.2.jar;\
+${project.lib}/jackson-databind-2.17.2.jar;\
+${project.lib}/java-jwt-4.4.0.jar;\
+${project.lib}/java-mail-1.4.4.jar;\
+${project.lib}/json-20240303.jar;\
+${project.lib}/json-simple.jar;\
+${project.lib}/mysql-connector-j-8.2.0.jar;\
+${project.lib}/stripe-java-7.18.0.jar;\
+

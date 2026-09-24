@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;jquery/ajax.html&apos; to &apos;ajax.jsp&apos;" description="Rename resource &apos;ajax.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ajax.html" name="ajax.jsp" stamp="1771414586894" updateReferences="true"/>
+</session>

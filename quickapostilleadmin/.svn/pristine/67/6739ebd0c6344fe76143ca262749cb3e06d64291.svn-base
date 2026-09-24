@@ -1,0 +1,3 @@
+<%
+response.setStatus(301);
+response.sendRedirect( "/orders.jsp"); %>

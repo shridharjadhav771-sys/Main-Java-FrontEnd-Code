@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start' : new Date().getTime(),
+			event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+				+ l
+				: '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-WSFP6M7W');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<link rel="canonical" href="https://www.quickapostille.online/apostille" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title"
+	content="Apostille Service - Get an Apostille in 1 day - For any document" />
+<meta property="og:description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<meta property="og:url" content="https://www.quickapostille.online/" />
+<meta property="og:site_name"
+	content="Apostille for Any Document from Any Country" />
+<title>Apostille | Quick Apostille</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="images/favicon-07.png" />
+<!-- Bootstrap icons-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" type="text/css" />
+<!-- Google fonts-->
+<link href='https://fonts.googleapis.com/css?family=Titillium Web'
+	rel='stylesheet'>
+
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://js.stripe.com/v3/"></script>
+
+
+<script async data-id="101481203" src="//static.getclicky.com/js"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<noscript>
+	<p>
+		<img alt="Clicky" width="1" height="1"
+			src="//in.getclicky.com/101481203ns.gif" />
+	</p>
+</noscript>
+
+<style type="text/css">
+#headerImageSectionContact {
+	box-shadow: 0px 0px #00000070;
+	padding-top: 140px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: !important;
+	margin-bottom: !important;
+	overflow: visible;
+	order: initial;
+	border-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 55% 29%;
+	background-size: cover;
+	background-attachment: scroll;
+	background-image: url('images/Contact.jpg');
+	background-clip: padding-box;
+	row-gap: 20px;
+	column-gap: 20px;
+	position: relative;
+}
+
+#headerImageSectionContact:before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	top: -0px;
+	left: -0px;
+	width: calc(100% + 0px + 0px);
+	height: calc(100% + 0px + 0px);
+	border-color: inherit;
+	background: #070614;
+	opacity: 0.8;
+}
+
+section#headerImageSectionContact>div {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+}
+#formSection {
+	justify-content: center;
+	margin-top: 60px;
+}
+
+#formSectionInside {
+	margin-top: 60px;
+}
+
+#aboveFormSection {
+	margin-left: auto;
+	margin-top: -50px;
+	background-color: #203852;
+	width: 1000px;
+	margin-right: auto;
+	height:;
+}
+
+section#aboveFormSection>div {
+	z-index: 3;
+	position: relative;
+	color: #fff;
+}
+
+section#aboveFormSection {
+	z-index: 3;
+	position: relative;
+	color: #fff;
+}
+
+.custom-containerform {
+	display: grid;
+	justify-content: center;
+	padding: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	position: relative;
+}
+
+.custom-containerform-child {
+	width: 38%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.svg-box svg {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	box-sizing: content-box;
+	line-height: 40px;
+	font-size: 40px;
+	color: #f2d299;
+	fill: #f2d299;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+}
+
+.svg-box {
+	text-align: center;
+}
+
+#faq-btn {
+	text-align: center;
+}
+
+.frm_required {
+	color: var(--required-color);
+	font-weight: var(--required-weight);
+}
+
+.seprator {
+	background-color: #0067ff;
+	width: 80px;
+	border-top-width: 6px;
+	border-top-color: #0067ff;
+	border-top-style: solid;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: inline-block;
+	line-height: 0;
+	align-items: center;
+	position: absolute;
+}
+
+#info-box-link {role
+	
+}
+</style>
+
+
+
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSFP6M7W"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="container top-bar d-flex p-2">
+		<div class="col-4 col-sm-0 text-start d-none d-sm-block">
+			<strong><img class="alignnone" src="images/mail-1.png"
+				alt="mail" width="24" height="24">&nbsp;&nbsp;<span
+				style="color: #203852">contact@quickapostille.online</span></strong>
+		</div>
+
+		<div class="col-md-3 col-sm-12 text-center">
+			<strong><img class="alignnone" src="images/phone 2-01.png"
+				alt="phone" width="24" height="24">&nbsp;&nbsp; <span href="#"
+				style="color: #203852; text-decoration: none">+1(252) 579
+					0347</span></strong>
+		</div>
+
+		<div class="col-5 col-sm-0  text-end  d-none d-sm-block">
+			<span style="color: #203852"><strong> <img
+					class="alignnone"
+					src="images/WXibs0O8_400x400-removebg-preview-300x300.png" alt=""
+					width="29" height="29">Official HCCH Hague Convention
+					Documentation
+			</strong></span>
+		</div>
+	</div>
+
+	<!-- Navigation-->
+	<%@ include file="nav.jsp"%>
+	<main>
+
+		<section id="headerImageSectionContact">
+			<div class="container">
+				<div class="seprator"></div>
+				<div class="pt-5">
+					<div>
+						<h1>Get in Touch with Us</h1>
+						<p>
+							Have questions or need assistance? Our team is here to help!
+							Contact us for fast, secure,<br> and reliable support
+							regarding your document authentication needs.
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="aboveFormSection">
+
+
+			<div class="container">
+				<div class="row row-cols-auto">
+
+					<div class="col-6 col-md-4 pt-2">
+						<div class="svg-box">
+							<span><svg xmlns="https://www.w3.org/2000/svg"
+									viewBox="0 0 512 512">
+										<path
+										d="M447 56.25C443.5 42 430.7 31.1 416 31.1H96c-14.69 0-27.47 10-31.03 24.25L3.715 304.9C1.247 314.9 0 325.2 0 335.5v96.47c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48v-96.47c0-10.32-1.247-20.6-3.715-30.61L447 56.25zM352 352H160L128 288H72.97L121 96h270l48.03 192H384L352 352z"></path></svg></span>
+						</div>
+						<div class="mt-2 p-4 pt-2">
+							<h4 class="d-flex justify-content-center">Email Address</h4> 
+						</div>
+						 
+						<p class="d-flex justify-content-center">contact@quickapostille.online</p>
+					</div>
+
+					<div class="col-6 col-md-4 pt-2">
+						<div class="svg-box">
+							<span><svg xmlns="https://www.w3.org/2000/svg"
+									viewBox="0 0 512 512">
+										<path
+										d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z"></path></svg></span>
+						</div>
+						<div class="mt-2 p-4 pt-2">
+							<h4 class="d-flex justify-content-center">Phone</h4> 
+						</div>
+						<p class="d-flex justify-content-center">
+							<a href="tel:+12525790347" target="_blank"
+								rel="noreferrer noopener" style="text-decoration:  none; color: #ffffff">+1(252) 579 0347</a>
+						</p>
+					</div>
+
+					<div class="col-6 col-md-4" id="info-box-link"> 
+						<div class="svg-box">
+							<a href="https://wa.me/+34611762250" target="_blank"
+								aria-label="Infobox Link" rel="noopener noreferrer"> <span><svg
+										xmlns="https://www.w3.org/2000/svg" viewBox="0 0 512 512">
+										<path
+											d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg></span>
+							</a>
+						</div>
+						<a href="https://wa.me/+34611762250" target="_" style="text-decoration:  none; color: #ffffff">
+						<div class="mt-2 p-4"> 
+							<h4 class="d-flex justify-content-center">WhatsApp Support</h4> 
+						</div>
+						<p class="d-flex justify-content-center">Our team is here to
+							help</p>
+						</a>
+					</div>
+
+				</div>
+			</div>
+
+
+		</section>
+		<section id="formSection">
+
+			<div class="row" id="formSectionInside">
+
+				<h2 class="d-flex justify-content-center ">Get an Appointment
+					Today!</h2>
+			</div>
+
+			<div class="custom-containerform">
+				<div class="custom-containerform-child">
+
+					<form class="row g-3 " action="contact" method="post">
+						<input type="hidden" name="country" id="country" value=""/>
+						<div class="alert alert-success d-none" id="alertmsgid" >
+						  <strong>Success!</strong> We have sent your request to our support team. We will contact you soon.
+						</div>
+						<div class="col-md-6">
+							<label for="fname" class="form-label">First Name</label> <input
+								type="text" class="form-control" id="fname" name="fname"><span
+								class="frm_required msgerror text-danger" aria-hidden="true"
+								id="error_fname"></span>
+						</div>
+						<div class="col-md-6">
+							<label for="lname" class="form-label">Last Name*</label> <input
+								type="text" class="form-control" id="lname" name="lname"><span
+								class="frm_required msgerror text-danger" aria-hidden="true"
+								id="error_lname"></span>
+						</div>
+						<div class="col-12">
+							<label for="email" class="form-label">Email*</label> <input
+								type="email" class="form-control" id="emailid" name="email"><span
+								class="frm_required msgerror text-danger" aria-hidden="true"
+								id="error_emailid"></span>
+						</div>
+						<div class="col-12">
+							<label for="subject" class="form-label">Subject*</label> <input
+								type="text" class="form-control" id="subject" name=subject><span
+								class="frm_required msgerror text-danger" aria-hidden="true"
+								id="error_subject"></span>
+						</div>
+						<div class="col-md-12">
+							<label for="message" class="form-label">Message*</label>
+							<textarea rows="2" cols="" class="form-control" id="message"
+								placeholder="type your message here..." name="message"></textarea>
+							<span class="frm_required msgerror text-danger"
+								aria-hidden="true" id="error_message"></span>
+						</div>
+						<div class="col-md-12">
+							<div class="g-recaptcha"
+								data-sitekey="6LcJ8xwrAAAAABl8zAgPab0N6a_T5pp4jAUK6aQm"></div>
+							<span class="frm_required msgerror text-danger"
+								aria-hidden="true" id="error_captcha"></span>
+
+						</div>
+
+						<div class="col-12" id="faq-btn">
+							<button type="button" class="btn btn-primary" onclick="doSave()"
+								id="submit_btn">Submit</button>
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+		</section>
+
+
+
+
+
+	</main>
+
+	<!-- Footer-->
+<%@ include file="footer.jsp"%>
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+		type="text/javascript"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js"></script>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script type="text/javascript">
+	$(function() { 
+			$.get("https://ipinfo.io", function(response) {
+				 $("#country").val(response.country);
+			}, "jsonp");
+			
+
+		});
+		function doSave() {
+			console.log("submit button clicked...");
+			$("#alertmsgid").removeClass('d-block');
+			$("#alertmsgid").addClass('d-none');
+			if (validate()) { 
+				$.ajax({ 
+					type : 'POST',
+					url : 'contact',
+					data : { 
+						fname : $("#fname").val(),
+						lname : $("#lname").val(),
+						email : $("#emailid").val(),
+						subject : $("#subject").val(),
+						message : $("#message").val(),
+						country : $("#country").val()
+
+					},
+					success : function(data) {
+						console.log(data); 
+						$("#alertmsgid").removeClass('d-none');
+						$("#alertmsgid").addClass('d-block');
+						$("#fname").val("");
+						$("#lname").val("");
+						$("#emailid").val("");
+						$("#subject").val("");
+						$("#message").val("");
+						
+					},
+					failure : function(data) {
+						alert("something went wrong...");
+
+					} 
+				})
+ 
+				
+			}
+		}
+
+		function validate() {
+
+			if (!isRequired($("#fname"), $("#error_fname"))) {
+				return false;
+			}
+			if (!isRequired($("#lname"), $("#error_lname"))) {
+				return false;
+			}
+
+			if (!emailid($("#emailid"), $("#error_emailid"))) {
+				return false;
+			}
+
+			if (!isRequired($("#subject"), $("#error_subject"))) {
+				return false;
+			}
+			if (!isRequired($("#message"), $("#error_message"))) {
+				return false;
+			}
+
+			$("#error_captcha").text("");
+			if (grecaptcha.getResponse() === "") {
+				$("#error_captcha").text("Please select captcha.");
+				return false;
+			}
+
+			return true;
+		}
+
+		function emailid(tempEmail, errorMsg) {
+			errorMsg.text('');
+			var email = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+			if (!email.test(tempEmail.val())) {
+				errorMsg.text('invalid email.');
+				return false;
+			}
+			return true;
+		}
+
+		function isRequired(obj, errObj) {
+			errObj.text("");
+			if (obj.val().trim() === "") {
+				errObj.text("This field is required..");
+				obj.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+
+</body>
+</html>

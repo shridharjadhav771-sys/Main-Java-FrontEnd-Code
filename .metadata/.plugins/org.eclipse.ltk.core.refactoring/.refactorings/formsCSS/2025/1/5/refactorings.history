@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;formsCSS/multipleFormsjsp.jsp&apos; to &apos;multipleForms.jsp&apos;" description="Rename resource &apos;multipleFormsjsp.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="multipleFormsjsp.jsp" name="multipleForms.jsp" stamp="1738134398791" updateReferences="true"/>
+</session>

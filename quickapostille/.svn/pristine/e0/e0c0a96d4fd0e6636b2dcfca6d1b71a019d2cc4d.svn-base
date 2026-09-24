@@ -1,0 +1,102 @@
+<%@page import="java.util.Calendar"%>
+<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm- 12 mt-3">
+					<section id="block-15"
+						class="widget widget_block widget_media_image">
+						<figure class="wp-block-image size-full is-resized">
+							<img decoding="async" src="images/apostille_logo.png" alt=""
+								class="wp-image-3606" style="width: 238px; height: auto">
+						</figure>
+					</section>
+					<section id="block-14" class="widget widget_block widget_text">
+						<p>Quick Apostille provides quick, secure, and reliable
+							document authentication services. Our streamlined process ensures
+							accuracy, compliance, and hassle-free verification, making
+							document legalization simple and efficient.</p>
+					</section>
+				</div>
+				<div class="col-md-3 col-sm-12 mt-3">
+					<section id="nav_menu-4" class="widget widget_nav_menu">
+						<h2 class="widget-title">Quick Link</h2>
+						<nav class="menu-footer-menu-container" aria-label="Quick Link">
+							<ul class="menu-footer-menu">
+								<li id="menu-item" class="menu-item"><a
+									href="about_us.jsp"
+									class="menu-link" target="_">About Us</a></li>
+								<li id="menu-item" class="menu-item"><a
+									rel="privacy-policy"
+									href="privacy_policy.jsp"
+									class="menu-link" target="_">Privacy Policy</a></li>
+								<li id="menu-item" class="menu-item"><a
+									href="terms_and_conditions.jsp"
+									class="menu-link" target="_">Terms and Conditions</a></li>
+								<li id="menu-item" class="menu-item"><a
+									href="faq.jsp" class="menu-link"
+									target="_">FAQ</a></li>
+							</ul>
+						</nav>
+					</section>
+				</div>
+				<div class="col-md-3 col-sm-12 mt-3">
+
+					<section id="nav_menu-3" class="widget widget_nav_menu">
+						<h2 class="widget-title">Quick Services</h2>
+						<nav class="menu-services-container" aria-label="Quick Services">
+							<ul class="menu-footer-menu">
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2361"><a
+									href="product/1001/Apostille"
+									class="menu-link" target="_">Apostille Certification</a></li>
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2362"><a
+									href="product/1002/birth-certificate-apostille"
+									class="menu-link" target="_">Birth Certificate Apostille</a></li>
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2363"><a
+									href="product/1005/power-of-attorney-apostille"
+									class="menu-link" target="_">Power of Attorney Apostille</a></li>
+								<li id="menu-item"
+									class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2364"><a
+									href="product/1008/certified-copy-of-passport-id"
+									class="menu-link" target="_">Certified copy of Passport/ID</a></li>
+							</ul>
+						</nav>
+					</section>
+				</div>
+				<div class="col-md-2 col-sm-12 mt-3">
+
+					<section id="block-44" class="widget widget_block">
+						<div
+							class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">
+							<div
+								class="wp-block-group is-layout-constrained wp-container-core-group-is-layout-1 wp-block-group-is-layout-constrained">
+								<div
+									class="wp-block-uagb-info-box uagb-block-b84b6894 uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top">
+									<div class="uagb-ifb-content">
+										<div class="uagb-ifb-title-wrap">
+											<h2 class="widget-title">Contact us</h2>
+											<p>Integrated Business Systems LLC</p>
+											<p>7451 Ohana Ct, Las Vegas NV 89129</p>
+										</div>
+										<p class="uagb-ifb-desc"> +1(252) 579 0347
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ast-footer-copyright">
+					<p>
+						Copyright &#169;
+						<%=Calendar.getInstance().get(Calendar.YEAR)%>
+						Quick Apostille
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>

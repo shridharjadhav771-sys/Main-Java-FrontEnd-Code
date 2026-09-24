@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move &apos;studentInfo.jsp&apos; to &apos;bin&apos;" description="Move &apos;studentInfo.jsp&apos; to &apos;bin&apos;" destination="bin" element1="/studentDetails/studentInfo.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1769602793835" updateReferences="true"/>&#x0A;<refactoring comment="Move &apos;studentInfo.jsp&apos; to &apos;student&apos;" description="Move &apos;studentInfo.jsp&apos; to &apos;student&apos;" destination="/student" element1="bin/studentInfo.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1769602798481" updateReferences="true"/>
+</session>

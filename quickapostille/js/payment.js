@@ -1,0 +1,199 @@
+'use strict'; 
+//var stripe = Stripe(document.checkoutForm.stripekey.value); 
+var stripe = Stripe('pk_test_51Qys6qB4i5fFeCIHeGqpVAd8ukIfEAt14XeAoQJTdD6xXfGBaf5yqK3FJWsJNHaU6ytniXMuh241MkpqtiajLvQu00JpRNDJos', {
+	  betas: ['payment_intent_beta_3']
+	});
+function registerElements(elements) {
+	var form = document.checkoutForm; 
+	 
+function enableInputs() {
+    Array.prototype.forEach.call(
+      form.querySelectorAll(
+        "input[type='text'], input[type='email'], input[type='tel']"
+      ),
+      function(input) {
+        input.removeAttribute('disabled');
+      }
+    );
+  }
+  function disableInputs() {
+    Array.prototype.forEach.call(
+      form.querySelectorAll(
+        "input[type='text'], input[type='email'], input[type='tel']"
+      ),
+      function(input) {
+        input.setAttribute('disabled', 'true');
+      }
+    );
+  }
+	  
+ function getStripeSecretKey() { 
+	jQuery.ajax({
+		url: "stripesecretkey",
+		type: 'POST',
+		async: false,
+		cache: false,
+		timeout: 30000,
+		data: {
+			"orderAmount": $("#orderCostRound").val(),
+			"firstName" : form.first_name.value,
+			"lastName" : form.last_name.value,
+			"email" : form.email.value,
+			"shippingStreet" : form.street.value,
+			"shippingCity" : form.city.value,
+			"shippingState" : form.state.value,
+			"shippingZip" : form.zip.value,
+			"shippingCountry" : form.country.value,
+			"currency": $("#currencyCode").val()
+			
+		},success: function (data) {
+		console.log("Stripe Call..." + data);
+			if (data != "") {
+				form.clientSecret.value = data;
+			}
+			else { console.log(data); }
+	      },
+	      error: function (data) {
+		 
+			document.getElementById("paymentErrorDiv").style.display = 'block';
+			document.getElementById("errormsg").innerHTML = "Card not authorized  please try a different card.";
+			form.submitbtn.innerHTML = "Place Order" 
+          form.submitbtn.disabled = false;
+          enableInputs();
+	      }
+	});
+
+}
+
+form.addEventListener('submit', function(e) {
+	    e.preventDefault(); 
+		let isValid = true; 
+	    // Clear previous error messages and invalid highlights
+	    document.querySelectorAll(".msgError").forEach(el => el.innerText = "");
+	    document.querySelectorAll(".required").forEach(field => {
+	        field.classList.remove("is-invalid");
+	    }); 
+	    // Validate only visible, required fields
+	    document.querySelectorAll(".required").forEach(field => {
+	        const isVisible = field.offsetParent !== null;
+	        const errorSpanId = "error_" + field.id;
+	        const errorSpan = document.getElementById(errorSpanId);
+
+	        if (isVisible) {
+	            let value = "";
+	            const tag = field.tagName.toLowerCase();
+
+	            if (tag === "input" || tag === "textarea" || tag === "select") {
+	               if(field.id == 'agreeTerms' && !field.checked){
+	            	   errorSpan.innerText = "This field is required.";
+	               }else{
+	            	   value = field.value.trim();
+	               }
+	            }
+
+	            if (!value) {
+	                if (errorSpan) {
+	                    errorSpan.innerText = "This field is required.";
+	                }
+	                field.classList.add("is-invalid"); 
+	                isValid = false;
+	            }
+	        }
+	    });
+		if(isValid){
+					form.submitbtn.innerHTML = "Wait, request processing..."
+					form.submitbtn.disabled = true;
+					getStripeSecretKey();
+					document.getElementById("paymentErrorDiv").style.display = 'none';
+				    document.getElementById("errormsg").innerHTML = "";
+				    disableInputs();
+				    var fullname = form.first_name.value + " "+ form.last_name.value;	 
+				    var address1 = form.street.value;
+				    var city = form.city.value;
+				    var state = form.state.value;
+				    var zip = form.zip.value; 
+					var country = form.country.value; 
+				    stripe.handleCardPayment(
+						document.getElementById("clientSecret").value,
+						elements[0],
+						  {
+						    source_data: {
+						      owner: {
+						        name: fullname,
+						        email:form.email.value,
+						        phone:form.phone.value,
+						        address:{
+						        	city: city,	    		           
+						            line1: address1, 
+						            postal_code: zip,
+						            state: state,
+									country: country
+						        }
+						      }
+						    }
+						  }
+						).then(function(result) {
+							console.log(result);
+							if(result.error){ 
+								  document.getElementById("paymentErrorDiv").style.display = 'block';
+								  document.getElementById("errormsg").innerHTML = "Card not authorized  please try a different card.";
+						          form.submitbtn.innerHTML = "Place Order" 
+						          form.submitbtn.disabled = false;
+						          enableInputs();
+								  $("#orderStatus").val("0");	
+								  saveOrderDetails("0"); 
+							}else{ 
+								enableInputs();
+								console.log(result.paymentIntent.id); 
+								$("#paymentId").val(result.paymentIntent.id);	
+								$("#orderStatus").val("1");	
+								console.log($("#orderStatus").val());
+								saveOrderDetails(result.paymentIntent.id); 
+							} 
+							
+						});
+		}
+		
+
+		    return false;
+		});
+			
+function saveOrderDetails(payId){
+	$.ajax({
+        url: 'customerorderdetails',
+        type: 'POST',
+        data: $("#checkoutForm").serialize(),
+        success: function(response) { 
+            var res = eval(response);
+            console.log(res);
+            if(res.status === 'sucess'){
+            	$("#orderId").val(res.orderID); 
+				$("#mainOrderId").val(res.mainOrderId); 
+				if(payId !== "0"){
+					completePayment(payId);
+				}
+				
+            } 
+        },
+        error: function(error) {
+        	 console.log(error);
+        } 
+	});
+}
+     
+function completePayment(payId){
+	$.ajax({
+		url: 'stripecheckout',
+		type: 'GET',
+		data : {
+			stripeToken : payId,
+			orderId: $("#orderId").val(),
+			orderTotal : $("orderCost").val()
+		},success: function (data){
+			console.log(data);
+			var res = eval(data);
+			window.location.replace("https://www.quickapostille.online/thank-you?order_id="+$("#mainOrderId").val());
+		}
+	});
+}
+}

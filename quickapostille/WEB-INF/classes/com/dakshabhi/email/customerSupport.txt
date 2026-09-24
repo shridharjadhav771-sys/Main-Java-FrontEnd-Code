@@ -1,0 +1,15 @@
+<html>
+<body>
+<font size="2" face="arial"> 
+&nbsp;&nbsp;&nbsp;From: {0}<br/>
+&nbsp;&nbsp;&nbsp;Subject: {1}<br/>
+&nbsp;&nbsp;&nbsp;-----------------------------------<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;Name: {2}<br/> 
+ 
+<br/>
+&nbsp;&nbsp;&nbsp;Message: {3}<br/> 
+
+</font>
+</body>
+</html>

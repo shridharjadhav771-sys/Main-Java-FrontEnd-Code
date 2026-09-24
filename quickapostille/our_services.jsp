@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.util.Calendar"%>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start' : new Date().getTime(),
+			event : 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+				+ l
+				: '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-WSFP6M7W');
+</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<link rel="canonical" href="https://www.quickapostille.online/apostille" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title"
+	content="Apostille Service - Get an Apostille in 1 day - For any document" />
+<meta property="og:description"
+	content="Accredited Apostille service. Get apostille for any document (official, notarial, civil, business, private, etc.) issued in any country." />
+<meta property="og:url" content="https://www.quickapostille.online/" />
+<meta property="og:site_name"
+	content="Apostille for Any Document from Any Country" />
+<title>Apostille | Quick Apostille</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="images/favicon-07.png" />
+<!-- Bootstrap icons-->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+	rel="stylesheet" type="text/css" />
+<!-- Google fonts-->
+<link href='https://fonts.googleapis.com/css?family=Titillium Web'
+	rel='stylesheet'>
+
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/styles.css" rel="stylesheet" />
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://js.stripe.com/v3/"></script>
+
+
+<script async data-id="101481203" src="//static.getclicky.com/js"></script>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<noscript>
+	<p>
+		<img alt="Clicky" width="1" height="1"
+			src="//in.getclicky.com/101481203ns.gif" />
+	</p>
+</noscript>
+
+<style>
+#headerImageSection {
+	box-shadow: 0px 0px #00000070;
+	padding-top: 150px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+	overflow: visible;
+	border-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 65% 55%;
+	background-size: cover;
+	position: relative;
+	background-image: url(images/Our-Services-Product.jpg);
+	background-clip: padding-box;
+}
+
+#headerImageSection:before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	top: -0px;
+	left: -0px;
+	width: calc(100% + 0px + 0px);
+	height: calc(100% + 0px + 0px);
+	border-color: inherit;
+	background: #070614;
+	opacity: 0.8;
+}
+
+section#headerImageSection>div {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+.seprator {
+	background-color: #0067ff;
+	width: 80px;
+	border-top-width: 6px;
+	border-top-color: #0067ff;
+	border-top-style: solid;
+	margin-bottom: 20px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	display: inline-block;
+	line-height: 0;
+	align-items: center;
+	position: absolute;
+}
+
+#services-sections {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px
+}
+
+.product-sections-inside-h3 {
+	color: #0f172a;
+	margin-top: 15px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.3em;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.product-sections-inside-p {
+	color: #0f172a;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3em;
+	margin-top: 10px;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.get-apostille-span {
+	color: #2c4a6e;
+	background: #f2d299;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 35px;
+	padding-left: 35px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	font-weight: 800;
+	font-size: 14px;
+}
+
+.getStarted {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #FFFFFF;
+}
+
+.getStarted-p {
+	font-family: 'Titillium Web', sans-serif;
+	font-size:;
+	font-weight:;
+	color: #FFFFFF;
+	font-weight:;
+	text-align: center
+}
+
+#getStarted-section {
+	min-height: 440px;
+	box-shadow: 0px 0px #00000070;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	margin-left: 0px;
+	margin-right: 0px;
+	overflow: visible;
+	order: initial;
+	border-color: inherit;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-clip: padding-box;
+	row-gap: 20px;
+	column-gap: 20px;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+#getStarted-section:before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	top: -0px;
+	left: -0px;
+	width: calc(100% + 0px + 0px);
+	height: calc(100% + 0px + 0px);
+	border-color: inherit;
+	background: #070614;
+	opacity: 0.6;
+}
+
+section#getStarted-section>div {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+}
+
+#get-started-button {
+	border-color: #0067ff;
+	background-color: #0067ff;
+	color: #ffffff;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: 500;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #ffffff;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: 500;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.testimonial {
+	align-items: center;
+	text-align: center;
+	justify-items: center;
+}
+
+#containers-padding {
+	padding-top: 40px
+}
+
+.our-services-box>div>h3 {
+	color: #0F172A;
+	font-size: 1.75rem;
+	font-weight: 700;
+	line-height: 2.5em;
+}
+</style>
+
+
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSFP6M7W"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="container top-bar d-flex p-2">
+		<div class="col-4 col-sm-0 text-start d-none d-sm-block">
+			<strong><img class="alignnone" src="images/mail-1.png"
+				alt="mail" width="24" height="24">&nbsp;&nbsp;<span
+				style="color: #203852">contact@quickapostille.online</span></strong>
+		</div>
+
+		<div class="col-md-3 col-sm-12 text-center">
+			<strong><img class="alignnone" src="images/phone 2-01.png"
+				alt="phone" width="24" height="24">&nbsp;&nbsp; <span href="#"
+				style="color: #203852; text-decoration: none">+1(252) 579
+					0347</span></strong>
+		</div>
+
+		<div class="col-5 col-sm-0  text-end  d-none d-sm-block">
+			<span style="color: #203852"><strong> <img
+					class="alignnone"
+					src="images/WXibs0O8_400x400-removebg-preview-300x300.png" alt=""
+					width="29" height="29">Official HCCH Hague Convention
+					Documentation
+			</strong></span>
+		</div>
+	</div>
+
+	<!-- Navigation-->
+	<%@ include file="nav.jsp" %>
+	<!-- Navigation end-->
+	<section id="headerImageSection">
+		<div class="container">
+			<div class=" d-flex ">
+				<div class="seprator"></div>
+				<h1 class="d-flex justify-content-center mt-5">Quick Apostille
+					Services</h1>
+
+			</div>
+			<p>
+				Our <strong>quick apostille services</strong> provide fast, secure,
+				and government-recognized document<br> authentication for
+				international use, saving you time and effort.
+			</p>
+		</div>
+	</section>
+	<!-- services-sections -->
+
+	<section id="services-sections">
+		<div class="container">
+
+			<div class="row g-5">
+				<div class="col-md-6 flex-column">
+					<div class="text-center">
+						<div>
+							<img alt="Document Authentication"
+								src="images/Document-Authentication.jpg"
+								class="rounded img-fluid mb-1">
+						</div>
+
+					</div>
+
+
+				</div>
+				<div class="col-md-6 d-flex align-items-center ">
+					<div class="our-services-box">
+
+						<div>
+							<h3>Document Authentication</h3>
+						</div>
+						<p>Ensure your documents are officially recognized with our
+							quick apostille services, designed for speed, security, and
+							compliance. We handle every step of the authentication process
+							with accuracy and confidentiality, offering you a smooth,
+							hassle-free experience from start to finish.</p>
+
+					</div>
+
+
+				</div>
+			</div>
+			<div class="row g-5">
+
+				<div class="col-md-6 d-flex align-items-center ">
+					<div class="our-services-box">
+
+						<div>
+							<h3>Apostille Certification</h3>
+						</div>
+						<p>Apostille certification verifies the authenticity of your
+							documents for international use. Our streamlined process ensures
+							fast, secure, and legally recognized certification, eliminating
+							complexities and delays.</p>
+					</div>
+
+				</div>
+				<div class="col-md-6 flex-column">
+					<div class="text-center">
+						<div>
+							<img alt="Apostille Certification"
+								src="images/Apostille-Certification.jpg"
+								class="rounded img-fluid mb-1">
+						</div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+			<div class="row g-5">
+				<div class="col-md-6 flex-column ">
+					<div class="text-center">
+						<div>
+							<img alt="Attestation Services"
+								src="images/Attestation-Services.jpg"
+								class="rounded img-fluid mb-1">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 d-flex align-items-center ">
+					<div class="our-services-box">
+
+						<div class="our-services-box">
+							<h3>Attestation Services</h3>
+						</div>
+						<p>Attestation verifies the authenticity of documents for
+							official and legal use. Our secure and efficient process ensures
+							that your documents are properly authenticated, meeting all
+							required standards with accuracy and reliability.</p>
+					</div>
+
+				</div>
+
+
+			</div>
+			<div class="row g-5">
+
+				<div class="col-md-6 d-flex align-items-center">
+					<div class="our-services-box">
+
+						<div>
+							<h3>Notarization Support</h3>
+						</div>
+						<p>Notarization ensures the authenticity of your documents
+							with official validation. Our reliable support streamlines the
+							process, providing secure and legally recognized notarized
+							documents with accuracy and efficiency.</p>
+
+					</div>
+					<a href=""></a>
+				</div>
+				<div class="col-md-6 flex-column ">
+					<div class="text-center">
+						<div>
+							<img alt="Notarization-Support"
+								src="images/Notarization-Support.jpg"
+								class="rounded img-fluid mb-1">
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<div class="row g-5">
+				<div class="col-md-6 flex-column ">
+					<div class="text-center">
+						<div>
+							<img alt="Translation-Assistance"
+								src="images/Translation-Assistance.jpg"
+								class="rounded img-fluid mb-1">
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+				<div class="col-md-6 d-flex align-items-center">
+					<div class="our-services-box">
+
+						<div>
+							<h3>Translation Assistance</h3>
+						</div>
+						<p>Accurate and certified translation of legal, personal, and
+							business documents for official use. Our professional translators
+							ensure linguistic precision, cultural accuracy, and compliance
+							with legal standards, making your documents valid and accepted
+							globally.</p>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- services-sections -->
+
+	<section id="getStarted-section" class="d-flex justify-content-center">
+
+		<div>
+			<div>
+
+				<div>
+					<h2 class="getStarted d-flex justify-content-center">Get
+						Started Today !</h2>
+				</div>
+				<p class="getStarted-p">
+					Simplify your document authentication with our Quick and secure
+					service.<br> Quick Processing | Secure & Verified | Legally
+					Compliant
+				</p>
+			</div>
+			<div class="d-flex justify-content-center">
+				<a class="btn" href="contact.jsp" role="button"><span
+					id="get-started-button">Contact Us</span></a>
+			</div>
+		</div>
+	</section>
+	<section class="testimonials-section">
+		<div class="d-flex justify-content-center">
+			<div class="seprator"></div>
+
+		</div>
+		<div class="container" id="containers-padding">
+
+			<div class="section-header">
+
+				<h2>What Our Clients Say</h2>
+				<p>Hear from our satisfied clients who have experienced our
+					quick, reliable, and hassle-free document authentication services.</p>
+			</div>
+
+			<div class="testimonial-carousel">
+				<div class="testimonial">
+					<p class="testimonial-desc">Quick Apostille handled my marriage
+						certificate apostille seamlessly. The team was responsive and
+						guided me at every step.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-1.png" alt="Emily Carter"> <span
+							class="author">Emily Carter</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">They helped me get my birth
+						certificate apostilled within days. The communication was
+						excellent and everything was done digitally.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-2.png" alt="Michael Trujillo"> <span
+							class="author">Michael Trujillo</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">We were traveling abroad and needed
+						a minor travel consent notarized urgently. Their team came through
+						at the right time.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-3.png" alt="Olivia Brown"> <span
+							class="author">Olivia Brown</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">A hassle-free and smooth process!
+						The team was supportive, and my documents were verified quickly.
+						Great service.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-6.png" alt="Andrea Sanders"> <span
+							class="author">Andrea Sanders</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">The entire process for my Power of
+						Attorney notarization was quick and smooth. I didn't have to worry
+						about anything highly recommend!</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-5.png" alt="Scott R. Pierce"> <span
+							class="author">Scott R. Pierce</span>
+					</div>
+				</div>
+
+				<div class="testimonial">
+					<p class="testimonial-desc">Professional, efficient, and
+						reliable. They handled my request with care and delivered on time.
+						Fantastic experience.</p>
+					<div class="testimonial-meta">
+						<img src="images/testi-4.png" alt="Gerald L."> <span
+							class="author">Gerald L.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer-->
+
+
+	<%@ include file="footer.jsp" %>
+	
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded', uagbTimelineInit);
+		window.addEventListener('resize', uagbTimelineInit);
+		window.addEventListener('scroll', uagbTimelineInit);
+		document.addEventListener('UAGTimelineEditor', uagbTimelineInit);
+		$(window).on('resize', function() {
+			initializeMobileSlider();
+		});
+		$(document).ready(function() {
+			$('.testimonial-carousel').slick({
+				slidesToShow : 1,
+				slidesToScroll : 1,
+				infinite : true,
+				arrows : false,
+				dots : true,
+				autoplay : true,
+				autoplaySpeed : 2000,
+				centerMode : false,
+				responsive : [ {
+					breakpoint : 768,
+					settings : {
+						slidesToShow : 2
+					}
+				}, {
+					breakpoint : 480,
+					settings : {
+						slidesToShow : 1
+					}
+				} ]
+			});
+			initializeMobileSlider();
+		});
+
+		function initializeMobileSlider() {
+			if ($(window).width() < 768) {
+				if (!$('.testimonial-carousel').hasClass('slick-initialized')) {
+					$('.testimonial-carousel').slick({
+						slidesToShow : 1,
+						slidesToScroll : 1,
+						infinite : true,
+						arrows : false,
+						dots : true,
+						autoplay : true,
+						autoplaySpeed : 2000,
+						centerMode : false
+					});
+				}
+			} else {
+				if ($('.testimonial-carousel').hasClass('slick-initialized')) {
+					$('.testimonial-carousel').slick('unslick');
+				}
+			}
+		}
+	</script>
+</body>
+</html>

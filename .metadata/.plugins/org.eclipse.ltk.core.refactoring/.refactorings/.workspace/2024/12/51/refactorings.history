@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;css&amp;html&apos; to &apos;cssandhtml&apos;" description="Rename resource &apos;css&amp;html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/css&amp;html" name="cssandhtml" stamp="1734330868383" updateReferences="true"/>
+</session>

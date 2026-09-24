@@ -1,0 +1,51 @@
+package com.dakshabhi.contact.service;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.dakshabhi.contact.dao.ContactDAO;
+import com.dakshabhi.contact.dto.ContactDTO;
+import com.dakshabhi.email.SupportEmailAction;
+
+@WebServlet("/contact")
+
+public class ContactService extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("Inside get");
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String fName = req.getParameter("fname");
+		String lName = req.getParameter("lname");
+		String email = req.getParameter("email");
+		String subject = req.getParameter("subject");
+		String message = req.getParameter("message");
+		
+		ContactDTO contactDTO = new ContactDTO();
+		
+		contactDTO.setFirstName(fName);
+		contactDTO.setLastName(lName);
+		contactDTO.setEmail(email);
+		contactDTO.setSubject(subject);
+		contactDTO.setMessage(message);
+
+		
+		ContactDAO objcontact = new ContactDAO();
+		objcontact.saveContactDetails(contactDTO);
+		
+		//send email
+		SupportEmailAction.sendCustomerSupportEmail(contactDTO);
+		
+		resp.setContentType("application/plain");
+		resp.getWriter().write("success");
+
+	}
+}

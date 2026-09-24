@@ -1,0 +1,222 @@
+<html>
+<body style="background-color: #E2E8F0;font-family:  'Helvetica Neue',Helvetica ,Roboto,Arial,sans-serif; ">
+	<div
+		style="background-color: #f7f7f7; padding: 0; text-align: center; background-color: #f7f7f7">
+		<table style="background-color: #f7f7f7">
+			<tr>
+				<td width="20%"></td>
+				<td width="600px" align="center" >
+					<div
+						style="margin: 0 auto; padding: 70px 0; width: 100%; max-width: 600px">
+						<table border="0" cellpadding="0" cellspacing="0" height="100%"
+							width="100%">
+							<tr>
+								<td width="100%"
+									style="background-color: #720eec; color: #fff;  padding:36px; border-radius: 3px 3px 0 0;">
+									<h1 bgcolor="inherit"
+										style="font-size: 30px; font-weight: 300; line-height: 150%; margin: 0; text-align: left; color: #fff; background-color: inherit">
+										New Order: #{0}</h1> 
+								</td>
+							</tr>
+							<tr>
+								<td align="center" valign="top" >
+									<table border="0" cellpadding="0" cellspacing="0" width="100%"
+										id="m_2510743657171915195x_template_body" style="width: 100%">
+										<tbody>
+											<tr>
+												<td valign="top" id="m_2510743657171915195x_body_content"
+													bgcolor="#fff" style="background-color: #fff">
+													<table border="0" cellpadding="20" cellspacing="0"
+														width="100%">
+														<tbody>
+															<tr>
+																<td valign="top" 
+																	style="padding: 48px 48px 32px">
+																	<div  
+																		align="left"
+																		style="color: #636363; font-size: 14px; line-height: 150%; text-align: left">
+																		<p style="margin: 0 0 16px">We have received the following order from {1}:</p>
+																		<h2
+																			style="color: #720eec; display: block; font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left">
+																			[Order #{0}] ({2})
+																		</h2>
+																		<div style="margin-bottom: 40px">
+																			<table cellspacing="0" cellpadding="6" border="1"
+																				width="100%"
+																				style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle;  width: 100%">
+																				<thead>
+																					<tr>
+																						<th scope="col" align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left">
+																							Product</th>
+																						<th scope="col" align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left">
+																							Quantity</th>
+																						<th scope="col" align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; padding: 12px; text-align: left">
+																							Price</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; text-align: left; padding: 12px; vertical-align: middle; word-wrap: break-word">
+																							Apostille</td>
+																						<td align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; text-align: left; padding: 12px; vertical-align: middle">
+																							{3}</td>
+																						<td align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; text-align: left; padding: 12px; vertical-align: middle">
+																							<span><span>{4}</span>{5}</span>
+																						</td>
+																					</tr>
+																				</tbody>
+																				<tfoot>
+																					 
+																					<tr>
+																						<th scope="row" colspan="2" align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							Shipping:</th>
+																						<td align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							{6}</td>
+																					</tr>
+																					{7}
+																					<tr>
+																						<th scope="row" colspan="2" align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							Payment method:</th>
+																						<td align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							Credit / Debit Card</td>
+																					</tr>
+																					<tr>
+																						<th scope="row" colspan="2" align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							Total:</th>
+																						<td align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							<span><span>{4}</span>{8}</span>
+																						</td>
+																					</tr>
+																					<tr>
+																						<th scope="row" colspan="2" align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							Note:</th>
+																						<td align="left"
+																							style="color: #636363; border: 1px solid #e5e5e5; vertical-align: middle; text-align: left; padding: 12px">
+																							{16}</td>
+																					</tr>
+																				</tfoot>
+																			</table>
+																		</div>
+																		<table 
+																			cellspacing="5" cellpadding="0" border="0"
+																			width="100%"
+																			style="width: 100%; vertical-align: top; margin-bottom: 40px; padding: 0">
+																			<tbody>
+																				<tr>
+																					<td valign="top" width="50%" align="left"
+																						style="  text-align: left; border: 0; padding: 0">
+																						<h2
+																							style="color: #720eec; display: block;  font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left">
+																							Billing address</h2>
+																						<address
+																							style="padding: 12px; color: #636363; border: 1px solid #e5e5e5">
+																							{1}<br> {9}<br>
+																							{10}, {11} {12}<br> {13} <br>
+																							<a  href="tel:{14}"
+																								style="color: #720eec; font-weight: normal; text-decoration: underline"
+																								target="_blank">{14}</a> <br> <a href="mailto:{15}" 
+																								target="_blank">{15}</a>
+																						</address>
+																					</td>
+																					<td valign="top" width="50%" align="left"
+																						style=" text-align: left; padding: 0">
+																						<h2
+																							style="color: #720eec; display: block; font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left">
+																							Shipping address</h2>
+																						<address
+																							style="padding: 12px; color: #636363; border: 1px solid #e5e5e5">
+																							{1}<br> {9}<br>
+																							{10}, {11} {12}<br> {13} <br>
+																							<a  href="tel:{14}"
+																								style="color: #720eec; font-weight: normal; text-decoration: underline"
+																								target="_blank">{14}</a>
+																						</address>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table> 
+																		
+																		<table 
+																			cellspacing="0" cellpadding="0" border="0"
+																			width="100%"
+																			style="width: 100%; vertical-align: top; margin-bottom: 40px; padding: 0">
+																			<tbody>
+																					<tr>
+																					<td valign="top" width="100%" align="left"
+																						style="  text-align: left; border: 0; padding: 0">
+																						<h2
+																							style="color: #720eec; display: block;  font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left">
+																							IMP: Please complete below steps to process your order ASAP.</h2> 
+																						 
+																					</td>
+																					 
+																				</tr>
+																				<tr>
+																					<td valign="top" width="100%" align="left"
+																						style="  text-align: left; border: 0; padding: 0">
+																						<h2
+																							style="color: #720eec; display: block;  font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left">
+																							Step 1:</h2>
+																						<p>Please send us a scanned copy of your document if you have not uploaded it yet. We recommend sending documents as a PDF, in good quality, and avoiding photos of documents.</p>
+																						 
+																					</td>
+																					 
+																				</tr>
+																				
+																				<tr>
+																					<td valign="top" width="100%" align="left"
+																						style="text-align: left; border: 0; padding-top: 20px">
+																						<h2
+																							style="color: #720eec; display: block;  font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left">
+																							Step 2:</h2>
+																						<p>Please verify your identity and inform us once completed successfully:</p>
+																						<p><a href="https://idcheck.quickapostille.online/?orderid={0}" target="_blank">CLICK HERE TO VERIFY IDENTITY</a></p>
+																						 
+																					</td>
+																					 
+																				</tr>
+																				
+																				<tr>
+																					<td valign="top" width="100%" align="left"
+																						style="text-align: left; border: 0; padding-top: 40px">
+																						 
+																						<p>Thank you for choosing QuickApostille!</p>
+																						 
+																					</td>
+																					 
+																				</tr>
+																			</tbody>
+																		</table> 
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td> 
+			</tr>
+		</table>
+
+	</div>
+</body>
+</html>

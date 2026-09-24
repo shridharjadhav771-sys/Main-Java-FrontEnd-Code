@@ -1,0 +1,243 @@
+package com.dakshabhi.orders.dto;
+
+import java.util.List;
+
+public class OrderDTO {
+
+	private String orderId;
+	private String dateCreated;
+	private String timeCreated;
+	private String dateUpdated;
+	private String timeUpdated;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String phone;
+	private String additionalServices;
+	private String shippingMethod;
+	private String totalCost;
+	private String itemCost;
+	private String shippingCost;
+	private String paymentId;
+	private String notes;
+	private String documentName;
+	private String orderStatus;
+	private String userIP;
+	private String currencyCode;
+	private String country;
+	private List<String> documentList;
+	private String product;
+	private double product_price;
+	private String sessionId;
+	private int quantity;
+
+	public List<String> getDocumentList() {
+		return documentList;
+	}
+
+	public void setDocumentList(List<String> documentList) {
+		this.documentList = documentList;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getUserIP() {
+		return userIP;
+	}
+
+	public void setUserIP(String userIP) {
+		this.userIP = userIP;
+	}
+
+	public String getCurrencyCode() {
+		return currencyCode;
+	}
+
+	public void setCurrencyCode(String currencyCode) {
+		this.currencyCode = currencyCode;
+	}
+
+	public String getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+
+	public String getDateCreated() {
+		return dateCreated;
+	}
+
+	public void setDateCreated(String dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+	public String getTimeCreated() {
+		return timeCreated;
+	}
+
+	public void setTimeCreated(String timeCreated) {
+		this.timeCreated = timeCreated;
+	}
+
+	public String getDateUpdated() {
+		return dateUpdated;
+	}
+
+	public void setDateUpdated(String dateUpdated) {
+		this.dateUpdated = dateUpdated;
+	}
+
+	public String getTimeUpdated() {
+		return timeUpdated;
+	}
+
+	public void setTimeUpdated(String timeUpdated) {
+		this.timeUpdated = timeUpdated;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAdditionalServices() {
+		return additionalServices;
+	}
+
+	public void setAdditionalServices(String additionalServices) {
+		this.additionalServices = additionalServices;
+	}
+
+	public String getShippingMethod() {
+		return shippingMethod;
+	}
+
+	public void setShippingMethod(String shippingMethod) {
+		this.shippingMethod = shippingMethod;
+	}
+
+	public String getTotalCost() {
+		return totalCost;
+	}
+
+	public void setTotalCost(String totalCost) {
+		this.totalCost = totalCost;
+	}
+
+	public String getItemCost() {
+		return itemCost;
+	}
+
+	public void setItemCost(String itemCost) {
+		this.itemCost = itemCost;
+	}
+
+	public String getShippingCost() {
+		return shippingCost;
+	}
+
+	public void setShippingCost(String shippingCost) {
+		this.shippingCost = shippingCost;
+	}
+
+	public String getPaymentId() {
+		return paymentId;
+	}
+
+	public void setPaymentId(String paymentId) {
+		this.paymentId = paymentId;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+
+	public String getDocumentName() {
+		return documentName;
+	}
+
+	public void setDocumentName(String documentName) {
+		this.documentName = documentName;
+	}
+
+	public String getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(String orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+	public String getProduct() {
+		return product;
+	}
+
+	public void setProduct(String product) {
+		this.product = product;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public String getSessionId() {
+		return sessionId;
+	}
+
+	public void setSessionId(String sessionId) {
+		this.sessionId = sessionId;
+	}
+
+	public double getProduct_price() {
+		return product_price;
+	}
+
+	public void setProduct_price(double product_price) {
+		this.product_price = product_price;
+	}
+	
+
+}
